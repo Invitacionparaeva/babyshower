@@ -1,1110 +1,721 @@
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#fff4f5">
-<title>Un cuento llamado Eva | Baby Shower</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
-
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Baby Shower de Eva | Una dulce historia</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --pink:#c78398;
-  --rose:#a9637c;
-  --pale:#f9e5ea;
-  --cream:#fffaf6;
-  --gold:#b99a74;
-  --ink:#705c62;
+  --rosa:#bd7e94;
+  --rosa2:#e8b7c6;
+  --crema:#fffaf6;
+  --oscuro:#775968;
+  --claro:#f8e8ed;
+  --oro:#b69a73;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
   margin:0;
-  color:var(--ink);
-  background:var(--cream);
+  background:var(--crema);
+  color:var(--oscuro);
   font-family:Montserrat,sans-serif;
   overflow-x:hidden;
 }
+body.bloqueado{overflow:hidden}
 h1,h2,h3{
   font-family:"Cormorant Garamond",serif;
   font-weight:500;
 }
-p{line-height:1.9}
-button,a{ -webkit-tap-highlight-color:transparent }
-button{cursor:pointer}
-.script{font-family:"Great Vibes",cursive}
-.center{text-align:center}
-.eyebrow{
-  font-size:11px;
+h2{font-size:clamp(40px,9vw,65px);margin:10px 0 24px}
+p{line-height:1.85}
+.subtitulo{
   text-transform:uppercase;
   letter-spacing:3px;
-  color:var(--gold);
+  font-size:11px;
+  color:var(--rosa);
+  margin:0 0 12px;
 }
-.section{
-  position:relative;
-  padding:105px 22px;
-  overflow:hidden;
+.texto{max-width:630px;margin:15px auto;font-size:14px}
+.frase{
+  font:italic clamp(23px,5vw,32px)/1.5 "Cormorant Garamond",serif;
+  max-width:640px;
+  margin:20px auto;
 }
-.inner{
-  position:relative;
-  z-index:2;
-  max-width:760px;
+.ornamento{font-size:27px;color:var(--oro);margin:24px auto}
+.contenedor{
+  max-width:850px;
   margin:auto;
   text-align:center;
+  position:relative;
+  z-index:1;
 }
-.section h2{
-  font-size:clamp(38px,8vw,60px);
-  color:var(--rose);
-  margin:12px 0 25px;
+section{padding:85px 20px;position:relative;overflow:hidden}
+.papel{
+  background:
+    radial-gradient(ellipse at 12% 18%,#f9e2e8,transparent 45%),
+    radial-gradient(ellipse at 88% 80%,#f8e5eb,transparent 40%),
+    var(--crema);
 }
-.section p{
-  max-width:580px;
-  margin:18px auto;
-  font-size:14px;
-}
-.ornament{
-  margin:25px auto;
-  color:var(--gold);
-  letter-spacing:9px;
-  font-size:22px;
-}
-.btn{
+.rosa{background:#f8e8ed}
+.blanco{background:#fff}
+.boton{
   display:inline-block;
-  padding:16px 28px;
-  border:1px solid var(--rose);
-  border-radius:35px;
-  background:var(--rose);
+  margin-top:20px;
+  padding:16px 27px;
+  background:var(--rosa);
   color:white;
-  font:600 12px Montserrat,sans-serif;
-  letter-spacing:1px;
+  border:1px solid var(--rosa);
+  font:600 11px Montserrat,sans-serif;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
   text-decoration:none;
-  transition:.35s;
-  box-shadow:0 8px 25px #b9799030;
+  cursor:pointer;
+  transition:.25s;
 }
-.btn:hover{
-  transform:translateY(-3px);
-  background:#94536a;
-}
-.btn-light{
-  background:transparent;
-  color:var(--rose);
-}
-.btn-light:hover{color:white}
-.reveal{
+.boton:hover{background:#9e6379}
+.revelar{
   opacity:0;
-  transform:translateY(35px);
-  transition:opacity 1s ease,transform 1s ease;
+  transform:translateY(24px);
+  transition:opacity .8s,transform .8s;
 }
-.reveal.visible{
-  opacity:1;
-  transform:translateY(0);
+.revelar.visible{opacity:1;transform:none}
+.intro-pantalla{
+  position:fixed;
+  inset:0;
+  z-index:1000;
+  background:radial-gradient(circle at center,#fff9f7,#f5dce5);
+  display:grid;
+  place-items:center;
+  padding:22px;
+  transition:opacity .8s,visibility .8s;
 }
-.paper{
-  background:
-    radial-gradient(ellipse at 10% 10%,#f8e1e6 0%,transparent 35%),
-    radial-gradient(ellipse at 90% 90%,#f5dfe5 0%,transparent 38%),
-    linear-gradient(145deg,#fffdf9,#fff4f5);
+.intro-pantalla.oculto{
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
 }
-.watercolor{
-  background:
-    radial-gradient(circle at 20% 20%,#f8e0e7 0%,transparent 38%),
-    radial-gradient(circle at 80% 80%,#f9e5e7 0%,transparent 38%),
-    #fffaf8;
+.intro-tarjeta{
+  width:min(100%,510px);
+  padding:35px 24px 45px;
+  text-align:center;
+  background:#ffffffa8;
+  border:1px solid #dfb8c5;
+  border-radius:220px 220px 18px 18px;
+  box-shadow:0 20px 60px #a46b8320;
 }
-.bunny{
-  display:block;
-  width:min(260px,85%);
+.intro-tarjeta h1{
+  font-size:clamp(42px,10vw,65px);
+  margin:5px;
+}
+.nombre-eva{
+  font:clamp(85px,20vw,140px)/1 "Great Vibes",cursive;
+  color:var(--rosa);
+  margin:5px auto 15px;
+}
+.conejita{
+  width:min(245px,85%);
   height:auto;
-  margin:15px auto;
-  filter:drop-shadow(0 12px 15px #bd8e9a25);
+  display:block;
+  margin:0 auto;
+  filter:drop-shadow(0 8px 14px #b884982a);
 }
-.flower-art{
-  position:absolute;
-  width:180px;
-  height:180px;
-  opacity:.65;
-  pointer-events:none;
-}
-.flower-left{
-  top:-30px;
-  left:-65px;
-  transform:rotate(-20deg);
-}
-.flower-right{
-  right:-65px;
-  bottom:-30px;
-  transform:rotate(160deg);
-}
-.sparkle{
-  position:fixed;
-  z-index:20;
-  width:5px;
-  height:5px;
-  background:#d5a67d;
-  border-radius:50%;
-  pointer-events:none;
-  animation:twinkle 4s ease-in-out infinite;
-  box-shadow:0 0 13px #e9b5c1;
-}
-@keyframes twinkle{
-  0%,100%{opacity:0;transform:scale(.3)}
-  50%{opacity:.65;transform:scale(1.5)}
-}
-.petal{
-  position:fixed;
-  top:-40px;
-  z-index:10;
-  width:13px;
-  height:18px;
-  background:#e7aebd;
-  border-radius:90% 0 90% 0;
-  opacity:.45;
-  pointer-events:none;
-  animation:fall linear forwards;
-}
-@keyframes fall{
-  to{transform:translate(90px,110vh) rotate(600deg);opacity:0}
-}
-@keyframes float{
-  0%,100%{transform:translateY(0)}
-  50%{transform:translateY(-12px)}
-}
-@keyframes fadein{
-  from{opacity:0;transform:translateY(20px)}
-  to{opacity:1;transform:translateY(0)}
-}
-#cover{
-  min-height:100vh;
+.hero{
   min-height:100svh;
   display:flex;
   align-items:center;
   justify-content:center;
-  padding:35px 18px;
-  position:relative;
-}
-.cover-card{
-  position:relative;
-  width:100%;
-  max-width:530px;
   text-align:center;
-  padding:65px 25px 45px;
-  border:1px solid #d8b7bf;
-  border-radius:240px 240px 25px 25px;
-  background:#ffffffa8;
-  box-shadow:0 20px 65px #bd8a9b25;
-  animation:fadein 1.3s ease both;
+  padding:75px 20px;
+  position:relative;
+  background:
+    linear-gradient(#fffaf6d8,#fffaf6dc),
+    radial-gradient(circle at 50% 20%,#e7b9c9,#fff7f7);
 }
-.cover-card:before{
-  content:"";
+.hero h1{
+  font-size:clamp(55px,12vw,95px);
+  margin:0;
+  color:var(--rosa);
+}
+.hero .fecha{
+  font:25px "Cormorant Garamond",serif;
+  letter-spacing:3px;
+  margin-top:15px;
+}
+.desliza{
   position:absolute;
-  inset:9px;
-  border:1px solid #e8d2d2;
-  border-radius:230px 230px 20px 20px;
-  pointer-events:none;
-}
-.cover-card .bunny{
-  width:min(215px,75%);
-  animation:float 5s ease-in-out infinite;
-}
-.cover-card h1{
-  font-size:clamp(42px,10vw,66px);
-  color:var(--rose);
-  margin:8px 0;
-}
-.eva-name{
-  font-family:"Great Vibes",cursive;
-  font-size:clamp(105px,26vw,165px);
-  color:var(--pink);
-  line-height:1;
-  margin:0 0 25px;
-}
-.ribbon{
-  width:140px;
-  height:90px;
-  display:block;
-  margin:0 auto 12px;
-}
-#story{display:none}
-.chapter{
-  font-family:"Cormorant Garamond",serif;
-  color:var(--gold);
-  font-size:18px;
+  bottom:24px;
+  font-size:11px;
   letter-spacing:2px;
 }
-.story-text{
-  font-family:"Cormorant Garamond",serif;
-  font-size:clamp(22px,5vw,29px)!important;
-  line-height:1.6!important;
-}
-.guest-name{
-  font-family:"Great Vibes",cursive;
-  font-size:clamp(48px,11vw,76px);
-  color:var(--rose);
-  margin:25px 0;
-  overflow-wrap:anywhere;
-}
-.cupos{
-  display:inline-block;
-  padding:20px 25px;
-  background:#fff9f9c9;
-  border:1px solid #e7c6d0;
-  border-radius:20px;
-  font-size:14px;
-}
-.countdown{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:10px;
-  max-width:550px;
-  margin:35px auto;
-}
-.time-box{
-  background:#ffffffb8;
-  border:1px solid #ead3d8;
-  border-radius:16px;
-  padding:20px 5px;
-}
-.time-box strong{
-  display:block;
-  font-family:"Cormorant Garamond",serif;
-  font-size:clamp(27px,7vw,48px);
-  color:var(--rose);
-}
-.time-box span{
-  font-size:10px;
-  text-transform:uppercase;
-  letter-spacing:1px;
-}
-.date-number{
-  font-family:"Cormorant Garamond",serif;
-  font-size:110px;
-  line-height:1;
-  color:var(--rose);
-}
-.gallery{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:13px;
-  margin-top:35px;
-}
-.photo{
-  background:linear-gradient(135deg,#fbe7eb,#fff9f9);
-  border:1px solid #e8cbd2;
-  border-radius:18px;
-  aspect-ratio:4/5;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  overflow:hidden;
-  color:#bd889a;
-  font-family:"Cormorant Garamond",serif;
-  font-size:22px;
-  font-style:italic;
-}
-.photo:first-child{
-  grid-column:span 2;
-  aspect-ratio:16/10;
-}
-.photo img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-footer{
-  padding:80px 20px;
-  text-align:center;
-  background:#f6e1e7;
-}
-footer .script{
-  font-size:100px;
-  color:var(--rose);
-}
-.music-button{
-  display:none;
-  position:fixed;
-  right:18px;
-  bottom:18px;
-  z-index:100;
-  width:55px;
-  height:55px;
-  border-radius:50%;
-  background:var(--rose);
-  border:0;
-  color:white;
-  font-size:22px;
-  box-shadow:0 5px 20px #0002;
-}
-#ytplayer{
+.flor{
   position:absolute;
-  width:1px;
-  height:1px;
-  opacity:0;
+  width:160px;
+  height:160px;
+  opacity:.5;
   pointer-events:none;
 }
-@media(max-width:500px){
-  .section{padding:80px 18px}
-  .cover-card{padding:60px 17px 38px}
-  .countdown{gap:6px}
-  .time-box{padding:16px 2px}
-  .gallery{gap:8px}
+.izq{top:-40px;left:-60px}
+.der{
+  right:-55px;
+  bottom:-35px;
+  transform:rotate(160deg);
+}
+.contador-seccion{background:#aa7188;color:white}
+.contador-seccion .subtitulo{color:#ffe8ef}
+.contador{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  max-width:620px;
+  gap:12px;
+  margin:32px auto 0;
+}
+.numero{
+  font:clamp(34px,8vw,62px) "Cormorant Garamond",serif;
+  color:white;
+}
+.etiqueta{
+  font-size:10px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+.fecha-grande{
+  font:clamp(45px,12vw,85px) "Cormorant Garamond",serif;
+  color:var(--rosa);
+  margin:12px;
+}
+.tarjeta{
+  max-width:560px;
+  margin:30px auto;
+  padding:38px 25px;
+  background:#ffffffc7;
+  border-top:3px solid var(--rosa);
+  box-shadow:0 12px 35px #9e6b8015;
+}
+.tarjeta h3{font-size:34px;margin:10px}
+.tarjeta p{font-size:14px}
+.nombre-invitado{
+  font:clamp(43px,9vw,65px) "Great Vibes",cursive;
+  color:var(--rosa);
+  overflow-wrap:anywhere;
+  margin:25px auto;
+}
+.cupos-texto{
+  font:25px/1.5 "Cormorant Garamond",serif;
+  margin:10px auto;
+}
+.galeria{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+  margin-top:30px;
+}
+.foto{
+  aspect-ratio:3/4;
+  background:#f6e4e9;
+  display:grid;
+  place-items:center;
+  overflow:hidden;
+  cursor:pointer;
+  color:var(--rosa);
+  font:italic 22px "Cormorant Garamond",serif;
+}
+.foto img{width:100%;height:100%;object-fit:cover}
+.foto:last-child{grid-column:2}
+.lightbox{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:#241820ed;
+  z-index:2000;
+  align-items:center;
+  justify-content:center;
+  padding:35px;
+}
+.lightbox.activo{display:flex}
+.lightbox img{
+  max-width:95%;
+  max-height:90vh;
+  object-fit:contain;
+}
+.cerrar{
+  position:absolute;
+  right:20px;
+  top:10px;
+  font-size:38px;
+  color:white;
+  cursor:pointer;
+}
+footer{
+  text-align:center;
+  padding:75px 20px;
+  background:#a66e85;
+  color:white;
+}
+footer .nombre-eva{color:#fff1f5}
+.boton-musica{
+  position:fixed;
+  bottom:18px;
+  right:18px;
+  z-index:999;
+  display:none;
+  border:0;
+  border-radius:50%;
+  width:52px;
+  height:52px;
+  background:var(--rosa);
+  color:white;
+  font-size:21px;
+  cursor:pointer;
+}
+#youtube-player{
+  position:fixed;
+  left:-999px;
+  width:1px;
+  height:1px;
+}
+@media(max-width:600px){
+  section{padding:65px 18px}
+  .galeria{grid-template-columns:repeat(2,1fr);gap:9px}
+  .foto:last-child{
+    grid-column:1/3;
+    width:calc(50% - 5px);
+    justify-self:center;
+  }
+  .contador{gap:4px}
+  .intro-tarjeta{padding:32px 17px}
 }
 @media(prefers-reduced-motion:reduce){
   *,*:before,*:after{
     animation:none!important;
-    scroll-behavior:auto!important;
     transition:none!important;
   }
-  .reveal{opacity:1;transform:none}
+  .revelar{opacity:1;transform:none}
 }
 </style>
 </head>
+<body class="bloqueado">
 
-<body>
-
-<!-- ILUSTRACIONES REUTILIZABLES -->
-<svg xmlns="http://www.w3.org/2000/svg"
-     style="position:absolute;width:0;height:0;overflow:hidden">
-
+<!-- ILUSTRACIONES -->
+<svg style="position:absolute;width:0;height:0;overflow:hidden"
+xmlns="http://www.w3.org/2000/svg">
 <defs>
-  <symbol id="bunny" viewBox="0 0 320 320">
-    <ellipse cx="118" cy="92" rx="27" ry="80"
-      transform="rotate(-18 118 92)"
-      fill="#fff8ed" stroke="#c9a99f" stroke-width="2"/>
-    <ellipse cx="202" cy="92" rx="27" ry="80"
-      transform="rotate(18 202 92)"
-      fill="#fff8ed" stroke="#c9a99f" stroke-width="2"/>
-    <ellipse cx="118" cy="92" rx="13" ry="57"
-      transform="rotate(-18 118 92)" fill="#eeb9c4"/>
-    <ellipse cx="202" cy="92" rx="13" ry="57"
-      transform="rotate(18 202 92)" fill="#eeb9c4"/>
-    <ellipse cx="160" cy="245" rx="78" ry="56"
-      fill="#fff8ed" stroke="#c9a99f" stroke-width="2"/>
-    <circle cx="160" cy="162" r="78"
-      fill="#fff8ed" stroke="#c9a99f" stroke-width="2"/>
-    <ellipse cx="134" cy="157" rx="8" ry="11" fill="#58474b"/>
-    <ellipse cx="186" cy="157" rx="8" ry="11" fill="#58474b"/>
-    <circle cx="137" cy="153" r="3" fill="white"/>
-    <circle cx="189" cy="153" r="3" fill="white"/>
-    <ellipse cx="116" cy="180" rx="16" ry="10"
-      fill="#f3bdc7" opacity=".7"/>
-    <ellipse cx="204" cy="180" rx="16" ry="10"
-      fill="#f3bdc7" opacity=".7"/>
-    <path d="M151 179 Q160 172 169 179 Q160 190 151 179"
-      fill="#d9a0ab"/>
-    <path d="M160 185 v8 q-10 11 -20 0
-             M160 193 q10 11 20 0"
-      fill="none" stroke="#90757b"
-      stroke-width="2" stroke-linecap="round"/>
-    <path d="M86 245 Q160 205 234 245
-             Q215 288 160 294 Q105 288 86 245"
-      fill="#efb5c6"/>
-    <path d="M95 246 Q160 218 225 246"
-      fill="none" stroke="#fff3f4" stroke-width="5"/>
-    <ellipse cx="117" cy="280" rx="29" ry="18"
-      fill="#fff8ed" stroke="#c9a99f" stroke-width="2"/>
-    <ellipse cx="203" cy="280" rx="29" ry="18"
-      fill="#fff8ed" stroke="#c9a99f" stroke-width="2"/>
-    <ellipse cx="117" cy="283" rx="15" ry="9" fill="#f3c8c9"/>
-    <ellipse cx="203" cy="283" rx="15" ry="9" fill="#f3c8c9"/>
-    <g transform="translate(160 91)">
-      <ellipse cx="-15" cy="0" rx="20" ry="14" fill="#d991a8"/>
-      <ellipse cx="15" cy="0" rx="20" ry="14" fill="#d991a8"/>
-      <circle r="9" fill="#bb718c"/>
-      <path d="M-3 8 L-13 28 L2 15 L13 28 L3 8"
-        fill="#d991a8"/>
-    </g>
-  </symbol>
+<symbol id="conejo" viewBox="0 0 320 340">
+<ellipse cx="112" cy="94" rx="28" ry="84"
+ transform="rotate(-15 112 94)"
+ fill="#fff8ef" stroke="#c9aaa6" stroke-width="2"/>
+<ellipse cx="208" cy="94" rx="28" ry="84"
+ transform="rotate(15 208 94)"
+ fill="#fff8ef" stroke="#c9aaa6" stroke-width="2"/>
+<ellipse cx="112" cy="94" rx="13" ry="61"
+ transform="rotate(-15 112 94)" fill="#efbdc8"/>
+<ellipse cx="208" cy="94" rx="13" ry="61"
+ transform="rotate(15 208 94)" fill="#efbdc8"/>
+<ellipse cx="160" cy="261" rx="75" ry="60"
+ fill="#fff8ef" stroke="#c9aaa6" stroke-width="2"/>
+<circle cx="160" cy="166" r="76"
+ fill="#fff8ef" stroke="#c9aaa6" stroke-width="2"/>
+<ellipse cx="133" cy="164" rx="7" ry="10" fill="#58454b"/>
+<ellipse cx="187" cy="164" rx="7" ry="10" fill="#58454b"/>
+<circle cx="135" cy="161" r="2.5" fill="#fff"/>
+<circle cx="189" cy="161" r="2.5" fill="#fff"/>
+<ellipse cx="115" cy="188" rx="16" ry="9" fill="#f2c1ca"/>
+<ellipse cx="205" cy="188" rx="16" ry="9" fill="#f2c1ca"/>
+<path d="M151 182q9-9 18 0q-9 12-18 0"
+ fill="#ce98a4"/>
+<path d="M160 190v7q-10 12-20 0m20 0q10 12 20 0"
+ fill="none" stroke="#8c7079" stroke-width="2"/>
+<path d="M88 260q72-53 144 0q-10 45-72 54q-62-9-72-54"
+ fill="#e8afc0"/>
+<path d="M97 260q63-32 126 0"
+ fill="none" stroke="#fff0f3" stroke-width="5"/>
+<ellipse cx="119" cy="300" rx="28" ry="17"
+ fill="#fff8ef" stroke="#c9aaa6"/>
+<ellipse cx="201" cy="300" rx="28" ry="17"
+ fill="#fff8ef" stroke="#c9aaa6"/>
+<g transform="translate(160 91)">
+<ellipse cx="-16" cy="0" rx="21" ry="15" fill="#e3a2b6"/>
+<ellipse cx="16" cy="0" rx="21" ry="15" fill="#e3a2b6"/>
+<circle r="9" fill="#bf7b95"/>
+</g>
+</symbol>
 
-  <symbol id="flowers" viewBox="0 0 200 200">
-    <g fill="none" stroke="#9ba98a" stroke-width="3">
-      <path d="M100 190 Q100 100 100 50"/>
-      <path d="M100 145 Q55 120 35 95"/>
-      <path d="M100 125 Q145 100 170 70"/>
-    </g>
-    <g fill="#c7d3b2">
-      <ellipse cx="75" cy="140" rx="13" ry="25"
-        transform="rotate(-45 75 140)"/>
-      <ellipse cx="125" cy="115" rx="13" ry="25"
-        transform="rotate(45 125 115)"/>
-    </g>
-    <g fill="#e9b1c1">
-      <circle cx="100" cy="38" r="20"/>
-      <circle cx="80" cy="55" r="20"/>
-      <circle cx="120" cy="55" r="20"/>
-      <circle cx="88" cy="80" r="20"/>
-      <circle cx="112" cy="80" r="20"/>
-    </g>
-    <circle cx="100" cy="60" r="13" fill="#e9d3a6"/>
-    <g fill="#f1c7d0">
-      <circle cx="35" cy="85" r="13"/>
-      <circle cx="23" cy="98" r="13"/>
-      <circle cx="47" cy="98" r="13"/>
-      <circle cx="170" cy="60" r="13"/>
-      <circle cx="158" cy="73" r="13"/>
-      <circle cx="182" cy="73" r="13"/>
-    </g>
-    <circle cx="35" cy="98" r="7" fill="#e8d2a7"/>
-    <circle cx="170" cy="73" r="7" fill="#e8d2a7"/>
-  </symbol>
-
-  <symbol id="bow" viewBox="0 0 160 100">
-    <path d="M78 45 Q20 -10 8 30 Q-5 80 78 55"
-      fill="#e9aebf" stroke="#c58b9e" stroke-width="2"/>
-    <path d="M82 45 Q140 -10 152 30 Q165 80 82 55"
-      fill="#e9aebf" stroke="#c58b9e" stroke-width="2"/>
-    <path d="M74 55 L43 100 L85 72 L114 100 L88 55"
-      fill="#e9aebf" stroke="#c58b9e" stroke-width="2"/>
-    <ellipse cx="80" cy="50" rx="13" ry="16"
-      fill="#c8879e"/>
-    <path d="M15 30 Q45 35 68 48
-             M145 30 Q115 35 92 48"
-      fill="none" stroke="#fbe1e8" stroke-width="4"/>
-  </symbol>
+<symbol id="flores" viewBox="0 0 200 200">
+<g fill="none" stroke="#a1b28e" stroke-width="3">
+<path d="M100 190Q100 100 100 50M100 145Q55 120 35 95M100 125Q145 100 170 70"/>
+</g>
+<g fill="#c9d4b7">
+<ellipse cx="75" cy="140" rx="13" ry="25"
+ transform="rotate(-45 75 140)"/>
+<ellipse cx="125" cy="115" rx="13" ry="25"
+ transform="rotate(45 125 115)"/>
+</g>
+<g fill="#eab4c3">
+<circle cx="100" cy="38" r="20"/>
+<circle cx="80" cy="55" r="20"/>
+<circle cx="120" cy="55" r="20"/>
+<circle cx="88" cy="80" r="20"/>
+<circle cx="112" cy="80" r="20"/>
+</g>
+<circle cx="100" cy="60" r="13" fill="#e9d6aa"/>
+<g fill="#f2cbd3">
+<circle cx="35" cy="85" r="13"/>
+<circle cx="23" cy="98" r="13"/>
+<circle cx="47" cy="98" r="13"/>
+<circle cx="170" cy="60" r="13"/>
+<circle cx="158" cy="73" r="13"/>
+<circle cx="182" cy="73" r="13"/>
+</g>
+</symbol>
 </defs>
 </svg>
 
-<!-- PORTADA -->
-<section id="cover" class="paper">
-
-  <svg class="flower-art flower-left"><use href="#flowers"/></svg>
-  <svg class="flower-art flower-right"><use href="#flowers"/></svg>
-
-  <div class="cover-card">
-
-    <svg class="ribbon" viewBox="0 0 160 100">
-      <use href="#bow"/>
-    </svg>
-
-    <div class="eyebrow">Había una vez...</div>
-
-    <svg class="bunny" viewBox="0 0 320 320"
-         aria-label="Conejita con vestido rosado">
-      <use href="#bunny"/>
-    </svg>
-
+<!-- PANTALLA DE BIENVENIDA -->
+<div class="intro-pantalla" id="intro">
+  <div class="intro-tarjeta">
+    <p class="subtitulo">Había una vez...</p>
+    <svg class="conejita"><use href="#conejo"/></svg>
     <h1>Baby Shower</h1>
-
-    <div class="eyebrow">De nuestra pequeña</div>
-
-    <div class="eva-name">Eva</div>
-
-    <p>Un cuento de amor está por comenzar...</p>
-
-    <p class="eyebrow">6 de diciembre de 2026</p>
-
-    <button class="btn" onclick="openInvitation()">
-      ABRIR MI INVITACIÓN
+    <p class="subtitulo">De nuestra pequeña</p>
+    <div class="nombre-eva">Eva</div>
+    <p class="texto">Un cuento de amor está por comenzar...</p>
+    <button class="boton" id="abrir">
+      Abrir mi invitación
     </button>
+  </div>
+</div>
 
+<!-- PORTADA PRINCIPAL -->
+<header class="hero">
+  <svg class="flor izq"><use href="#flores"/></svg>
+  <svg class="flor der"><use href="#flores"/></svg>
+  <div>
+    <p class="subtitulo">Una dulce espera</p>
+    <svg class="conejita"><use href="#conejo"/></svg>
+    <h1>Baby Shower</h1>
+    <div class="nombre-eva">Eva</div>
+    <p class="fecha">06 · 12 · 2026</p>
+  </div>
+  <div class="desliza">DESLIZA ↓</div>
+</header>
+
+<!-- MENSAJE -->
+<section class="blanco">
+  <div class="contenedor revelar">
+    <p class="subtitulo">Había una vez...</p>
+    <h2>Un cuento llamado Eva</h2>
+    <div class="ornamento">❀ ✦ ❀</div>
+    <p class="frase">
+      “Hay sueños que comienzan mucho antes de conocernos
+      y que, sin haber llegado todavía, ya llenan nuestros
+      días de amor.”
+    </p>
+    <p class="texto">
+      Nuestra pequeña Eva está por llegar y queremos
+      compartir la alegría de esta dulce espera con las
+      personas que forman parte de nuestra historia.
+    </p>
+    <p class="frase">
+      Su compañía será un regalo precioso en este
+      capítulo de nuestra historia.
+    </p>
   </div>
 </section>
 
-<main id="story">
-
-<!-- CAPÍTULO 1 -->
-<section class="section watercolor">
-
-  <svg class="flower-art flower-left"><use href="#flowers"/></svg>
-
-  <div class="inner reveal">
-
-    <div class="chapter">Capítulo I</div>
-
-    <h2>Había una vez...</h2>
-
-    <p class="story-text">
-      Un sueño pequeñito que comenzó a crecer
-      en silencio, rodeado de esperanza,
-      ternura y un amor que no conoce límites.
-    </p>
-
-    <div class="ornament">✦ ❀ ✦</div>
-
-    <p class="story-text">
-      Ese sueño tiene un nombre tan dulce
-      como la primavera...
-    </p>
-
-    <div class="eva-name">Eva</div>
-
-    <p>
-      Y aunque todavía no conocemos su sonrisa,
-      ya ha llenado nuestros corazones
-      de una felicidad imposible de describir.
-    </p>
-
+<!-- CUENTA REGRESIVA -->
+<section class="contador-seccion">
+  <div class="contenedor revelar">
+    <p class="subtitulo">Falta muy poco</p>
+    <h2>Cuenta regresiva</h2>
+    <div class="contador">
+      <div>
+        <div class="numero" id="dias">00</div>
+        <div class="etiqueta">Días</div>
+      </div>
+      <div>
+        <div class="numero" id="horas">00</div>
+        <div class="etiqueta">Horas</div>
+      </div>
+      <div>
+        <div class="numero" id="minutos">00</div>
+        <div class="etiqueta">Minutos</div>
+      </div>
+      <div>
+        <div class="numero" id="segundos">00</div>
+        <div class="etiqueta">Segundos</div>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- CAPÍTULO 2 -->
-<section class="section paper">
+<!-- FECHA Y UBICACIÓN -->
+<section class="papel">
+  <svg class="flor der"><use href="#flores"/></svg>
+  <div class="contenedor revelar">
+    <p class="subtitulo">Acompáñanos</p>
+    <h2>El día de nuestra celebración</h2>
+    <p class="subtitulo">Domingo · Diciembre · 2026</p>
+    <div class="fecha-grande">06</div>
+    <p class="frase">2:00 de la tarde</p>
+    <div class="tarjeta">
+      <h3>Baby Shower de Eva</h3>
+      <p>
+        Entre flores, sonrisas y mucho cariño,
+        nos reuniremos para celebrar su próxima llegada.
+      </p>
+      <a class="boton"
+         href="https://maps.app.goo.gl/pATyiWgRNzmx7Gxr8"
+         target="_blank" rel="noopener">
+        Ver ubicación
+      </a>
+    </div>
+  </div>
+</section>
 
-  <svg class="flower-art flower-right"><use href="#flowers"/></svg>
-
-  <div class="inner reveal">
-
-    <div class="chapter">Capítulo II</div>
-
-    <h2>Una dulce invitación</h2>
-
-    <p>
-      Los momentos más hermosos de la vida
-      merecen compartirse con personas especiales.
-    </p>
-
-    <p>
-      Por eso, con el corazón lleno de ilusión,
-      queremos invitarle a celebrar
-      la próxima llegada de nuestra pequeña Eva.
-    </p>
-
-    <div class="ornament">❀ ✦ ❀</div>
-
-    <p>Esta invitación es especialmente para:</p>
-
-    <div class="guest-name" id="guestName">
+<!-- INVITACIÓN PERSONALIZADA -->
+<section class="blanco">
+  <div class="contenedor revelar">
+    <p class="subtitulo">Una invitación con cariño</p>
+    <h2>Tu invitación especial</h2>
+    <p class="texto">Esta invitación es especialmente para:</p>
+    <div class="nombre-invitado" id="nombreInvitado">
       Invitado especial
     </div>
-
-    <div class="cupos" id="guestSpaces">
-      Nos encantará contar con su presencia.
-    </div>
-
-    <p>
-      Su compañía será un regalo precioso
-      en este capítulo de nuestra historia.
+    <p class="cupos-texto" id="textoCupos"></p>
+    <div class="ornamento">❀ ✦ ❀</div>
+    <p class="frase">
+      Su compañía será un regalo precioso en este
+      capítulo de nuestra historia.
     </p>
-
   </div>
 </section>
 
-<!-- CAPÍTULO 3 -->
-<section class="section watercolor">
-
-  <div class="inner reveal">
-
-    <div class="chapter">Capítulo III</div>
-
-    <h2>El día de nuestra celebración</h2>
-
-    <svg class="bunny" viewBox="0 0 320 320">
-      <use href="#bunny"/>
-    </svg>
-
-    <div class="date-number">06</div>
-
-    <h2>Diciembre 2026</h2>
-
-    <p class="story-text">
-      Domingo a las 2:00 de la tarde
+<!-- CONFIRMACIÓN -->
+<section class="rosa">
+  <div class="contenedor revelar">
+    <p class="subtitulo">Nos encantaría verte</p>
+    <h2>Confirma tu asistencia</h2>
+    <p class="texto">
+      Queremos compartir contigo este día tan especial.
+      Confírmanos si podrás acompañarnos en la
+      celebración de Eva.
     </p>
-
-    <div class="ornament">✦ ❀ ✦</div>
-
-    <p>
-      Cada día que pasa estamos
-      un poquito más cerca de conocer a Eva.
-    </p>
-
-    <div class="countdown">
-
-      <div class="time-box">
-        <strong id="days">00</strong>
-        <span>Días</span>
-      </div>
-
-      <div class="time-box">
-        <strong id="hours">00</strong>
-        <span>Horas</span>
-      </div>
-
-      <div class="time-box">
-        <strong id="minutes">00</strong>
-        <span>Minutos</span>
-      </div>
-
-      <div class="time-box">
-        <strong id="seconds">00</strong>
-        <span>Segundos</span>
-      </div>
-
-    </div>
-
-    <p id="countdownMessage"></p>
-
-  </div>
-</section>
-
-<!-- CAPÍTULO 4 -->
-<section class="section paper">
-
-  <svg class="flower-art flower-left"><use href="#flowers"/></svg>
-
-  <div class="inner reveal">
-
-    <div class="chapter">Capítulo IV</div>
-
-    <h2>Un lugar para compartir</h2>
-
-    <p class="story-text">
-      Entre flores, sonrisas y mucho cariño,
-      nos reuniremos para celebrar
-      esta hermosa bendición.
-    </p>
-
-    <div class="ornament">❀ ✦ ❀</div>
-
-    <p>
-      Domingo 6 de diciembre de 2026<br>
-      2:00 de la tarde
-    </p>
-
-    <a class="btn"
-       href="https://maps.app.goo.gl/pATyiWgRNzmx7Gxr8"
-       target="_blank"
-       rel="noopener noreferrer">
-      VER UBICACIÓN
+    <a class="boton" id="confirmar"
+       target="_blank" rel="noopener">
+      Confirmar por WhatsApp
     </a>
-
   </div>
 </section>
 
-<!-- CAPÍTULO 5 -->
-<section class="section watercolor">
-
-  <div class="inner reveal">
-
-    <div class="chapter">Capítulo V</div>
-
-    <h2>¿Nos acompañará?</h2>
-
-    <p class="story-text">
-      Un cuento tan hermoso
-      no estaría completo sin las personas
-      que forman parte de nuestra vida.
-    </p>
-
-    <p>
-      Nos haría muy felices contar
-      con su presencia en esta celebración.
-    </p>
-
-    <div class="ornament">✦ ❀ ✦</div>
-
-    <a class="btn"
-       id="whatsappButton"
-       href="#"
-       target="_blank"
-       rel="noopener noreferrer">
-      CONFIRMAR ASISTENCIA
-    </a>
-
-    <p style="font-size:12px">
-      Al tocar el botón se abrirá WhatsApp
-      con un mensaje preparado para enviar.
-    </p>
-
-  </div>
-</section>
-
-<!-- CAPÍTULO 6 -->
-<section class="section paper">
-
-  <div class="inner reveal">
-
-    <div class="chapter">Capítulo VI</div>
-
+<!-- GALERÍA -->
+<section class="papel">
+  <div class="contenedor revelar">
+    <p class="subtitulo">Momentos para recordar</p>
     <h2>Pequeños recuerdos</h2>
-
-    <p>
-      Porque cada instante de esta dulce espera
+    <p class="texto">
+      Cada instante de esta dulce espera
       merece guardarse para siempre.
     </p>
-
-    <div class="gallery">
-
-      <div class="photo">
-        <img src="foto1.jpg" alt="Recuerdo 1"
-          onerror="this.style.display='none'">
-      </div>
-
-      <div class="photo">
-        <img src="foto2.jpg" alt="Recuerdo 2"
-          onerror="this.style.display='none'">
-      </div>
-
-      <div class="photo">
-        <img src="foto3.jpg" alt="Recuerdo 3"
-          onerror="this.style.display='none'">
-      </div>
-
-      <div class="photo">
-        <img src="foto4.jpg" alt="Recuerdo 4"
-          onerror="this.style.display='none'">
-      </div>
-
-      <div class="photo">
-        <img src="foto5.jpg" alt="Recuerdo 5"
-          onerror="this.style.display='none'">
-      </div>
-
-      <div class="photo">
-        <img src="foto6.jpg" alt="Recuerdo 6"
-          onerror="this.style.display='none'">
-      </div>
-
-      <div class="photo">
-        <img src="foto7.jpg" alt="Recuerdo 7"
-          onerror="this.style.display='none'">
-      </div>
-
-    </div>
-
+    <div class="galeria" id="galeria"></div>
   </div>
 </section>
 
-<!-- FINAL DEL CUENTO -->
+<!-- FINAL -->
 <footer>
-
-  <div class="inner reveal">
-
-    <div class="chapter">Y este cuento apenas comienza...</div>
-
-    <svg class="bunny" viewBox="0 0 320 320">
-      <use href="#bunny"/>
-    </svg>
-
-    <p class="story-text">
-      Gracias por ser parte de este
-      capítulo tan especial.
-    </p>
-
-    <p>
-      Muy pronto una pequeña princesa
-      llegará para llenar nuestros días
-      de magia, ternura y amor.
-    </p>
-
-    <div class="script">Eva</div>
-
-    <div class="ornament">✦ ❀ ✦</div>
-
-    <p>6 de diciembre de 2026</p>
-
-    <p style="font-size:12px">
-      Con todo nuestro cariño
-    </p>
-
-  </div>
+  <svg class="conejita"><use href="#conejo"/></svg>
+  <p class="frase">Y este cuento apenas comienza...</p>
+  <div class="nombre-eva">Eva</div>
+  <p>06 · DICIEMBRE · 2026</p>
+  <p>Con todo nuestro cariño</p>
 </footer>
 
-</main>
+<!-- VISOR DE FOTOGRAFÍAS -->
+<div class="lightbox" id="lightbox">
+  <span class="cerrar" id="cerrar">×</span>
+  <img id="fotoGrande" alt="Recuerdo ampliado">
+</div>
 
 <!-- MÚSICA -->
-<button class="music-button"
-        id="musicButton"
-        onclick="toggleMusic()"
-        aria-label="Reproducir o pausar música">
-  ♫
-</button>
-
-<div id="ytplayer"></div>
+<button class="boton-musica" id="botonMusica"
+ aria-label="Reproducir música">♫</button>
+<div id="youtube-player"></div>
 
 <script>
-
 /* CONFIGURACIÓN */
-
 const CONFIG = {
-  date:"2026-12-06T14:00:00-06:00",
-  whatsapp:"50662343967",
-  youtubeId:""
+  fecha: "2026-12-06T14:00:00-06:00",
+  whatsapp: "50662343967",
+  youtubeId: ""
 };
 
-/* PERSONALIZACIÓN */
+/* NOMBRES Y CUPOS */
+const parametros = new URLSearchParams(location.search);
+const nombre = (
+  parametros.get("nombre") || "Invitado especial"
+).trim().slice(0,120);
 
-const params = new URLSearchParams(location.search);
+const cupos = Number(parametros.get("cupos"));
+const cuposValidos =
+  Number.isInteger(cupos) && cupos >= 1 && cupos <= 30;
 
-const guestName =
-  (params.get("nombre") || "Invitado especial")
-  .trim().slice(0,120);
+document.getElementById("nombreInvitado").textContent =
+  nombre;
 
-const receivedSpaces = Number(params.get("cupos"));
+const texto = cuposValidos
+  ? (cupos === 1
+      ? "1 espacio para usted"
+      : cupos === 2
+      ? "2 espacios para usted y su acompañante"
+      : `${cupos} espacios para usted y sus acompañantes`)
+  : "";
 
-const spaces =
-  Number.isInteger(receivedSpaces) &&
-  receivedSpaces >= 1 &&
-  receivedSpaces <= 8
-  ? receivedSpaces
-  : null;
+document.getElementById("textoCupos").textContent = texto;
 
-document.getElementById("guestName").textContent =
-  guestName;
-
-let spacesText = "";
-
-if(spaces === 1){
-  spacesText = "1 espacio para usted";
-}
-else if(spaces === 2){
-  spacesText =
-    "2 espacios para usted y su acompañante";
-}
-else if(spaces >= 3){
-  spacesText =
-    spaces + " espacios para usted y sus acompañantes";
-}
-else{
-  spacesText =
-    "Nos encantará contar con su presencia.";
-}
-
-document.getElementById("guestSpaces").textContent =
-  spacesText;
-
-/* WHATSAPP */
-
-const whatsappMessage =
-  "Hola, deseo confirmar mi asistencia " +
-  "al Baby Shower de Eva.\n\n" +
-  "Nombre: " + guestName + "\n" +
-  "Invitación: " + spacesText + "\n\n" +
-  "Cantidad de personas que asistirán: ";
-
-document.getElementById("whatsappButton").href =
+/* CONFIRMACIÓN POR WHATSAPP */
+document.getElementById("confirmar").href =
   "https://wa.me/" + CONFIG.whatsapp +
-  "?text=" + encodeURIComponent(whatsappMessage);
+  "?text=" + encodeURIComponent(
+    "Hola, deseo confirmar mi asistencia al Baby Shower de Eva.\n" +
+    "Nombre: " + nombre + "\n" +
+    (texto ? "Invitación: " + texto + "\n" : "") +
+    "Cantidad de personas que asistirán: "
+  );
 
 /* ABRIR INVITACIÓN */
+document.getElementById("abrir").addEventListener(
+  "click", () => {
+    document.getElementById("intro").classList.add("oculto");
+    document.body.classList.remove("bloqueado");
+    window.scrollTo(0,0);
 
-function openInvitation(){
-
-  document.getElementById("cover").style.display =
-    "none";
-
-  document.getElementById("story").style.display =
-    "block";
-
-  window.scrollTo(0,0);
-
-  revealElements();
-
-  if(CONFIG.youtubeId){
-    document.getElementById("musicButton").style.display =
-      "block";
-    startMusic();
+    if(CONFIG.youtubeId){
+      document.getElementById("botonMusica").style.display =
+        "block";
+      iniciarMusica();
+    }
   }
-
-}
-
-/* ANIMACIONES AL BAJAR */
-
-const observer = new IntersectionObserver(
-  entries => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting){
-        entry.target.classList.add("visible");
-      }
-    });
-  },
-  {threshold:0.12}
 );
 
-document.querySelectorAll(".reveal").forEach(el => {
-  observer.observe(el);
-});
-
-function revealElements(){
-  document.querySelectorAll(".reveal").forEach(el => {
-    if(el.getBoundingClientRect().top < innerHeight){
-      el.classList.add("visible");
-    }
-  });
-}
-
-/* DESTELLOS */
-
-for(let i=0;i<14;i++){
-
-  const sparkle = document.createElement("span");
-
-  sparkle.className = "sparkle";
-
-  sparkle.style.left = Math.random()*100 + "%";
-  sparkle.style.top = Math.random()*100 + "%";
-  sparkle.style.animationDelay = Math.random()*5 + "s";
-
-  document.body.appendChild(sparkle);
-
-}
-
-/* PÉTALOS */
-
-const reducedMotion =
-  window.matchMedia("(prefers-reduced-motion: reduce)")
-  .matches;
-
-function createPetal(){
-
-  if(reducedMotion || document.hidden) return;
-
-  const petal = document.createElement("span");
-
-  petal.className = "petal";
-  petal.style.left = Math.random()*100 + "vw";
-
-  const duration = 9 + Math.random()*7;
-
-  petal.style.animationDuration = duration + "s";
-
-  document.body.appendChild(petal);
-
-  setTimeout(() => petal.remove(),duration*1000);
-
-}
-
-if(!reducedMotion){
-  setInterval(createPetal,1800);
-}
-
 /* CUENTA REGRESIVA */
+const fecha = new Date(CONFIG.fecha).getTime();
 
-const eventDate = new Date(CONFIG.date).getTime();
+function contador(){
+  let d = Math.max(0,fecha-Date.now());
+  let valores = [
+    Math.floor(d/86400000),
+    Math.floor(d/3600000)%24,
+    Math.floor(d/60000)%60,
+    Math.floor(d/1000)%60
+  ];
 
-function updateCountdown(){
+  ["dias","horas","minutos","segundos"].forEach(
+    (id,i) => {
+      document.getElementById(id).textContent =
+        String(valores[i]).padStart(2,"0");
+    }
+  );
+}
+contador();
+setInterval(contador,1000);
 
-  const difference = eventDate - Date.now();
+/* ANIMACIONES AL DESLIZAR */
+const observador = new IntersectionObserver(
+  es => es.forEach(e => {
+    if(e.isIntersecting){
+      e.target.classList.add("visible");
+    }
+  }),
+  {threshold:.08}
+);
+document.querySelectorAll(".revelar").forEach(
+  e => observador.observe(e)
+);
 
-  if(difference <= 0){
+/* SIETE FOTOGRAFÍAS */
+const galeria = document.getElementById("galeria");
 
-    ["days","hours","minutes","seconds"]
-      .forEach(id => {
-        document.getElementById(id).textContent = "00";
-      });
+for(let i=1;i<=7;i++){
+  const d = document.createElement("div");
+  d.className = "foto";
+  d.textContent = "Recuerdo " + i;
 
-    document.getElementById(
-      "countdownMessage"
-    ).textContent = "¡Llegó el gran día!";
+  const img = new Image();
+  img.src = "img/foto" + i + ".jpeg";
+  img.alt = "Recuerdo " + i;
+  img.loading = "lazy";
 
+  img.onload = () => {
+    d.textContent = "";
+    d.appendChild(img);
+    d.onclick = () => {
+      document.getElementById("fotoGrande").src = img.src;
+      document.getElementById("lightbox")
+        .classList.add("activo");
+    };
+  };
+  galeria.appendChild(d);
+}
+
+document.getElementById("lightbox").onclick = e => {
+  if(e.target.id !== "fotoGrande"){
+    document.getElementById("lightbox")
+      .classList.remove("activo");
+  }
+};
+
+/* MÚSICA DE YOUTUBE */
+let reproductor = null;
+let musicaActiva = false;
+
+function iniciarMusica(){
+  if(window.YT && YT.Player){
+    crearReproductor();
     return;
   }
-
-  const days = Math.floor(difference/86400000);
-  const hours = Math.floor(difference/3600000)%24;
-  const minutes = Math.floor(difference/60000)%60;
-  const seconds = Math.floor(difference/1000)%60;
-
-  document.getElementById("days").textContent =
-    String(days).padStart(2,"0");
-
-  document.getElementById("hours").textContent =
-    String(hours).padStart(2,"0");
-
-  document.getElementById("minutes").textContent =
-    String(minutes).padStart(2,"0");
-
-  document.getElementById("seconds").textContent =
-    String(seconds).padStart(2,"0");
-
+  const s = document.createElement("script");
+  s.src = "https://www.youtube.com/iframe_api";
+  document.head.appendChild(s);
 }
 
-updateCountdown();
-setInterval(updateCountdown,1000);
+function crearReproductor(){
+  if(reproductor) return;
 
-/* REPRODUCTOR DE YOUTUBE */
-
-let player = null;
-let musicPlaying = false;
-let apiLoaded = false;
-
-function startMusic(){
-
-  if(!CONFIG.youtubeId) return;
-
-  if(!apiLoaded){
-
-    apiLoaded = true;
-
-    const script = document.createElement("script");
-
-    script.src = "https://www.youtube.com/iframe_api";
-
-    document.body.appendChild(script);
-
-  }
-  else if(player){
-    player.playVideo();
-  }
-
-}
-
-window.onYouTubeIframeAPIReady = function(){
-
-  player = new YT.Player("ytplayer",{
+  reproductor = new YT.Player("youtube-player",{
     height:"1",
     width:"1",
     videoId:CONFIG.youtubeId,
-
     playerVars:{
-      autoplay:0,
-      controls:0,
       playsinline:1,
       loop:1,
       playlist:CONFIG.youtubeId
     },
-
     events:{
-      onReady:function(){
-        player.playVideo();
+      onReady:e => {
+        e.target.setVolume(35);
+        e.target.playVideo();
       },
-      onStateChange:function(event){
-
-        musicPlaying =
-          event.data === YT.PlayerState.PLAYING;
-
-        updateMusicButton();
-
+      onStateChange:e => {
+        musicaActiva = e.data === YT.PlayerState.PLAYING;
+        document.getElementById("botonMusica").textContent =
+          musicaActiva ? "Ⅱ" : "♫";
       }
     }
   });
+}
 
+window.onYouTubeIframeAPIReady = crearReproductor;
+
+document.getElementById("botonMusica").onclick = () => {
+  if(!reproductor) return;
+
+  if(musicaActiva){
+    reproductor.pauseVideo();
+  }else{
+    reproductor.playVideo();
+  }
 };
-
-function toggleMusic(){
-
-  if(!player) return;
-
-  if(musicPlaying){
-    player.pauseVideo();
-    musicPlaying = false;
-  }
-  else{
-    player.playVideo();
-    musicPlaying = true;
-  }
-
-  updateMusicButton();
-
-}
-
-function updateMusicButton(){
-
-  const button = document.getElementById(
-    "musicButton"
-  );
-
-  button.textContent = musicPlaying ? "Ⅱ" : "♫";
-
-  button.setAttribute(
-    "aria-label",
-    musicPlaying ? "Pausar música" : "Reproducir música"
-  );
-
-}
-
 </script>
 </body>
 </html>

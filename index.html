@@ -5,7 +5,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#fff8f8">
-<title>Baby Shower de Eva</title>
+<title>Baby Shower de Eva | Una dulce espera</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
@@ -16,16 +17,17 @@
   --oscuro:#775968;
   --oro:#b69a73;
 }
-*,
-*::before,
-*::after{
+
+*,*::before,*::after{
   box-sizing:border-box;
 }
+
 html{
   width:100%;
   overflow-x:clip;
   scroll-behavior:smooth;
 }
+
 body{
   width:100%;
   margin:0;
@@ -34,31 +36,38 @@ body{
   color:var(--oscuro);
   font-family:Montserrat,sans-serif;
 }
+
 body.bloqueado{
   overflow:hidden;
 }
+
 img,svg{
   max-width:100%;
 }
+
 h1,h2,h3{
   font-family:"Cormorant Garamond",serif;
   font-weight:500;
   overflow-wrap:break-word;
 }
+
 h2{
   font-size:clamp(37px,8vw,65px);
   line-height:1.12;
   margin:10px 0 24px;
 }
+
 p{
   line-height:1.85;
 }
+
 section{
   width:100%;
   padding:85px 20px;
   position:relative;
   overflow:hidden;
 }
+
 .contenedor{
   position:relative;
   z-index:1;
@@ -67,27 +76,32 @@ section{
   margin:auto;
   text-align:center;
 }
+
 .subtitulo{
   color:var(--rosa);
   font-size:11px;
   letter-spacing:2.5px;
   text-transform:uppercase;
 }
+
 .texto{
   max-width:630px;
   margin:18px auto;
   font-size:14px;
 }
+
 .frase{
   max-width:640px;
   margin:22px auto;
   font:italic clamp(24px,5vw,33px)/1.5 "Cormorant Garamond",serif;
 }
+
 .ornamento{
   color:var(--oro);
   font-size:28px;
   margin:25px auto;
 }
+
 .boton{
   display:inline-block;
   max-width:100%;
@@ -103,32 +117,39 @@ section{
   text-transform:uppercase;
   cursor:pointer;
 }
+
 .boton:hover{
   background:#9e6379;
 }
+
 .blanco{
   background:white;
 }
+
 .rosa{
   background:#f8e8ed;
 }
+
 .papel{
   background:
     radial-gradient(ellipse at 12% 18%,#f9e2e8,transparent 45%),
     radial-gradient(ellipse at 88% 80%,#f8e5eb,transparent 40%),
     var(--crema);
 }
+
 .revelar{
   opacity:0;
   transform:translateY(25px);
   transition:opacity .85s,transform .85s;
 }
+
 .revelar.visible{
   opacity:1;
   transform:none;
 }
 
-/* ILUSTRACIONES */
+/* CONEJITA Y FLORES */
+
 .conejita{
   display:block;
   width:min(225px,75%);
@@ -136,6 +157,7 @@ section{
   aspect-ratio:320/340;
   margin:0 auto;
 }
+
 .flor{
   position:absolute;
   width:145px;
@@ -143,17 +165,20 @@ section{
   opacity:.45;
   pointer-events:none;
 }
+
 .flor.izq{
   left:-55px;
   top:-35px;
 }
+
 .flor.der{
   right:-55px;
   bottom:-35px;
   transform:rotate(160deg);
 }
 
-/* PANTALLA INICIAL */
+/* BIENVENIDA */
+
 .intro-pantalla{
   position:fixed;
   inset:0;
@@ -165,11 +190,13 @@ section{
   background:radial-gradient(circle,#fff9f7,#f5dce5);
   transition:opacity .8s,visibility .8s;
 }
+
 .intro-pantalla.oculto{
   opacity:0;
   visibility:hidden;
   pointer-events:none;
 }
+
 .intro-tarjeta{
   width:100%;
   max-width:500px;
@@ -181,17 +208,20 @@ section{
   border-radius:170px 170px 18px 18px;
   box-shadow:0 20px 60px #a46b8320;
 }
+
 .intro-tarjeta h1{
   font-size:clamp(40px,10vw,65px);
   margin:5px;
 }
+
 .nombre-eva{
   font:clamp(80px,20vw,135px)/1.2 "Great Vibes",cursive;
   color:var(--rosa);
   margin:5px auto 15px;
 }
 
-/* PORTADA CON ECOGRAFÍA */
+/* ECOGRAFÍA */
+
 .hero-foto{
   position:relative;
   width:100%;
@@ -200,6 +230,7 @@ section{
     radial-gradient(circle at 50% 15%,#f4dbe4,transparent 55%),
     #fffaf6;
 }
+
 .foto-fija{
   position:sticky;
   top:0;
@@ -214,6 +245,7 @@ section{
   text-align:center;
   overflow:hidden;
 }
+
 .foto-contenido{
   position:relative;
   z-index:2;
@@ -222,6 +254,7 @@ section{
   margin:auto;
   will-change:opacity,transform;
 }
+
 .foto-marco{
   width:min(390px,78vw);
   max-width:100%;
@@ -234,25 +267,30 @@ section{
   transform:rotate(-5deg);
   border:1px solid #f2e4e7;
 }
+
 .foto-marco img{
   display:block;
   width:100%;
   height:auto;
 }
+
 .foto-marco .pie-foto{
   margin:15px 0 -20px;
   font:26px "Great Vibes",cursive;
   color:var(--rosa);
 }
+
 .foto-contenido h1{
   margin:8px auto 0;
   font-size:clamp(38px,8vw,60px);
   color:var(--rosa);
 }
+
 .foto-contenido .fecha{
   font:23px "Cormorant Garamond",serif;
   letter-spacing:2px;
 }
+
 .desliza{
   position:absolute;
   bottom:20px;
@@ -261,17 +299,19 @@ section{
   font-size:10px;
   letter-spacing:2px;
   color:var(--rosa);
-  text-align:center;
 }
 
 /* CONTADOR */
+
 .contador-seccion{
   background:#aa7188;
   color:white;
 }
+
 .contador-seccion .subtitulo{
   color:#ffe8ef;
 }
+
 .contador{
   display:grid;
   grid-template-columns:repeat(4,minmax(0,1fr));
@@ -279,24 +319,29 @@ section{
   max-width:620px;
   margin:32px auto 0;
 }
+
 .contador>div{
   min-width:0;
 }
+
 .numero{
   font:clamp(31px,8vw,62px) "Cormorant Garamond",serif;
 }
+
 .etiqueta{
   font-size:9px;
   letter-spacing:.5px;
   text-transform:uppercase;
 }
 
-/* FECHA Y UBICACIÓN */
+/* FECHA */
+
 .fecha-grande{
   margin:10px auto;
   color:var(--rosa);
   font:clamp(65px,13vw,95px) "Cormorant Garamond",serif;
 }
+
 .tarjeta{
   width:100%;
   max-width:560px;
@@ -306,33 +351,39 @@ section{
   border-top:3px solid var(--rosa);
   box-shadow:0 12px 35px #9e6b8015;
 }
+
 .tarjeta h3{
   font-size:34px;
   margin:10px;
 }
+
 .tarjeta p{
   font-size:14px;
 }
 
-/* INVITACIÓN PERSONALIZADA */
+/* INVITADOS */
+
 .nombre-invitado{
   margin:25px auto;
   color:var(--rosa);
   font:clamp(42px,9vw,65px)/1.3 "Great Vibes",cursive;
   overflow-wrap:anywhere;
 }
+
 .cupos-texto{
   font:25px/1.5 "Cormorant Garamond",serif;
   margin:10px auto;
 }
 
 /* GALERÍA */
+
 .galeria{
   display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
   gap:12px;
   margin-top:30px;
 }
+
 .foto{
   min-width:0;
   aspect-ratio:3/4;
@@ -345,14 +396,17 @@ section{
   font:italic 22px "Cormorant Garamond",serif;
   text-align:center;
 }
+
 .foto img{
   width:100%;
   height:100%;
   object-fit:cover;
 }
+
 .foto:last-child{
   grid-column:2;
 }
+
 .lightbox{
   display:none;
   position:fixed;
@@ -363,14 +417,17 @@ section{
   padding:30px;
   background:#241820ed;
 }
+
 .lightbox.activo{
   display:flex;
 }
+
 .lightbox img{
   max-width:100%;
   max-height:85vh;
   object-fit:contain;
 }
+
 .cerrar{
   position:absolute;
   right:20px;
@@ -381,6 +438,7 @@ section{
 }
 
 /* FINAL */
+
 footer{
   width:100%;
   padding:75px 20px;
@@ -389,98 +447,90 @@ footer{
   text-align:center;
   overflow:hidden;
 }
+
 footer .nombre-eva{
   color:#fff1f5;
 }
 
-/* MÚSICA */
-.boton-musica{
-  position:fixed;
-  right:18px;
-  bottom:18px;
-  z-index:999;
-  display:none;
-  width:52px;
-  height:52px;
-  border:0;
-  border-radius:50%;
-  background:var(--rosa);
-  color:white;
-  font-size:21px;
-  cursor:pointer;
-}
-#youtube-player{
-  position:fixed;
-  left:0;
-  bottom:0;
-  width:1px;
-  height:1px;
-  opacity:0;
-  pointer-events:none;
-  z-index:-1;
+footer .frase{
+  margin-left:auto;
+  margin-right:auto;
 }
 
 /* CELULARES */
+
 @media(max-width:600px){
   section{
     padding:65px 16px;
   }
+
   .intro-tarjeta{
     padding:25px 14px 30px;
   }
+
   .intro-tarjeta .conejita{
     width:min(190px,65%);
   }
+
   .foto-fija{
     padding:20px 14px 35px;
   }
+
   .foto-marco{
     width:min(340px,76vw);
     padding:9px 9px 32px;
     margin:18px auto;
   }
+
   .foto-contenido h1{
     font-size:clamp(35px,9vw,52px);
   }
+
   .foto-contenido .fecha{
     font-size:20px;
   }
+
   .galeria{
     grid-template-columns:repeat(2,minmax(0,1fr));
     gap:9px;
   }
+
   .foto:last-child{
     grid-column:1/3;
     width:calc(50% - 5px);
     justify-self:center;
   }
+
   .contador{
     gap:4px;
   }
+
   .etiqueta{
     font-size:8px;
   }
+
   .tarjeta{
     padding:28px 16px;
   }
 }
+
 @media(max-height:650px){
   .foto-marco{
     width:min(260px,65vw);
     margin:10px auto;
   }
+
   .foto-contenido h1{
     font-size:35px;
   }
-  .foto-contenido .fecha{
-    margin:5px;
-  }
 }
+
 @media(prefers-reduced-motion:reduce){
   .revelar{
     opacity:1;
     transform:none;
   }
+
   *{
     scroll-behavior:auto!important;
     transition:none!important;
@@ -491,7 +541,8 @@ footer .nombre-eva{
 
 <body class="bloqueado">
 
-<!-- DIBUJOS DE CONEJITA Y FLORES -->
+<!-- ILUSTRACIONES -->
+
 <svg xmlns="http://www.w3.org/2000/svg"
 width="0" height="0"
 aria-hidden="true"
@@ -502,35 +553,50 @@ style="position:absolute;overflow:hidden">
 <ellipse cx="112" cy="94" rx="28" ry="84"
 transform="rotate(-15 112 94)"
 fill="#fff8ef" stroke="#c9aaa6" stroke-width="2"/>
+
 <ellipse cx="208" cy="94" rx="28" ry="84"
 transform="rotate(15 208 94)"
 fill="#fff8ef" stroke="#c9aaa6" stroke-width="2"/>
+
 <ellipse cx="112" cy="94" rx="13" ry="61"
 transform="rotate(-15 112 94)" fill="#efbdc8"/>
+
 <ellipse cx="208" cy="94" rx="13" ry="61"
 transform="rotate(15 208 94)" fill="#efbdc8"/>
+
 <ellipse cx="160" cy="261" rx="75" ry="60"
 fill="#fff8ef" stroke="#c9aaa6" stroke-width="2"/>
+
 <circle cx="160" cy="166" r="76"
 fill="#fff8ef" stroke="#c9aaa6" stroke-width="2"/>
+
 <ellipse cx="133" cy="164" rx="7" ry="10" fill="#58454b"/>
 <ellipse cx="187" cy="164" rx="7" ry="10" fill="#58454b"/>
+
 <circle cx="135" cy="161" r="2.5" fill="#fff"/>
 <circle cx="189" cy="161" r="2.5" fill="#fff"/>
+
 <ellipse cx="115" cy="188" rx="16" ry="9" fill="#f2c1ca"/>
 <ellipse cx="205" cy="188" rx="16" ry="9" fill="#f2c1ca"/>
+
 <path d="M151 182q9-9 18 0q-9 12-18 0"
 fill="#ce98a4"/>
+
 <path d="M160 190v7q-10 12-20 0m20 0q10 12 20 0"
 fill="none" stroke="#8c7079" stroke-width="2"/>
+
 <path d="M88 260q72-53 144 0q-10 45-72 54q-62-9-72-54"
 fill="#e8afc0"/>
+
 <path d="M97 260q63-32 126 0"
 fill="none" stroke="#fff0f3" stroke-width="5"/>
+
 <ellipse cx="119" cy="300" rx="28" ry="17"
 fill="#fff8ef" stroke="#c9aaa6"/>
+
 <ellipse cx="201" cy="300" rx="28" ry="17"
 fill="#fff8ef" stroke="#c9aaa6"/>
+
 <g transform="translate(160 91)">
 <ellipse cx="-16" cy="0" rx="21" ry="15" fill="#e3a2b6"/>
 <ellipse cx="16" cy="0" rx="21" ry="15" fill="#e3a2b6"/>
@@ -544,12 +610,15 @@ fill="#fff8ef" stroke="#c9aaa6"/>
 M100 145Q55 120 35 95
 M100 125Q145 100 170 70"/>
 </g>
+
 <g fill="#c9d4b7">
 <ellipse cx="75" cy="140" rx="13" ry="25"
 transform="rotate(-45 75 140)"/>
+
 <ellipse cx="125" cy="115" rx="13" ry="25"
 transform="rotate(45 125 115)"/>
 </g>
+
 <g fill="#eab4c3">
 <circle cx="100" cy="38" r="20"/>
 <circle cx="80" cy="55" r="20"/>
@@ -557,7 +626,9 @@ transform="rotate(45 125 115)"/>
 <circle cx="88" cy="80" r="20"/>
 <circle cx="112" cy="80" r="20"/>
 </g>
+
 <circle cx="100" cy="60" r="13" fill="#e9d6aa"/>
+
 <g fill="#f2cbd3">
 <circle cx="35" cy="85" r="13"/>
 <circle cx="23" cy="98" r="13"/>
@@ -571,19 +642,27 @@ transform="rotate(45 125 115)"/>
 </defs>
 </svg>
 
-<!-- BIENVENIDA -->
+<!-- PANTALLA DE BIENVENIDA -->
+
 <div class="intro-pantalla" id="intro">
   <div class="intro-tarjeta">
-    <p class="subtitulo">Había una vez...</p>
+    <p class="subtitulo">Una bendición de amor</p>
+
     <svg class="conejita" viewBox="0 0 320 340">
       <use href="#conejo"/>
     </svg>
+
     <h1>Baby Shower</h1>
+
     <p class="subtitulo">De nuestra pequeña</p>
+
     <div class="nombre-eva">Eva</div>
+
     <p class="texto">
-      Un cuento de amor está por comenzar...
+      Una pequeña personita ya ocupa
+      un lugar inmenso en nuestros corazones.
     </p>
+
     <button class="boton" id="abrir">
       Abrir mi invitación
     </button>
@@ -591,16 +670,20 @@ transform="rotate(45 125 115)"/>
 </div>
 
 <!-- ECOGRAFÍA QUE SE DESVANECE -->
+
 <header class="hero-foto" id="heroFoto">
   <div class="foto-fija">
+
     <svg class="flor izq" viewBox="0 0 200 200">
       <use href="#flores"/>
     </svg>
+
     <svg class="flor der" viewBox="0 0 200 200">
       <use href="#flores"/>
     </svg>
 
     <div class="foto-contenido" id="fotoContenido">
+
       <p class="subtitulo">Una dulce espera</p>
 
       <h1>Un pequeño milagro</h1>
@@ -608,111 +691,153 @@ transform="rotate(45 125 115)"/>
       <div class="foto-marco">
         <img src="eva.jpeg"
              alt="Ecografía de nuestra pequeña Eva">
-        <p class="pie-foto">Nuestro pequeño milagro</p>
+
+        <p class="pie-foto">
+          Nuestro pequeño amor
+        </p>
       </div>
 
       <div class="nombre-eva">Eva</div>
+
       <p class="fecha">06 · 12 · 2026</p>
     </div>
 
-    <div class="desliza">DESLIZA PARA DESCUBRIR ↓</div>
+    <div class="desliza">
+      DESLIZA PARA DESCUBRIR ↓
+    </div>
   </div>
 </header>
 
-<!-- MENSAJE -->
+<!-- MENSAJE PRINCIPAL -->
+
 <section class="blanco">
   <div class="contenedor revelar">
-    <p class="subtitulo">Había una vez...</p>
-    <h2>Un cuento llamado Eva</h2>
+
+    <p class="subtitulo">
+      Con todo nuestro amor
+    </p>
+
+    <h2>Un amor que crece cada día</h2>
+
     <div class="ornamento">❀ ✦ ❀</div>
 
     <p class="frase">
-      “Hay sueños que comienzan mucho antes de conocernos
-      y que, sin haber llegado todavía, ya llenan
-      nuestros días de amor.”
+      “Hay amores que llegan a nuestra vida
+      incluso antes de poder abrazarlos,
+      y desde ese instante lo cambian todo.”
     </p>
 
     <p class="texto">
-      Nuestra pequeña Eva está por llegar y queremos
-      compartir la alegría de esta dulce espera con
-      las personas que forman parte de nuestra historia.
+      La espera de Eva nos llena de ilusión,
+      ternura y felicidad.
+      Cada día estamos más cerca de conocer su carita,
+      escuchar su risa y tenerla entre nuestros brazos.
+    </p>
+
+    <p class="texto">
+      Queremos compartir esta alegría
+      con las personas que tanto queremos,
+      rodeados de sonrisas, abrazos y mucho cariño.
     </p>
 
     <p class="frase">
-      Su compañía será un regalo precioso en este
-      capítulo de nuestra historia.
+      Su compañía hará todavía más especial
+      esta hermosa celebración.
     </p>
+
   </div>
 </section>
 
 <!-- CUENTA REGRESIVA -->
+
 <section class="contador-seccion">
   <div class="contenedor revelar">
+
     <p class="subtitulo">Falta muy poco</p>
+
     <h2>Cuenta regresiva</h2>
 
     <div class="contador">
+
       <div>
         <div class="numero" id="dias">00</div>
         <div class="etiqueta">Días</div>
       </div>
+
       <div>
         <div class="numero" id="horas">00</div>
         <div class="etiqueta">Horas</div>
       </div>
+
       <div>
         <div class="numero" id="minutos">00</div>
         <div class="etiqueta">Minutos</div>
       </div>
+
       <div>
         <div class="numero" id="segundos">00</div>
         <div class="etiqueta">Segundos</div>
       </div>
+
     </div>
   </div>
 </section>
 
 <!-- FECHA Y UBICACIÓN -->
+
 <section class="papel">
+
   <svg class="flor der" viewBox="0 0 200 200">
     <use href="#flores"/>
   </svg>
 
   <div class="contenedor revelar">
-    <p class="subtitulo">Acompáñanos</p>
-    <h2>El día de nuestra celebración</h2>
+
+    <p class="subtitulo">
+      Un día lleno de ilusión
+    </p>
+
+    <h2>Te esperamos para celebrar</h2>
 
     <p class="subtitulo">
       Domingo · Diciembre · 2026
     </p>
 
     <div class="fecha-grande">06</div>
+
     <p class="frase">2:00 de la tarde</p>
 
     <div class="tarjeta">
+
       <h3>Baby Shower de Eva</h3>
+
       <p>
         Entre flores, sonrisas y mucho cariño,
-        nos reuniremos para celebrar su próxima llegada.
+        nos reuniremos para celebrar
+        la próxima llegada de nuestra pequeña Eva.
       </p>
 
       <a class="boton"
          href="https://maps.app.goo.gl/pATyiWgRNzmx7Gxr8"
-         target="_blank" rel="noopener">
+         target="_blank"
+         rel="noopener noreferrer">
         Ver ubicación
       </a>
+
     </div>
   </div>
 </section>
 
 <!-- INVITACIÓN PERSONALIZADA -->
+
 <section class="blanco">
   <div class="contenedor revelar">
+
     <p class="subtitulo">
-      Una invitación con cariño
+      Preparada con mucho cariño
     </p>
 
-    <h2>Tu invitación especial</h2>
+    <h2>Un día especial para compartir</h2>
 
     <p class="texto">
       Esta invitación es especialmente para:
@@ -727,16 +852,22 @@ transform="rotate(45 125 115)"/>
     <div class="ornamento">❀ ✦ ❀</div>
 
     <p class="frase">
-      Su compañía será un regalo precioso en este
-      capítulo de nuestra historia.
+      Nos hará muy felices contar con su presencia
+      y compartir juntos la alegría de esperar a Eva.
     </p>
+
   </div>
 </section>
 
 <!-- CONFIRMACIÓN -->
+
 <section class="rosa">
   <div class="contenedor revelar">
-    <p class="subtitulo">Nos encantaría verte</p>
+
+    <p class="subtitulo">
+      Nos encantaría verte
+    </p>
+
     <h2>Confirma tu asistencia</h2>
 
     <p class="texto">
@@ -745,17 +876,25 @@ transform="rotate(45 125 115)"/>
       en la celebración de Eva.
     </p>
 
-    <a class="boton" id="confirmar"
-       target="_blank" rel="noopener">
+    <a class="boton"
+       id="confirmar"
+       target="_blank"
+       rel="noopener noreferrer">
       Confirmar por WhatsApp
     </a>
+
   </div>
 </section>
 
 <!-- GALERÍA -->
+
 <section class="papel">
   <div class="contenedor revelar">
-    <p class="subtitulo">Momentos para recordar</p>
+
+    <p class="subtitulo">
+      Momentos para recordar
+    </p>
+
     <h2>Pequeños recuerdos</h2>
 
     <p class="texto">
@@ -764,50 +903,56 @@ transform="rotate(45 125 115)"/>
     </p>
 
     <div class="galeria" id="galeria"></div>
+
   </div>
 </section>
 
-<!-- FINAL -->
+<!-- DESPEDIDA -->
+
 <footer>
+
   <svg class="conejita" viewBox="0 0 320 340">
     <use href="#conejo"/>
   </svg>
 
   <p class="frase">
-    Y este cuento apenas comienza...
+    Eva, todavía no conocemos tu sonrisa,
+    pero ya eres motivo de tantas sonrisas.
+    Te esperamos con los brazos abiertos
+    y el corazón lleno de amor.
   </p>
 
   <div class="nombre-eva">Eva</div>
+
   <p>06 · DICIEMBRE · 2026</p>
+
   <p>Con todo nuestro cariño</p>
+
 </footer>
 
-<!-- VISOR DE FOTOS -->
+<!-- VISOR DE FOTOGRAFÍAS -->
+
 <div class="lightbox" id="lightbox">
   <span class="cerrar" id="cerrar">×</span>
   <img id="fotoGrande" alt="Recuerdo ampliado">
 </div>
 
-<!-- MÚSICA -->
-<button class="boton-musica" id="botonMusica"
-aria-label="Reproducir música">♫</button>
-<div id="youtube-player"></div>
-
 <script>
 
-/* CONFIGURACIÓN */
+/* DATOS DEL EVENTO */
+
 const CONFIG={
   fecha:"2026-12-06T14:00:00-06:00",
-  whatsapp:"50662343967",
-  youtubeId:""
+  whatsapp:"50662343967"
 };
 
-/* NOMBRE Y CUPOS */
+/* NOMBRE Y ESPACIOS */
+
 const parametros=new URLSearchParams(location.search);
 
 const nombre=(
   parametros.get("nombre") || "Invitado especial"
-).trim().slice(0,120);
+).trim().slice(0,120) || "Invitado especial";
 
 const cupos=Number(parametros.get("cupos"));
 
@@ -833,7 +978,8 @@ if(cuposValidos){
 
 document.getElementById("textoCupos").textContent=texto;
 
-/* WHATSAPP */
+/* CONFIRMACIÓN POR WHATSAPP */
+
 const mensaje=
   "Hola, deseo confirmar mi asistencia al Baby Shower de Eva.\n"+
   "Nombre: "+nombre+"\n"+
@@ -845,26 +991,29 @@ document.getElementById("confirmar").href=
   "?text="+encodeURIComponent(mensaje);
 
 /* ABRIR INVITACIÓN */
+
 document.getElementById("abrir").addEventListener(
   "click",function(){
-    document.getElementById("intro").classList.add("oculto");
+
+    document.getElementById("intro")
+      .classList.add("oculto");
+
     document.body.classList.remove("bloqueado");
+
     window.scrollTo(0,0);
 
-    if(CONFIG.youtubeId){
-      document.getElementById("botonMusica").style.display="block";
-      iniciarMusica();
-    }
   }
 );
 
-/* FOTO QUE SE DESVANECE AL DESLIZAR */
+/* ECOGRAFÍA QUE SE DESVANECE */
+
 const heroFoto=document.getElementById("heroFoto");
 const fotoContenido=document.getElementById("fotoContenido");
 
 let desplazamientoPendiente=false;
 
 function actualizarFoto(){
+
   const recorrido=Math.max(
     1,
     heroFoto.offsetHeight-window.innerHeight
@@ -872,12 +1021,16 @@ function actualizarFoto(){
 
   const avance=Math.min(
     1,
-    Math.max(0,-heroFoto.getBoundingClientRect().top/recorrido)
+    Math.max(
+      0,
+      -heroFoto.getBoundingClientRect().top/recorrido
+    )
   );
 
   const opacidad=1-Math.min(1,avance*1.35);
 
   fotoContenido.style.opacity=opacidad;
+
   fotoContenido.style.transform=
     "translateY("+(-avance*35)+"px) scale("+
     (1-avance*.07)+")";
@@ -898,14 +1051,23 @@ window.addEventListener(
   {passive:true}
 );
 
-window.addEventListener("resize",solicitarActualizacion);
+window.addEventListener(
+  "resize",
+  solicitarActualizacion
+);
+
 actualizarFoto();
 
 /* CUENTA REGRESIVA */
+
 const fechaEvento=new Date(CONFIG.fecha).getTime();
 
 function actualizarContador(){
-  const diferencia=Math.max(0,fechaEvento-Date.now());
+
+  const diferencia=Math.max(
+    0,
+    fechaEvento-Date.now()
+  );
 
   const valores=[
     Math.floor(diferencia/86400000),
@@ -925,8 +1087,10 @@ function actualizarContador(){
 actualizarContador();
 setInterval(actualizarContador,1000);
 
-/* ANIMACIONES DE SECCIONES */
+/* ANIMACIONES AL DESLIZAR */
+
 if("IntersectionObserver" in window){
+
   const observador=new IntersectionObserver(
     function(entradas){
       entradas.forEach(function(entrada){
@@ -943,34 +1107,45 @@ if("IntersectionObserver" in window){
       observador.observe(elemento);
     }
   );
+
 }else{
+
   document.querySelectorAll(".revelar").forEach(
     function(elemento){
       elemento.classList.add("visible");
     }
   );
+
 }
 
-/* SIETE FOTOGRAFÍAS */
+/* GALERÍA DE SIETE FOTOGRAFÍAS */
+
 const galeria=document.getElementById("galeria");
 
 for(let i=1;i<=7;i++){
+
   const cuadro=document.createElement("div");
   cuadro.className="foto";
   cuadro.textContent="Recuerdo "+i;
 
   const imagen=new Image();
+
   imagen.src="img/foto"+i+".jpeg";
   imagen.alt="Recuerdo "+i;
   imagen.loading="lazy";
 
   imagen.onload=function(){
+
     cuadro.textContent="";
     cuadro.appendChild(imagen);
 
     cuadro.onclick=function(){
+
       document.getElementById("fotoGrande").src=imagen.src;
-      document.getElementById("lightbox").classList.add("activo");
+
+      document.getElementById("lightbox")
+        .classList.add("activo");
+
     };
   };
 
@@ -978,71 +1153,18 @@ for(let i=1;i<=7;i++){
 }
 
 /* CERRAR FOTOGRAFÍA */
+
 document.getElementById("lightbox").addEventListener(
   "click",function(e){
+
     if(e.target.id!=="fotoGrande"){
       this.classList.remove("activo");
     }
-  }
-);
 
-/* MÚSICA */
-let reproductor=null;
-let musicaActiva=false;
-
-function iniciarMusica(){
-  if(!CONFIG.youtubeId)return;
-
-  if(window.YT && YT.Player){
-    crearReproductor();
-    return;
-  }
-
-  const script=document.createElement("script");
-  script.src="https://www.youtube.com/iframe_api";
-  document.head.appendChild(script);
-}
-
-function crearReproductor(){
-  if(reproductor || !CONFIG.youtubeId)return;
-
-  reproductor=new YT.Player("youtube-player",{
-    height:"1",
-    width:"1",
-    videoId:CONFIG.youtubeId,
-    playerVars:{
-      playsinline:1,
-      loop:1,
-      playlist:CONFIG.youtubeId
-    },
-    events:{
-      onReady:function(e){
-        e.target.setVolume(35);
-        e.target.playVideo();
-      },
-      onStateChange:function(e){
-        musicaActiva=e.data===YT.PlayerState.PLAYING;
-        document.getElementById("botonMusica").textContent=
-          musicaActiva?"Ⅱ":"♫";
-      }
-    }
-  });
-}
-
-window.onYouTubeIframeAPIReady=crearReproductor;
-
-document.getElementById("botonMusica").addEventListener(
-  "click",function(){
-    if(!reproductor)return;
-
-    if(musicaActiva){
-      reproductor.pauseVideo();
-    }else{
-      reproductor.playVideo();
-    }
   }
 );
 
 </script>
+
 </body>
 </html>

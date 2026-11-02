@@ -1,0 +1,1030 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f8e9ec">
+<title>Baby Shower de Eva</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;500;600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --rosa:#c98299;
+  --rosa-claro:#f8e9ec;
+  --rosa-fondo:#fff8f8;
+  --dorado:#bd9870;
+  --texto:#705962;
+  --blanco:#fff;
+}
+
+* {box-sizing:border-box}
+
+html {scroll-behavior:smooth}
+
+body {
+  margin:0;
+  background:var(--rosa-fondo);
+  color:var(--texto);
+  font-family:Montserrat,sans-serif;
+  text-align:center;
+  overflow-x:hidden;
+}
+
+h1,h2,h3 {
+  font-family:"Playfair Display",serif;
+  font-weight:500;
+}
+
+p {line-height:1.8}
+
+.script {
+  font-family:"Great Vibes",cursive;
+  font-weight:400;
+}
+
+section {
+  padding:65px 22px;
+  position:relative;
+}
+
+.container {
+  max-width:760px;
+  margin:auto;
+}
+
+.divider {
+  width:90px;
+  height:1px;
+  background:var(--dorado);
+  margin:25px auto;
+}
+
+.flower {
+  color:var(--rosa);
+  font-size:26px;
+  letter-spacing:12px;
+}
+
+button,.btn {
+  display:inline-block;
+  border:1px solid var(--rosa);
+  background:var(--rosa);
+  color:white;
+  padding:15px 27px;
+  border-radius:35px;
+  text-decoration:none;
+  font-family:Montserrat,sans-serif;
+  font-size:13px;
+  font-weight:600;
+  letter-spacing:1px;
+  cursor:pointer;
+  transition:.3s;
+}
+
+button:hover,.btn:hover {
+  background:#ad647d;
+  transform:translateY(-2px);
+}
+
+.btn-outline {
+  background:transparent;
+  color:var(--rosa);
+}
+
+.btn-outline:hover {color:white}
+
+#portada {
+  min-height:100vh;
+  min-height:100svh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:35px 20px;
+  background:
+    radial-gradient(circle at 12% 10%,#f5d9df 0,transparent 34%),
+    radial-gradient(circle at 90% 88%,#f5d9df 0,transparent 35%),
+    linear-gradient(150deg,#fffaf8,#f8e6e9);
+}
+
+.marco {
+  width:100%;
+  max-width:520px;
+  padding:42px 20px;
+  border:1px solid #d8b7b9;
+  outline:5px solid rgba(255,255,255,.7);
+  outline-offset:-13px;
+  border-radius:180px 180px 22px 22px;
+  background:rgba(255,255,255,.65);
+  box-shadow:0 15px 45px #c9829920;
+}
+
+.small-title {
+  letter-spacing:4px;
+  text-transform:uppercase;
+  font-size:12px;
+  color:var(--dorado);
+}
+
+.bunny-art {
+  width:min(280px,85%);
+  height:auto;
+  margin:10px auto;
+  display:block;
+}
+
+#portada h1 {
+  font-size:clamp(38px,9vw,60px);
+  margin:5px 0;
+  color:var(--rosa);
+}
+
+.eva {
+  font-family:"Great Vibes",cursive;
+  font-size:clamp(100px,24vw,160px);
+  line-height:1;
+  color:var(--rosa);
+  margin:5px 0 20px;
+}
+
+.fecha-portada {
+  font-family:"Playfair Display",serif;
+  font-size:19px;
+  letter-spacing:2px;
+}
+
+#contenido {display:none}
+
+#bienvenida {
+  background:white;
+}
+
+#bienvenida h2 {
+  color:var(--rosa);
+  font-size:35px;
+}
+
+.nombre-invitado {
+  font-family:"Great Vibes",cursive;
+  font-size:53px;
+  color:var(--rosa);
+  margin:20px 0;
+  overflow-wrap:anywhere;
+}
+
+.cupos {
+  padding:18px;
+  border:1px solid #e9cbd1;
+  border-radius:15px;
+  max-width:430px;
+  margin:25px auto;
+  background:#fff9fa;
+}
+
+#fecha {
+  background:linear-gradient(135deg,#f9e9ed,#fff9fa);
+}
+
+.fecha-grande {
+  font-family:"Playfair Display",serif;
+  font-size:48px;
+  color:var(--rosa);
+  margin:10px;
+}
+
+.reloj {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:10px;
+  max-width:500px;
+  margin:35px auto;
+}
+
+.tiempo {
+  background:white;
+  padding:20px 5px;
+  border-radius:15px;
+  border:1px solid #f0d9de;
+}
+
+.tiempo strong {
+  display:block;
+  font-family:"Playfair Display",serif;
+  font-size:clamp(24px,6vw,38px);
+  color:var(--rosa);
+}
+
+.tiempo span {
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+
+#ubicacion {background:white}
+
+#confirmacion {
+  background:#f9e9ed;
+}
+
+#fotos {background:white}
+
+.galeria {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+  margin-top:35px;
+}
+
+.foto {
+  aspect-ratio:4/5;
+  border:1px solid #e9cbd1;
+  border-radius:14px;
+  background:linear-gradient(135deg,#fceef1,#f6dce3);
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#b77d90;
+  font-family:"Playfair Display",serif;
+  font-style:italic;
+  font-size:15px;
+}
+
+.foto:first-child {
+  grid-column:span 2;
+  aspect-ratio:16/10;
+}
+
+.foto img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+footer {
+  background:#f3dfe5;
+  padding:50px 20px;
+}
+
+footer .script {
+  font-size:65px;
+  color:var(--rosa);
+}
+
+.musica {
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  z-index:100;
+  border-radius:50%;
+  width:52px;
+  height:52px;
+  padding:0;
+  font-size:21px;
+  box-shadow:0 5px 20px #0002;
+  display:none;
+}
+
+#youtube-player {
+  position:absolute;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+  opacity:0;
+  pointer-events:none;
+}
+
+@media(max-width:480px) {
+  section {padding:55px 17px}
+  .marco {padding:35px 15px}
+  .reloj {gap:6px}
+  .tiempo {padding:16px 3px}
+  .galeria {gap:8px}
+  .nombre-invitado {font-size:43px}
+}
+</style>
+</head>
+
+<body>
+
+<!-- PORTADA -->
+<div id="portada">
+  <div class="marco">
+
+    <div class="small-title">
+      Una dulce espera
+    </div>
+
+    <!-- CONEJITO DECORATIVO -->
+    <svg class="bunny-art" viewBox="0 0 320 290"
+         xmlns="http://www.w3.org/2000/svg"
+         role="img"
+         aria-label="Conejito con flores rosadas">
+
+      <g fill="#f2c7d1" opacity=".8">
+        <circle cx="46" cy="100" r="10"/>
+        <circle cx="60" cy="88" r="10"/>
+        <circle cx="74" cy="100" r="10"/>
+        <circle cx="60" cy="112" r="10"/>
+        <circle cx="270" cy="120" r="12"/>
+        <circle cx="286" cy="108" r="12"/>
+        <circle cx="300" cy="120" r="12"/>
+        <circle cx="286" cy="134" r="12"/>
+      </g>
+
+      <g stroke="#b5bfa1" stroke-width="3" fill="none">
+        <path d="M60 105 Q75 175 115 215"/>
+        <path d="M286 125 Q260 190 210 225"/>
+      </g>
+
+      <ellipse cx="122" cy="84" rx="28" ry="75"
+               transform="rotate(-18 122 84)"
+               fill="#fffaf5" stroke="#d7c1bd"
+               stroke-width="3"/>
+
+      <ellipse cx="198" cy="84" rx="28" ry="75"
+               transform="rotate(18 198 84)"
+               fill="#fffaf5" stroke="#d7c1bd"
+               stroke-width="3"/>
+
+      <ellipse cx="122" cy="84" rx="13" ry="53"
+               transform="rotate(-18 122 84)"
+               fill="#f5cbd3"/>
+
+      <ellipse cx="198" cy="84" rx="13" ry="53"
+               transform="rotate(18 198 84)"
+               fill="#f5cbd3"/>
+
+      <ellipse cx="160" cy="231" rx="77" ry="52"
+               fill="#fffaf5" stroke="#d7c1bd"
+               stroke-width="3"/>
+
+      <circle cx="160" cy="156" r="77"
+              fill="#fffaf5" stroke="#d7c1bd"
+              stroke-width="3"/>
+
+      <ellipse cx="134" cy="151" rx="5" ry="7"
+               fill="#735e62"/>
+      <ellipse cx="186" cy="151" rx="5" ry="7"
+               fill="#735e62"/>
+
+      <ellipse cx="160" cy="172" rx="9" ry="6"
+               fill="#e5a6b5"/>
+
+      <path d="M160 178 v8 q-10 12 -20 0
+               M160 186 q10 12 20 0"
+            stroke="#927a7b"
+            stroke-width="2.5"
+            fill="none"
+            stroke-linecap="round"/>
+
+      <ellipse cx="117" cy="173" rx="13" ry="8"
+               fill="#f4cbd3" opacity=".8"/>
+      <ellipse cx="203" cy="173" rx="13" ry="8"
+               fill="#f4cbd3" opacity=".8"/>
+
+      <ellipse cx="116" cy="255" rx="28" ry="17"
+               fill="#fffaf5" stroke="#d7c1bd"
+               stroke-width="2"/>
+      <ellipse cx="204" cy="255" rx="28" ry="17"
+               fill="#fffaf5" stroke="#d7c1bd"
+               stroke-width="2"/>
+
+      <g transform="translate(160 95)">
+        <circle cx="-12" cy="0" r="14" fill="#d99bad"/>
+        <circle cx="12" cy="0" r="14" fill="#d99bad"/>
+        <circle cx="0" cy="-12" r="14" fill="#d99bad"/>
+        <circle cx="0" cy="12" r="14" fill="#d99bad"/>
+        <circle cx="0" cy="0" r="8" fill="#f6e6bf"/>
+      </g>
+    </svg>
+
+    <h1>Baby Shower</h1>
+
+    <div class="small-title">
+      En honor a nuestra pequeña
+    </div>
+
+    <div class="eva">Eva</div>
+
+    <div class="divider"></div>
+
+    <div class="fecha-portada">
+      06 · DICIEMBRE · 2026
+    </div>
+
+    <p>2:00 de la tarde</p>
+
+    <button onclick="abrirInvitacion()">
+      ABRIR INVITACIÓN
+    </button>
+
+  </div>
+</div>
+
+<!-- CONTENIDO -->
+<main id="contenido">
+
+<section id="bienvenida">
+  <div class="container">
+
+    <div class="flower">✿ ❀ ✿</div>
+
+    <h2>Una pequeña bendición viene en camino</h2>
+
+    <p>
+      Hay momentos que llenan el corazón de alegría,
+      y la llegada de nuestra pequeña Eva
+      es uno de ellos.
+    </p>
+
+    <p>
+      Queremos compartir contigo una tarde
+      llena de amor, ternura y felicidad,
+      celebrando la dulce espera de nuestra princesa.
+    </p>
+
+    <div class="divider"></div>
+
+    <p>Con mucho cariño invitamos a:</p>
+
+    <div class="nombre-invitado" id="nombreInvitado">
+      Invitado especial
+    </div>
+
+    <div class="cupos">
+      <p id="textoCupos">
+        Nos encantará contar con tu presencia.
+      </p>
+    </div>
+
+    <p>
+      Tu compañía hará este día
+      todavía más especial.
+    </p>
+
+  </div>
+</section>
+
+<!-- FECHA Y CUENTA REGRESIVA -->
+<section id="fecha">
+  <div class="container">
+
+    <div class="small-title">
+      Reserva esta fecha
+    </div>
+
+    <h2 class="fecha-grande">06</h2>
+
+    <h2>Diciembre 2026</h2>
+
+    <div class="divider"></div>
+
+    <h3>Domingo · 2:00 p. m.</h3>
+
+    <p>Faltan solamente...</p>
+
+    <div class="reloj">
+
+      <div class="tiempo">
+        <strong id="dias">00</strong>
+        <span>Días</span>
+      </div>
+
+      <div class="tiempo">
+        <strong id="horas">00</strong>
+        <span>Horas</span>
+      </div>
+
+      <div class="tiempo">
+        <strong id="minutos">00</strong>
+        <span>Minutos</span>
+      </div>
+
+      <div class="tiempo">
+        <strong id="segundos">00</strong>
+        <span>Segundos</span>
+      </div>
+
+    </div>
+
+    <p id="mensajeCuenta"></p>
+
+  </div>
+</section>
+
+<!-- UBICACIÓN -->
+<section id="ubicacion">
+  <div class="container">
+
+    <div class="flower">✿ ❀ ✿</div>
+
+    <h2>¿Dónde celebraremos?</h2>
+
+    <p>
+      Hemos preparado un lugar especial
+      para compartir esta hermosa celebración.
+    </p>
+
+    <h3>Baby Shower de Eva</h3>
+
+    <p>
+      Domingo 6 de diciembre<br>
+      2:00 de la tarde
+    </p>
+
+    <a class="btn"
+       href="https://maps.app.goo.gl/pATyiWgRNzmx7Gxr8"
+       target="_blank"
+       rel="noopener noreferrer">
+       CÓMO LLEGAR
+    </a>
+
+  </div>
+</section>
+
+<!-- CONFIRMACIÓN -->
+<section id="confirmacion">
+  <div class="container">
+
+    <div class="flower">✿ ❀ ✿</div>
+
+    <h2>Confirma tu asistencia</h2>
+
+    <p>
+      Nos encantará compartir contigo
+      esta fecha tan especial.
+    </p>
+
+    <p>
+      Por favor, confírmanos tu asistencia
+      por medio de WhatsApp.
+    </p>
+
+    <a class="btn"
+       id="botonWhatsApp"
+       href="#"
+       target="_blank"
+       rel="noopener noreferrer">
+       CONFIRMAR POR WHATSAPP
+    </a>
+
+    <p style="font-size:12px;margin-top:25px">
+      Al tocar el botón se abrirá WhatsApp
+      con tu mensaje preparado.
+      Solo tendrás que enviarlo.
+    </p>
+
+  </div>
+</section>
+
+<!-- GALERÍA -->
+<section id="fotos">
+  <div class="container">
+
+    <div class="flower">✿ ❀ ✿</div>
+
+    <h2>Momentos especiales</h2>
+
+    <p>
+      Cada fotografía guarda un pedacito
+      de esta hermosa espera.
+    </p>
+
+    <div class="galeria">
+
+      <div class="foto">
+        <img src="foto1.jpg" alt="Fotografía 1"
+             onerror="this.style.display='none'">
+      </div>
+
+      <div class="foto">
+        <img src="foto2.jpg" alt="Fotografía 2"
+             onerror="this.style.display='none'">
+      </div>
+
+      <div class="foto">
+        <img src="foto3.jpg" alt="Fotografía 3"
+             onerror="this.style.display='none'">
+      </div>
+
+      <div class="foto">
+        <img src="foto4.jpg" alt="Fotografía 4"
+             onerror="this.style.display='none'">
+      </div>
+
+      <div class="foto">
+        <img src="foto5.jpg" alt="Fotografía 5"
+             onerror="this.style.display='none'">
+      </div>
+
+      <div class="foto">
+        <img src="foto6.jpg" alt="Fotografía 6"
+             onerror="this.style.display='none'">
+      </div>
+
+      <div class="foto">
+        <img src="foto7.jpg" alt="Fotografía 7"
+             onerror="this.style.display='none'">
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- DESPEDIDA -->
+<footer>
+
+  <p>
+    Gracias por acompañarnos
+    en esta dulce espera.
+  </p>
+
+  <div class="script">Eva</div>
+
+  <div class="divider"></div>
+
+  <p>
+    6 de diciembre de 2026
+  </p>
+
+  <p style="font-size:12px">
+    Hecho con mucho amor
+  </p>
+
+</footer>
+
+</main>
+
+<!-- BOTÓN DE MÚSICA -->
+<button class="musica"
+        id="botonMusica"
+        onclick="alternarMusica()"
+        aria-label="Reproducir o pausar música">
+  ♫
+</button>
+
+<div id="youtube-player"></div>
+
+<script>
+
+/* =====================================
+   CONFIGURACIÓN GENERAL
+===================================== */
+
+const CONFIG = {
+
+  evento:"Baby Shower de Eva",
+
+  fecha:"2026-12-06T14:00:00-06:00",
+
+  whatsapp:"50662343967",
+
+  maps:"https://maps.app.goo.gl/pATyiWgRNzmx7Gxr8",
+
+  // Colocaremos aquí la canción
+  // cuando tengamos el enlace.
+  youtubeId:""
+
+};
+
+/* =====================================
+   NOMBRE Y ESPACIOS PERSONALIZADOS
+===================================== */
+
+const parametros = new URLSearchParams(
+  window.location.search
+);
+
+const nombre = (
+  parametros.get("nombre") || "Invitado especial"
+).trim().slice(0,120);
+
+const cuposRecibidos = Number(
+  parametros.get("cupos")
+);
+
+const cupos = Number.isInteger(cuposRecibidos)
+  && cuposRecibidos >= 1
+  && cuposRecibidos <= 8
+  ? cuposRecibidos
+  : null;
+
+document.getElementById(
+  "nombreInvitado"
+).textContent = nombre;
+
+let mensajeCupos = "";
+
+if(cupos === 1) {
+
+  mensajeCupos =
+    "1 espacio para usted";
+
+} else if(cupos === 2) {
+
+  mensajeCupos =
+    "2 espacios para usted y su acompañante";
+
+} else if(cupos >= 3) {
+
+  mensajeCupos =
+    cupos +
+    " espacios para usted y sus acompañantes";
+
+} else {
+
+  mensajeCupos =
+    "Nos encantará contar con su presencia.";
+
+}
+
+document.getElementById(
+  "textoCupos"
+).textContent = mensajeCupos;
+
+/* =====================================
+   CONFIRMACIÓN POR WHATSAPP
+===================================== */
+
+let mensajeWhatsApp =
+  "Hola, deseo confirmar mi asistencia " +
+  "al Baby Shower de Eva.\n\n" +
+  "Nombre: " + nombre + "\n" +
+  "Invitación: " + mensajeCupos + "\n\n" +
+  "Personas que asistirán: ";
+
+const enlaceWhatsApp =
+  "https://wa.me/" +
+  CONFIG.whatsapp +
+  "?text=" +
+  encodeURIComponent(mensajeWhatsApp);
+
+document.getElementById(
+  "botonWhatsApp"
+).href = enlaceWhatsApp;
+
+/* =====================================
+   ABRIR INVITACIÓN
+===================================== */
+
+function abrirInvitacion() {
+
+  document.getElementById(
+    "portada"
+  ).style.display = "none";
+
+  document.getElementById(
+    "contenido"
+  ).style.display = "block";
+
+  document.getElementById(
+    "botonMusica"
+  ).style.display = CONFIG.youtubeId
+    ? "block"
+    : "none";
+
+  window.scrollTo(0,0);
+
+  if(CONFIG.youtubeId) {
+    iniciarMusica();
+  }
+
+}
+
+/* =====================================
+   CUENTA REGRESIVA
+===================================== */
+
+const fechaEvento = new Date(
+  CONFIG.fecha
+).getTime();
+
+function actualizarCuenta() {
+
+  const ahora = Date.now();
+
+  const diferencia = fechaEvento - ahora;
+
+  if(diferencia <= 0) {
+
+    document.getElementById(
+      "dias"
+    ).textContent = "00";
+
+    document.getElementById(
+      "horas"
+    ).textContent = "00";
+
+    document.getElementById(
+      "minutos"
+    ).textContent = "00";
+
+    document.getElementById(
+      "segundos"
+    ).textContent = "00";
+
+    document.getElementById(
+      "mensajeCuenta"
+    ).textContent =
+      "¡Llegó el gran día!";
+
+    return;
+  }
+
+  const dias = Math.floor(
+    diferencia / 86400000
+  );
+
+  const horas = Math.floor(
+    diferencia / 3600000
+  ) % 24;
+
+  const minutos = Math.floor(
+    diferencia / 60000
+  ) % 60;
+
+  const segundos = Math.floor(
+    diferencia / 1000
+  ) % 60;
+
+  document.getElementById(
+    "dias"
+  ).textContent =
+    String(dias).padStart(2,"0");
+
+  document.getElementById(
+    "horas"
+  ).textContent =
+    String(horas).padStart(2,"0");
+
+  document.getElementById(
+    "minutos"
+  ).textContent =
+    String(minutos).padStart(2,"0");
+
+  document.getElementById(
+    "segundos"
+  ).textContent =
+    String(segundos).padStart(2,"0");
+
+}
+
+actualizarCuenta();
+
+setInterval(
+  actualizarCuenta,
+  1000
+);
+
+/* =====================================
+   REPRODUCTOR DE MÚSICA
+===================================== */
+
+let reproductor = null;
+let musicaActiva = false;
+let apiCargada = false;
+
+function iniciarMusica() {
+
+  if(!CONFIG.youtubeId) return;
+
+  if(!apiCargada) {
+
+    apiCargada = true;
+
+    const script = document.createElement(
+      "script"
+    );
+
+    script.src =
+      "https://www.youtube.com/iframe_api";
+
+    document.body.appendChild(script);
+
+  } else if(reproductor) {
+
+    reproducirMusica();
+
+  }
+
+}
+
+window.onYouTubeIframeAPIReady =
+  function() {
+
+    reproductor = new YT.Player(
+      "youtube-player",
+      {
+        height:"1",
+        width:"1",
+        videoId:CONFIG.youtubeId,
+
+        playerVars:{
+          autoplay:0,
+          controls:0,
+          playsinline:1,
+          loop:1,
+          playlist:CONFIG.youtubeId
+        },
+
+        events:{
+          onReady:function() {
+            reproducirMusica();
+          },
+
+          onStateChange:function(event) {
+
+            if(
+              event.data ===
+              YT.PlayerState.PLAYING
+            ) {
+
+              musicaActiva = true;
+
+            } else if(
+              event.data ===
+              YT.PlayerState.PAUSED
+            ) {
+
+              musicaActiva = false;
+
+            }
+
+            actualizarBotonMusica();
+
+          }
+        }
+      }
+    );
+
+  };
+
+function reproducirMusica() {
+
+  if(!reproductor) return;
+
+  try {
+
+    reproductor.playVideo();
+
+    musicaActiva = true;
+
+    actualizarBotonMusica();
+
+  } catch(error) {
+
+    musicaActiva = false;
+
+  }
+
+}
+
+function alternarMusica() {
+
+  if(!reproductor) return;
+
+  if(musicaActiva) {
+
+    reproductor.pauseVideo();
+
+    musicaActiva = false;
+
+  } else {
+
+    reproductor.playVideo();
+
+    musicaActiva = true;
+
+  }
+
+  actualizarBotonMusica();
+
+}
+
+function actualizarBotonMusica() {
+
+  const boton = document.getElementById(
+    "botonMusica"
+  );
+
+  boton.textContent =
+    musicaActiva ? "Ⅱ" : "♫";
+
+  boton.setAttribute(
+    "aria-label",
+    musicaActiva
+      ? "Pausar música"
+      : "Reproducir música"
+  );
+
+}
+
+</script>
+
+</body>
+</html>

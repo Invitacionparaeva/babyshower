@@ -5,6 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#fff8f8">
+
 <title>Baby Shower de Eva | Una dulce espera</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
@@ -24,14 +25,14 @@
 
 html{
   width:100%;
-  overflow-x:clip;
+  overflow-x:hidden;
   scroll-behavior:smooth;
 }
 
 body{
   width:100%;
   margin:0;
-  overflow-x:clip;
+  overflow-x:hidden;
   background:var(--crema);
   color:var(--oscuro);
   font-family:Montserrat,sans-serif;
@@ -116,6 +117,7 @@ section{
   text-decoration:none;
   text-transform:uppercase;
   cursor:pointer;
+  transition:background .25s;
 }
 
 .boton:hover{
@@ -148,14 +150,15 @@ section{
   transform:none;
 }
 
-/* CONEJITA Y FLORES */
+/* NUEVA CONEJITA */
 
 .conejita{
   display:block;
-  width:min(225px,75%);
+  width:min(245px,78%);
   height:auto;
-  aspect-ratio:320/340;
   margin:0 auto;
+  object-fit:contain;
+  filter:drop-shadow(0 8px 14px #b8849825);
 }
 
 .flor{
@@ -177,7 +180,7 @@ section{
   transform:rotate(160deg);
 }
 
-/* BIENVENIDA */
+/* PANTALLA DE BIENVENIDA */
 
 .intro-pantalla{
   position:fixed;
@@ -212,6 +215,11 @@ section{
 .intro-tarjeta h1{
   font-size:clamp(40px,10vw,65px);
   margin:5px;
+}
+
+.intro-tarjeta .conejita{
+  width:min(245px,70%);
+  max-height:245px;
 }
 
 .nombre-eva{
@@ -301,7 +309,7 @@ section{
   color:var(--rosa);
 }
 
-/* CONTADOR */
+/* CUENTA REGRESIVA */
 
 .contador-seccion{
   background:#aa7188;
@@ -334,7 +342,7 @@ section{
   text-transform:uppercase;
 }
 
-/* FECHA */
+/* FECHA Y UBICACIÓN */
 
 .fecha-grande{
   margin:10px auto;
@@ -361,7 +369,7 @@ section{
   font-size:14px;
 }
 
-/* INVITADOS */
+/* INVITACIÓN PERSONALIZADA */
 
 .nombre-invitado{
   margin:25px auto;
@@ -437,7 +445,7 @@ section{
   cursor:pointer;
 }
 
-/* FINAL */
+/* DESPEDIDA */
 
 footer{
   width:100%;
@@ -446,6 +454,10 @@ footer{
   color:white;
   text-align:center;
   overflow:hidden;
+}
+
+footer .conejita{
+  width:min(220px,65%);
 }
 
 footer .nombre-eva{
@@ -469,7 +481,8 @@ footer .frase{
   }
 
   .intro-tarjeta .conejita{
-    width:min(190px,65%);
+    width:min(185px,62%);
+    max-height:185px;
   }
 
   .foto-fija{
@@ -541,68 +554,13 @@ footer .frase{
 
 <body class="bloqueado">
 
-<!-- ILUSTRACIONES -->
+<!-- FLORES DECORATIVAS -->
 
 <svg xmlns="http://www.w3.org/2000/svg"
 width="0" height="0"
 aria-hidden="true"
 style="position:absolute;overflow:hidden">
 <defs>
-
-<symbol id="conejo" viewBox="0 0 320 340">
-<ellipse cx="112" cy="94" rx="28" ry="84"
-transform="rotate(-15 112 94)"
-fill="#fff8ef" stroke="#c9aaa6" stroke-width="2"/>
-
-<ellipse cx="208" cy="94" rx="28" ry="84"
-transform="rotate(15 208 94)"
-fill="#fff8ef" stroke="#c9aaa6" stroke-width="2"/>
-
-<ellipse cx="112" cy="94" rx="13" ry="61"
-transform="rotate(-15 112 94)" fill="#efbdc8"/>
-
-<ellipse cx="208" cy="94" rx="13" ry="61"
-transform="rotate(15 208 94)" fill="#efbdc8"/>
-
-<ellipse cx="160" cy="261" rx="75" ry="60"
-fill="#fff8ef" stroke="#c9aaa6" stroke-width="2"/>
-
-<circle cx="160" cy="166" r="76"
-fill="#fff8ef" stroke="#c9aaa6" stroke-width="2"/>
-
-<ellipse cx="133" cy="164" rx="7" ry="10" fill="#58454b"/>
-<ellipse cx="187" cy="164" rx="7" ry="10" fill="#58454b"/>
-
-<circle cx="135" cy="161" r="2.5" fill="#fff"/>
-<circle cx="189" cy="161" r="2.5" fill="#fff"/>
-
-<ellipse cx="115" cy="188" rx="16" ry="9" fill="#f2c1ca"/>
-<ellipse cx="205" cy="188" rx="16" ry="9" fill="#f2c1ca"/>
-
-<path d="M151 182q9-9 18 0q-9 12-18 0"
-fill="#ce98a4"/>
-
-<path d="M160 190v7q-10 12-20 0m20 0q10 12 20 0"
-fill="none" stroke="#8c7079" stroke-width="2"/>
-
-<path d="M88 260q72-53 144 0q-10 45-72 54q-62-9-72-54"
-fill="#e8afc0"/>
-
-<path d="M97 260q63-32 126 0"
-fill="none" stroke="#fff0f3" stroke-width="5"/>
-
-<ellipse cx="119" cy="300" rx="28" ry="17"
-fill="#fff8ef" stroke="#c9aaa6"/>
-
-<ellipse cx="201" cy="300" rx="28" ry="17"
-fill="#fff8ef" stroke="#c9aaa6"/>
-
-<g transform="translate(160 91)">
-<ellipse cx="-16" cy="0" rx="21" ry="15" fill="#e3a2b6"/>
-<ellipse cx="16" cy="0" rx="21" ry="15" fill="#e3a2b6"/>
-<circle r="9" fill="#bf7b95"/>
-</g>
-</symbol>
 
 <symbol id="flores" viewBox="0 0 200 200">
 <g fill="none" stroke="#a1b28e" stroke-width="3">
@@ -646,15 +604,22 @@ transform="rotate(45 125 115)"/>
 
 <div class="intro-pantalla" id="intro">
   <div class="intro-tarjeta">
-    <p class="subtitulo">Una bendición de amor</p>
 
-    <svg class="conejita" viewBox="0 0 320 340">
-      <use href="#conejo"/>
-    </svg>
+    <p class="subtitulo">
+      Una bendición de amor
+    </p>
+
+    <img
+      src="conejaeva.jpeg"
+      class="conejita"
+      alt="Conejita con lazo y tutú rosado"
+    >
 
     <h1>Baby Shower</h1>
 
-    <p class="subtitulo">De nuestra pequeña</p>
+    <p class="subtitulo">
+      De nuestra pequeña
+    </p>
 
     <div class="nombre-eva">Eva</div>
 
@@ -666,6 +631,7 @@ transform="rotate(45 125 115)"/>
     <button class="boton" id="abrir">
       Abrir mi invitación
     </button>
+
   </div>
 </div>
 
@@ -684,27 +650,35 @@ transform="rotate(45 125 115)"/>
 
     <div class="foto-contenido" id="fotoContenido">
 
-      <p class="subtitulo">Una dulce espera</p>
+      <p class="subtitulo">
+        Una dulce espera
+      </p>
 
       <h1>Un pequeño milagro</h1>
 
       <div class="foto-marco">
-        <img src="eva.jpeg"
-             alt="Ecografía de nuestra pequeña Eva">
+
+        <img
+          src="eva.jpeg"
+          alt="Ecografía de nuestra pequeña Eva"
+        >
 
         <p class="pie-foto">
           Nuestro pequeño amor
         </p>
+
       </div>
 
       <div class="nombre-eva">Eva</div>
 
       <p class="fecha">06 · 12 · 2026</p>
+
     </div>
 
     <div class="desliza">
       DESLIZA PARA DESCUBRIR ↓
     </div>
+
   </div>
 </header>
 
@@ -753,7 +727,9 @@ transform="rotate(45 125 115)"/>
 <section class="contador-seccion">
   <div class="contenedor revelar">
 
-    <p class="subtitulo">Falta muy poco</p>
+    <p class="subtitulo">
+      Falta muy poco
+    </p>
 
     <h2>Cuenta regresiva</h2>
 
@@ -817,10 +793,12 @@ transform="rotate(45 125 115)"/>
         la próxima llegada de nuestra pequeña Eva.
       </p>
 
-      <a class="boton"
-         href="https://maps.app.goo.gl/pATyiWgRNzmx7Gxr8"
-         target="_blank"
-         rel="noopener noreferrer">
+      <a
+        class="boton"
+        href="https://maps.app.goo.gl/pATyiWgRNzmx7Gxr8"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         Ver ubicación
       </a>
 
@@ -876,10 +854,12 @@ transform="rotate(45 125 115)"/>
       en la celebración de Eva.
     </p>
 
-    <a class="boton"
-       id="confirmar"
-       target="_blank"
-       rel="noopener noreferrer">
+    <a
+      class="boton"
+      id="confirmar"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       Confirmar por WhatsApp
     </a>
 
@@ -907,13 +887,15 @@ transform="rotate(45 125 115)"/>
   </div>
 </section>
 
-<!-- DESPEDIDA -->
+<!-- DESPEDIDA CON LA NUEVA CONEJITA -->
 
 <footer>
 
-  <svg class="conejita" viewBox="0 0 320 340">
-    <use href="#conejo"/>
-  </svg>
+  <img
+    src="conejaeva.jpeg"
+    class="conejita"
+    alt="Conejita de Eva"
+  >
 
   <p class="frase">
     Eva, todavía no conocemos tu sonrisa,

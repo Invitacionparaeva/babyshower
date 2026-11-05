@@ -1,20 +1,15 @@
 
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#fff8f8">
-
 <title>Baby Shower de Eva | Una dulce espera</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
-
-/* COLORES */
-
 :root{
   --rosa:#bd7e94;
   --rosa-claro:#e8b7c6;
@@ -130,37 +125,20 @@ section{
   background:#9e6379;
 }
 
-.blanco{
-  background:white;
-}
-
-.rosa{
-  background:#f8e8ed;
-}
+.blanco{background:white}
+.rosa{background:#f8e8ed}
 
 .papel{
   background:
-    radial-gradient(
-      ellipse at 12% 18%,
-      #f9e2e8,
-      transparent 45%
-    ),
-    radial-gradient(
-      ellipse at 88% 80%,
-      #f8e5eb,
-      transparent 40%
-    ),
+    radial-gradient(ellipse at 12% 18%,#f9e2e8,transparent 45%),
+    radial-gradient(ellipse at 88% 80%,#f8e5eb,transparent 40%),
     var(--crema);
 }
-
-/* ANIMACIONES */
 
 .revelar{
   opacity:0;
   transform:translateY(25px);
-  transition:
-    opacity .85s,
-    transform .85s;
+  transition:opacity .85s,transform .85s;
 }
 
 .revelar.visible{
@@ -168,7 +146,7 @@ section{
   transform:none;
 }
 
-/* CONEJITA PRINCIPAL */
+/* CONEJITA */
 
 .conejita{
   display:block;
@@ -179,8 +157,6 @@ section{
   background:transparent;
   filter:drop-shadow(0 8px 14px #b8849825);
 }
-
-/* CONEJITAS EN LOS COSTADOS */
 
 .conejo-lateral{
   position:absolute;
@@ -217,8 +193,6 @@ section{
   transform:rotate(-13deg);
 }
 
-/* FLORES */
-
 .flor{
   position:absolute;
   z-index:0;
@@ -239,7 +213,7 @@ section{
   transform:rotate(160deg);
 }
 
-/* PANTALLA DE BIENVENIDA */
+/* BIENVENIDA */
 
 .intro-pantalla{
   position:fixed;
@@ -249,14 +223,8 @@ section{
   place-items:center;
   padding:15px;
   overflow-y:auto;
-  background:radial-gradient(
-    circle,
-    #fff9f7,
-    #f5dce5
-  );
-  transition:
-    opacity .8s,
-    visibility .8s;
+  background:radial-gradient(circle,#fff9f7,#f5dce5);
+  transition:opacity .8s,visibility .8s;
 }
 
 .intro-pantalla.oculto{
@@ -300,11 +268,7 @@ section{
   width:100%;
   min-height:175vh;
   background:
-    radial-gradient(
-      circle at 50% 15%,
-      #f4dbe4,
-      transparent 55%
-    ),
+    radial-gradient(circle at 50% 15%,#f4dbe4,transparent 55%),
     #fffaf6;
 }
 
@@ -378,7 +342,7 @@ section{
   color:var(--rosa);
 }
 
-/* CUENTA REGRESIVA */
+/* CONTADOR */
 
 .contador-seccion{
   background:#aa7188;
@@ -401,9 +365,7 @@ section{
   margin:32px auto 0;
 }
 
-.contador>div{
-  min-width:0;
-}
+.contador>div{min-width:0}
 
 .numero{
   font:clamp(31px,8vw,62px) "Cormorant Garamond",serif;
@@ -438,9 +400,7 @@ section{
   margin:10px;
 }
 
-.tarjeta p{
-  font-size:14px;
-}
+.tarjeta p{font-size:14px}
 
 /* INVITADO */
 
@@ -484,9 +444,7 @@ section{
   object-fit:cover;
 }
 
-.foto:last-child{
-  grid-column:2;
-}
+.foto:last-child{grid-column:2}
 
 .lightbox{
   display:none;
@@ -499,9 +457,7 @@ section{
   background:#241820ed;
 }
 
-.lightbox.activo{
-  display:flex;
-}
+.lightbox.activo{display:flex}
 
 .lightbox img{
   max-width:100%;
@@ -539,9 +495,7 @@ section{
   cursor:pointer;
 }
 
-.musica-control.visible{
-  display:flex;
-}
+.musica-control.visible{display:flex}
 
 .youtube-oculto{
   position:fixed;
@@ -553,18 +507,14 @@ section{
   pointer-events:none;
 }
 
-/* CARTA FINAL PARA EVA */
+/* CARTA FINAL */
 
 footer{
   position:relative;
   width:100%;
   padding:85px 20px;
   background:
-    radial-gradient(
-      ellipse at 50% 0%,
-      #c993a8,
-      transparent 65%
-    ),
+    radial-gradient(ellipse at 50% 0%,#c993a8,transparent 65%),
     #a66e85;
   color:white;
   text-align:center;
@@ -577,11 +527,6 @@ footer .conejita{
 
 footer .nombre-eva{
   color:#fff1f5;
-}
-
-footer .frase{
-  margin-left:auto;
-  margin-right:auto;
 }
 
 .carta-eva{
@@ -629,23 +574,20 @@ footer .frase{
   color:var(--rosa);
 }
 
-footer .fecha-footer{
+.fecha-footer{
   margin-top:30px;
   font-size:12px;
   letter-spacing:3px;
 }
 
-footer .despedida{
+.despedida{
   font:25px "Cormorant Garamond",serif;
 }
 
 /* CELULARES */
 
 @media(max-width:600px){
-
-  section{
-    padding:70px 18px;
-  }
+  section{padding:70px 18px}
 
   .intro-tarjeta{
     padding:25px 14px 30px;
@@ -685,13 +627,8 @@ footer .despedida{
     justify-self:center;
   }
 
-  .contador{
-    gap:4px;
-  }
-
-  .etiqueta{
-    font-size:8px;
-  }
+  .contador{gap:4px}
+  .etiqueta{font-size:8px}
 
   .tarjeta{
     padding:28px 16px;
@@ -726,7 +663,6 @@ footer .despedida{
 
   .carta-eva p{
     font-size:23px;
-    line-height:1.55;
   }
 
   .carta-titulo{
@@ -735,19 +671,13 @@ footer .despedida{
 }
 
 @media(max-height:650px){
-
   .foto-marco{
     width:min(260px,65vw);
     margin:10px auto;
   }
-
-  .foto-contenido h1{
-    font-size:35px;
-  }
 }
 
 @media(prefers-reduced-motion:reduce){
-
   .revelar{
     opacity:1;
     transform:none;
@@ -758,7 +688,6 @@ footer .despedida{
     transition:none!important;
   }
 }
-
 </style>
 </head>
 
@@ -767,81 +696,61 @@ footer .despedida{
 <!-- FLORES DECORATIVAS -->
 
 <svg xmlns="http://www.w3.org/2000/svg"
-width="0" height="0"
-aria-hidden="true"
+width="0" height="0" aria-hidden="true"
 style="position:absolute;overflow:hidden">
-
 <defs>
-
 <symbol id="flores" viewBox="0 0 200 200">
 
 <g fill="none" stroke="#a1b28e" stroke-width="3">
-
 <path d="M100 190Q100 100 100 50
 M100 145Q55 120 35 95
 M100 125Q145 100 170 70"/>
-
 </g>
 
 <g fill="#c9d4b7">
-
 <ellipse cx="75" cy="140" rx="13" ry="25"
 transform="rotate(-45 75 140)"/>
-
 <ellipse cx="125" cy="115" rx="13" ry="25"
 transform="rotate(45 125 115)"/>
-
 </g>
 
 <g fill="#eab4c3">
-
 <circle cx="100" cy="38" r="20"/>
 <circle cx="80" cy="55" r="20"/>
 <circle cx="120" cy="55" r="20"/>
 <circle cx="88" cy="80" r="20"/>
 <circle cx="112" cy="80" r="20"/>
-
 </g>
 
 <circle cx="100" cy="60" r="13" fill="#e9d6aa"/>
 
 <g fill="#f2cbd3">
-
 <circle cx="35" cy="85" r="13"/>
 <circle cx="23" cy="98" r="13"/>
 <circle cx="47" cy="98" r="13"/>
 <circle cx="170" cy="60" r="13"/>
 <circle cx="158" cy="73" r="13"/>
 <circle cx="182" cy="73" r="13"/>
-
 </g>
 
 </symbol>
-
 </defs>
 </svg>
 
-<!-- PANTALLA DE BIENVENIDA -->
+<!-- BIENVENIDA -->
 
 <div class="intro-pantalla" id="intro">
-
   <div class="intro-tarjeta">
 
-    <p class="subtitulo">
-      Una bendición de amor
-    </p>
+    <p class="subtitulo">Una bendición de amor</p>
 
-    <img
-      src="conejaeva.png"
-      class="conejita"
-      alt="Conejita de Eva"
-    >
+    <img src="conejaeva.png"
+         class="conejita"
+         alt="Conejita de Eva">
 
     <h1>Baby Shower</h1>
 
-    <p class="subtitulo">
-      De nuestra pequeña
-    </p>
+    <p class="subtitulo">De nuestra pequeña</p>
 
     <div class="nombre-eva">Eva</div>
 
@@ -855,13 +764,11 @@ transform="rotate(45 125 115)"/>
     </button>
 
   </div>
-
 </div>
 
 <!-- ECOGRAFÍA -->
 
 <header class="hero-foto" id="heroFoto">
-
   <div class="foto-fija">
 
     <svg class="flor izq" viewBox="0 0 200 200">
@@ -874,27 +781,16 @@ transform="rotate(45 125 115)"/>
 
     <div class="foto-contenido" id="fotoContenido">
 
-      <p class="subtitulo">
-        Una dulce espera
-      </p>
+      <p class="subtitulo">Una dulce espera</p>
 
       <h1>Un pequeño milagro</h1>
 
       <div class="foto-marco">
-
-        <img
-          src="eva.jpeg"
-          alt="Ecografía de Eva"
-        >
-
-        <p class="pie-foto">
-          Nuestro pequeño amor
-        </p>
-
+        <img src="eva.jpeg" alt="Ecografía de Eva">
+        <p class="pie-foto">Nuestro pequeño amor</p>
       </div>
 
       <div class="nombre-eva">Eva</div>
-
       <p class="fecha">06 · 12 · 2026</p>
 
     </div>
@@ -904,32 +800,23 @@ transform="rotate(45 125 115)"/>
     </div>
 
   </div>
-
 </header>
 
-<!-- MENSAJE -->
+<!-- MENSAJE PRINCIPAL -->
 
 <section class="blanco">
 
-  <img
-    src="conejaeva.png"
-    class="conejo-lateral conejo-izquierda"
-    alt=""
-    aria-hidden="true"
-  >
+  <img src="conejaeva.png"
+       class="conejo-lateral conejo-izquierda"
+       alt="" aria-hidden="true">
 
-  <img
-    src="conejaeva.png"
-    class="conejo-lateral conejo-derecha"
-    alt=""
-    aria-hidden="true"
-  >
+  <img src="conejaeva.png"
+       class="conejo-lateral conejo-derecha"
+       alt="" aria-hidden="true">
 
   <div class="contenedor revelar">
 
-    <p class="subtitulo">
-      Con todo nuestro amor
-    </p>
+    <p class="subtitulo">Con todo nuestro amor</p>
 
     <h2>Un amor que crece cada día</h2>
 
@@ -960,26 +847,19 @@ transform="rotate(45 125 115)"/>
     </p>
 
   </div>
-
 </section>
 
 <!-- CUENTA REGRESIVA -->
 
 <section class="contador-seccion">
 
-  <img
-    src="conejaeva.png"
-    class="conejo-lateral conejo-abajo-izquierda"
-    alt=""
-    aria-hidden="true"
-  >
+  <img src="conejaeva.png"
+       class="conejo-lateral conejo-abajo-izquierda"
+       alt="" aria-hidden="true">
 
   <div class="contenedor revelar">
 
-    <p class="subtitulo">
-      Falta muy poco
-    </p>
-
+    <p class="subtitulo">Falta muy poco</p>
     <h2>Cuenta regresiva</h2>
 
     <div class="contador">
@@ -1005,31 +885,20 @@ transform="rotate(45 125 115)"/>
       </div>
 
     </div>
-
   </div>
-
 </section>
 
 <!-- FECHA Y UBICACIÓN -->
 
 <section class="papel">
 
-  <img
-    src="conejaeva.png"
-    class="conejo-lateral conejo-arriba-derecha"
-    alt=""
-    aria-hidden="true"
-  >
-
-  <svg class="flor der" viewBox="0 0 200 200">
-    <use href="#flores"/>
-  </svg>
+  <img src="conejaeva.png"
+       class="conejo-lateral conejo-arriba-derecha"
+       alt="" aria-hidden="true">
 
   <div class="contenedor revelar">
 
-    <p class="subtitulo">
-      Un día lleno de ilusión
-    </p>
+    <p class="subtitulo">Un día lleno de ilusión</p>
 
     <h2>Te esperamos para celebrar</h2>
 
@@ -1039,9 +908,7 @@ transform="rotate(45 125 115)"/>
 
     <div class="fecha-grande">06</div>
 
-    <p class="frase">
-      2:00 de la tarde
-    </p>
+    <p class="frase">2:00 de la tarde</p>
 
     <div class="tarjeta">
 
@@ -1053,37 +920,28 @@ transform="rotate(45 125 115)"/>
         la próxima llegada de nuestra pequeña Eva.
       </p>
 
-      <a
-        class="boton"
-        href="https://maps.app.goo.gl/pATyiWgRNzmx7Gxr8"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a class="boton"
+         href="https://maps.app.goo.gl/pATyiWgRNzmx7Gxr8"
+         target="_blank"
+         rel="noopener noreferrer">
         Ver ubicación
       </a>
 
     </div>
-
   </div>
-
 </section>
 
 <!-- INVITADO PERSONALIZADO -->
 
 <section class="blanco">
 
-  <img
-    src="conejaeva.png"
-    class="conejo-lateral conejo-abajo-izquierda"
-    alt=""
-    aria-hidden="true"
-  >
+  <img src="conejaeva.png"
+       class="conejo-lateral conejo-abajo-izquierda"
+       alt="" aria-hidden="true">
 
   <div class="contenedor revelar">
 
-    <p class="subtitulo">
-      Preparada con mucho cariño
-    </p>
+    <p class="subtitulo">Preparada con mucho cariño</p>
 
     <h2>Un día especial para compartir</h2>
 
@@ -1105,25 +963,19 @@ transform="rotate(45 125 115)"/>
     </p>
 
   </div>
-
 </section>
 
 <!-- CONFIRMACIÓN -->
 
 <section class="rosa">
 
-  <img
-    src="conejaeva.png"
-    class="conejo-lateral conejo-derecha"
-    alt=""
-    aria-hidden="true"
-  >
+  <img src="conejaeva.png"
+       class="conejo-lateral conejo-derecha"
+       alt="" aria-hidden="true">
 
   <div class="contenedor revelar">
 
-    <p class="subtitulo">
-      Nos encantaría verte
-    </p>
+    <p class="subtitulo">Nos encantaría verte</p>
 
     <h2>Confirma tu asistencia</h2>
 
@@ -1133,35 +985,27 @@ transform="rotate(45 125 115)"/>
       en la celebración de Eva.
     </p>
 
-    <a
-      class="boton"
-      id="confirmar"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
+    <a class="boton"
+       id="confirmar"
+       target="_blank"
+       rel="noopener noreferrer">
       Confirmar por WhatsApp
     </a>
 
   </div>
-
 </section>
 
 <!-- GALERÍA -->
 
 <section class="papel">
 
-  <img
-    src="conejaeva.png"
-    class="conejo-lateral conejo-arriba-derecha"
-    alt=""
-    aria-hidden="true"
-  >
+  <img src="conejaeva.png"
+       class="conejo-lateral conejo-arriba-derecha"
+       alt="" aria-hidden="true">
 
   <div class="contenedor revelar">
 
-    <p class="subtitulo">
-      Momentos para recordar
-    </p>
+    <p class="subtitulo">Momentos para recordar</p>
 
     <h2>Pequeños recuerdos</h2>
 
@@ -1173,18 +1017,15 @@ transform="rotate(45 125 115)"/>
     <div class="galeria" id="galeria"></div>
 
   </div>
-
 </section>
 
 <!-- CARTA FINAL PARA EVA -->
 
 <footer>
 
-  <img
-    src="conejaeva.png"
-    class="conejita"
-    alt="Conejita de Eva"
-  >
+  <img src="conejaeva.png"
+       class="conejita"
+       alt="Conejita de Eva">
 
   <div class="carta-eva revelar">
 
@@ -1257,34 +1098,23 @@ transform="rotate(45 125 115)"/>
 
 </footer>
 
-<!-- BOTÓN DE MÚSICA -->
+<!-- MÚSICA -->
 
-<button
-  id="botonMusica"
-  class="musica-control"
-  type="button"
-  aria-label="Activar música"
-  title="Activar o pausar música"
->
+<button id="botonMusica"
+        class="musica-control"
+        type="button"
+        aria-label="Activar música">
   ♪
 </button>
 
-<div
-  id="reproductorYoutube"
-  class="youtube-oculto"
-></div>
+<div id="reproductorYoutube"
+     class="youtube-oculto"></div>
 
-<!-- VISOR DE FOTOGRAFÍAS -->
+<!-- VISOR DE FOTOS -->
 
 <div class="lightbox" id="lightbox">
-
   <span class="cerrar" id="cerrar">×</span>
-
-  <img
-    id="fotoGrande"
-    alt="Recuerdo ampliado"
-  >
-
+  <img id="fotoGrande" alt="Recuerdo ampliado">
 </div>
 
 <script>
@@ -1297,7 +1127,7 @@ const CONFIG={
   videoYoutube:"WC6lEMYmxR8"
 };
 
-/* INVITADO Y CUPOS */
+/* PERSONALIZACIÓN */
 
 const parametros=new URLSearchParams(location.search);
 
@@ -1321,13 +1151,9 @@ if(cuposValidos){
 
   if(cupos===1){
     texto="1 espacio para usted";
-  }
-
-  else if(cupos===2){
+  }else if(cupos===2){
     texto="2 espacios para usted y su acompañante";
-  }
-
-  else{
+  }else{
     texto=cupos+" espacios para usted y sus acompañantes";
   }
 
@@ -1335,7 +1161,7 @@ if(cuposValidos){
 
 document.getElementById("textoCupos").textContent=texto;
 
-/* CONFIRMACIÓN POR WHATSAPP */
+/* WHATSAPP */
 
 const mensaje=
   "Hola, deseo confirmar mi asistencia al Baby Shower de Eva.\n"+
@@ -1347,7 +1173,7 @@ document.getElementById("confirmar").href=
   "https://wa.me/"+CONFIG.whatsapp+
   "?text="+encodeURIComponent(mensaje);
 
-/* MÚSICA DE YOUTUBE */
+/* YOUTUBE */
 
 let reproductor=null;
 let musicaSolicitada=false;
@@ -1364,19 +1190,14 @@ function actualizarBotonMusica(){
     musicaActiva?"Pausar música":"Reproducir música"
   );
 
-  botonMusica.title=
-    musicaActiva?"Pausar música":"Reproducir música";
-
 }
 
 function iniciarMusica(){
 
   musicaSolicitada=true;
 
-  if(
-    reproductor &&
-    typeof reproductor.playVideo==="function"
-  ){
+  if(reproductor &&
+     typeof reproductor.playVideo==="function"){
     reproductor.playVideo();
   }
 
@@ -1388,7 +1209,6 @@ function onYouTubeIframeAPIReady(){
 
     width:"200",
     height:"120",
-
     videoId:CONFIG.videoYoutube,
 
     playerVars:{
@@ -1403,28 +1223,20 @@ function onYouTubeIframeAPIReady(){
     events:{
 
       onReady:function(){
-
         if(musicaSolicitada){
           iniciarMusica();
         }
-
       },
 
       onStateChange:function(evento){
-
         musicaActiva=
           evento.data===YT.PlayerState.PLAYING;
-
         actualizarBotonMusica();
-
       },
 
       onError:function(){
-
         musicaActiva=false;
-
         actualizarBotonMusica();
-
       }
 
     }
@@ -1434,9 +1246,7 @@ function onYouTubeIframeAPIReady(){
 }
 
 const scriptYoutube=document.createElement("script");
-
 scriptYoutube.src="https://www.youtube.com/iframe_api";
-
 document.head.appendChild(scriptYoutube);
 
 botonMusica.addEventListener("click",function(){
@@ -1448,9 +1258,7 @@ botonMusica.addEventListener("click",function(){
 
   if(musicaActiva){
     reproductor.pauseVideo();
-  }
-
-  else{
+  }else{
     iniciarMusica();
   }
 
@@ -1476,10 +1284,9 @@ document.getElementById("abrir").addEventListener(
   }
 );
 
-/* ECOGRAFÍA QUE SE DESVANECE */
+/* ECOGRAFÍA */
 
 const heroFoto=document.getElementById("heroFoto");
-
 const fotoContenido=document.getElementById("fotoContenido");
 
 let desplazamientoPendiente=false;
@@ -1499,9 +1306,8 @@ function actualizarFoto(){
     )
   );
 
-  const opacidad=1-Math.min(1,avance*1.35);
-
-  fotoContenido.style.opacity=opacidad;
+  fotoContenido.style.opacity=
+    1-Math.min(1,avance*1.35);
 
   fotoContenido.style.transform=
     "translateY("+(-avance*35)+"px) scale("+
@@ -1514,11 +1320,8 @@ function actualizarFoto(){
 function solicitarActualizacion(){
 
   if(!desplazamientoPendiente){
-
     desplazamientoPendiente=true;
-
     requestAnimationFrame(actualizarFoto);
-
   }
 
 }
@@ -1529,14 +1332,11 @@ window.addEventListener(
   {passive:true}
 );
 
-window.addEventListener(
-  "resize",
-  solicitarActualizacion
-);
+window.addEventListener("resize",solicitarActualizacion);
 
 actualizarFoto();
 
-/* CUENTA REGRESIVA */
+/* CONTADOR */
 
 const fechaEvento=new Date(CONFIG.fecha).getTime();
 
@@ -1554,94 +1354,70 @@ function actualizarContador(){
     Math.floor(diferencia/1000)%60
   ];
 
-  [
-    "dias",
-    "horas",
-    "minutos",
-    "segundos"
-  ].forEach(function(id,i){
-
-    document.getElementById(id).textContent=
-      String(valores[i]).padStart(2,"0");
-
-  });
+  ["dias","horas","minutos","segundos"].forEach(
+    function(id,i){
+      document.getElementById(id).textContent=
+        String(valores[i]).padStart(2,"0");
+    }
+  );
 
 }
 
 actualizarContador();
-
 setInterval(actualizarContador,1000);
 
-/* ANIMACIONES AL DESLIZAR */
+/* ANIMACIONES */
 
 if("IntersectionObserver" in window){
 
   const observador=new IntersectionObserver(
-
     function(entradas){
 
       entradas.forEach(function(entrada){
-
         if(entrada.isIntersecting){
-
           entrada.target.classList.add("visible");
-
         }
-
       });
 
     },
-
     {threshold:.08}
-
   );
 
   document.querySelectorAll(".revelar").forEach(
     function(elemento){
-
       observador.observe(elemento);
-
     }
   );
 
-}
-
-else{
+}else{
 
   document.querySelectorAll(".revelar").forEach(
     function(elemento){
-
       elemento.classList.add("visible");
-
     }
   );
 
 }
 
-/* GALERÍA DE SIETE FOTOGRAFÍAS */
+/* GALERÍA */
 
 const galeria=document.getElementById("galeria");
 
 for(let i=1;i<=7;i++){
 
   const cuadro=document.createElement("div");
-
   cuadro.className="foto";
-
   cuadro.textContent="Recuerdo "+i;
 
   const imagen=new Image();
 
   imagen.src="img/foto"+i+".jpeg";
-
   imagen.alt="Recuerdo "+i;
-
   imagen.loading="lazy";
 
   imagen.onload=function(){
 
     cuadro.textContent="";
-
     cuadro.appendChild(imagen);
 
     cuadro.onclick=function(){
@@ -1666,15 +1442,12 @@ document.getElementById("lightbox").addEventListener(
   function(e){
 
     if(e.target.id!=="fotoGrande"){
-
       this.classList.remove("activo");
-
     }
 
   }
 );
 
 </script>
-
 </body>
 </html>

@@ -5,549 +5,659 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#fff8f8">
-
 <title>Baby Shower de Eva | Una dulce espera</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
-:root {
-  --rosa: #bd7e94;
-  --rosa-claro: #e8b7c6;
-  --crema: #fffaf6;
-  --oscuro: #775968;
-  --oro: #b69a73;
+:root{
+  --rosa:#bd7e94;
+  --rosa-claro:#e8b7c6;
+  --crema:#fffaf6;
+  --oscuro:#775968;
+  --oro:#b69a73;
 }
 
-*, *::before, *::after {
-  box-sizing: border-box;
+*,
+*::before,
+*::after{
+  box-sizing:border-box;
 }
 
-html {
-  width: 100%;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
+html{
+  width:100%;
+  overflow-x:hidden;
+  scroll-behavior:smooth;
 }
 
-body {
-  width: 100%;
-  margin: 0;
-  overflow-x: hidden;
-  background: var(--crema);
-  color: var(--oscuro);
-  font-family: Montserrat, sans-serif;
+body{
+  margin:0;
+  width:100%;
+  overflow-x:hidden;
+  background:var(--crema);
+  color:var(--oscuro);
+  font-family:Montserrat,sans-serif;
 }
 
-body.bloqueado {
-  overflow: hidden;
+body.bloqueado{
+  overflow:hidden;
 }
 
-img, svg {
-  max-width: 100%;
+img,svg{
+  max-width:100%;
 }
 
-h1, h2, h3 {
-  font-family: "Cormorant Garamond", serif;
-  font-weight: 500;
-  overflow-wrap: break-word;
+h1,h2,h3{
+  font-family:"Cormorant Garamond",serif;
+  font-weight:500;
+  overflow-wrap:break-word;
 }
 
-h2 {
-  font-size: clamp(37px, 8vw, 65px);
-  line-height: 1.12;
-  margin: 10px 0 24px;
+h2{
+  font-size:clamp(37px,8vw,65px);
+  line-height:1.12;
+  margin:10px 0 24px;
 }
 
-p {
-  line-height: 1.85;
+p{
+  line-height:1.85;
 }
 
-section {
-  width: 100%;
-  padding: 85px 20px;
-  position: relative;
-  overflow: hidden;
+section{
+  position:relative;
+  width:100%;
+  padding:90px 20px;
+  overflow:hidden;
+  isolation:isolate;
 }
 
-.contenedor {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  max-width: 850px;
-  margin: auto;
-  text-align: center;
+.contenedor{
+  position:relative;
+  z-index:2;
+  width:100%;
+  max-width:850px;
+  margin:auto;
+  text-align:center;
 }
 
-.subtitulo {
-  color: var(--rosa);
-  font-size: 11px;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
+.subtitulo{
+  color:var(--rosa);
+  font-size:11px;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
 }
 
-.texto {
-  max-width: 630px;
-  margin: 18px auto;
-  font-size: 14px;
+.texto{
+  max-width:630px;
+  margin:18px auto;
+  font-size:14px;
 }
 
-.frase {
-  max-width: 640px;
-  margin: 22px auto;
-  font: italic clamp(24px, 5vw, 33px)/1.5 "Cormorant Garamond", serif;
+.frase{
+  max-width:640px;
+  margin:22px auto;
+  font:italic clamp(24px,5vw,33px)/1.5 "Cormorant Garamond",serif;
 }
 
-.ornamento {
-  color: var(--oro);
-  font-size: 28px;
-  margin: 25px auto;
+.ornamento{
+  color:var(--oro);
+  font-size:28px;
+  margin:25px auto;
 }
 
-.boton {
-  display: inline-block;
-  max-width: 100%;
-  padding: 16px 25px;
-  margin-top: 20px;
-  border: 1px solid var(--rosa);
-  background: var(--rosa);
-  color: white;
-  font: 600 11px/1.5 Montserrat, sans-serif;
-  letter-spacing: 1px;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: background .25s;
+.boton{
+  display:inline-block;
+  max-width:100%;
+  padding:16px 25px;
+  margin-top:20px;
+  border:1px solid var(--rosa);
+  background:var(--rosa);
+  color:white;
+  font:600 11px/1.5 Montserrat,sans-serif;
+  letter-spacing:1px;
+  text-align:center;
+  text-decoration:none;
+  text-transform:uppercase;
+  cursor:pointer;
+  transition:background .25s;
 }
 
-.boton:hover {
-  background: #9e6379;
+.boton:hover{
+  background:#9e6379;
 }
 
-.blanco {
-  background: white;
+.blanco{
+  background:white;
 }
 
-.rosa {
-  background: #f8e8ed;
+.rosa{
+  background:#f8e8ed;
 }
 
-.papel {
+.papel{
   background:
-    radial-gradient(ellipse at 12% 18%, #f9e2e8, transparent 45%),
-    radial-gradient(ellipse at 88% 80%, #f8e5eb, transparent 40%),
+    radial-gradient(ellipse at 12% 18%,#f9e2e8,transparent 45%),
+    radial-gradient(ellipse at 88% 80%,#f8e5eb,transparent 40%),
     var(--crema);
 }
 
-.revelar {
-  opacity: 0;
-  transform: translateY(25px);
-  transition: opacity .85s, transform .85s;
+.revelar{
+  opacity:0;
+  transform:translateY(25px);
+  transition:opacity .85s,transform .85s;
 }
 
-.revelar.visible {
-  opacity: 1;
-  transform: none;
+.revelar.visible{
+  opacity:1;
+  transform:none;
 }
 
-/* CONEJITA PNG TRANSPARENTE */
+/* CONEJITA PRINCIPAL */
 
-.conejita {
-  display: block;
-  width: min(245px, 78%);
-  height: auto;
-  margin: 0 auto;
-  object-fit: contain;
-  background: transparent;
-  filter: drop-shadow(0 8px 14px #b8849825);
+.conejita{
+  display:block;
+  width:min(245px,78%);
+  height:auto;
+  margin:0 auto;
+  object-fit:contain;
+  background:transparent;
+  filter:drop-shadow(0 8px 14px #b8849825);
 }
 
-.flor {
-  position: absolute;
-  width: 145px;
-  height: 145px;
-  opacity: .45;
-  pointer-events: none;
+/* CONEJITAS EN LOS COSTADOS */
+
+.conejo-lateral{
+  position:absolute;
+  z-index:1;
+  width:clamp(100px,17vw,210px);
+  height:auto;
+  opacity:.52;
+  pointer-events:none;
+  user-select:none;
+  filter:drop-shadow(0 8px 15px #a97b8a18);
 }
 
-.flor.izq {
-  left: -55px;
-  top: -35px;
+.conejo-izquierda{
+  left:-50px;
+  top:16%;
+  transform:rotate(-12deg);
 }
 
-.flor.der {
-  right: -55px;
-  bottom: -35px;
-  transform: rotate(160deg);
+.conejo-derecha{
+  right:-55px;
+  bottom:9%;
+  transform:rotate(12deg);
 }
 
-/* PANTALLA DE BIENVENIDA */
-
-.intro-pantalla {
-  position: fixed;
-  inset: 0;
-  z-index: 1000;
-  display: grid;
-  place-items: center;
-  padding: 15px;
-  overflow-y: auto;
-  background: radial-gradient(circle, #fff9f7, #f5dce5);
-  transition: opacity .8s, visibility .8s;
+.conejo-arriba-derecha{
+  right:-55px;
+  top:8%;
+  transform:rotate(15deg);
 }
 
-.intro-pantalla.oculto {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
+.conejo-abajo-izquierda{
+  left:-50px;
+  bottom:5%;
+  transform:rotate(-13deg);
 }
 
-.intro-tarjeta {
-  width: 100%;
-  max-width: 500px;
-  padding: 30px 18px 38px;
-  margin: auto;
-  text-align: center;
-  background: #ffffffc4;
-  border: 1px solid #dfb8c5;
-  border-radius: 170px 170px 18px 18px;
-  box-shadow: 0 20px 60px #a46b8320;
+/* FLORES */
+
+.flor{
+  position:absolute;
+  z-index:0;
+  width:145px;
+  height:145px;
+  opacity:.45;
+  pointer-events:none;
 }
 
-.intro-tarjeta h1 {
-  font-size: clamp(40px, 10vw, 65px);
-  margin: 5px;
+.flor.izq{
+  left:-55px;
+  top:-35px;
 }
 
-.intro-tarjeta .conejita {
-  width: min(245px, 70%);
-  max-height: 245px;
+.flor.der{
+  right:-55px;
+  bottom:-35px;
+  transform:rotate(160deg);
 }
 
-.nombre-eva {
-  font: clamp(80px, 20vw, 135px)/1.2 "Great Vibes", cursive;
-  color: var(--rosa);
-  margin: 5px auto 15px;
+/* BIENVENIDA */
+
+.intro-pantalla{
+  position:fixed;
+  inset:0;
+  z-index:1000;
+  display:grid;
+  place-items:center;
+  padding:15px;
+  overflow-y:auto;
+  background:radial-gradient(circle,#fff9f7,#f5dce5);
+  transition:opacity .8s,visibility .8s;
+}
+
+.intro-pantalla.oculto{
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+}
+
+.intro-tarjeta{
+  width:100%;
+  max-width:500px;
+  padding:30px 18px 38px;
+  margin:auto;
+  text-align:center;
+  background:#ffffffc4;
+  border:1px solid #dfb8c5;
+  border-radius:170px 170px 18px 18px;
+  box-shadow:0 20px 60px #a46b8320;
+}
+
+.intro-tarjeta h1{
+  font-size:clamp(40px,10vw,65px);
+  margin:5px;
+}
+
+.intro-tarjeta .conejita{
+  width:min(245px,70%);
+  max-height:245px;
+}
+
+.nombre-eva{
+  font:clamp(80px,20vw,135px)/1.2 "Great Vibes",cursive;
+  color:var(--rosa);
+  margin:5px auto 15px;
 }
 
 /* ECOGRAFÍA */
 
-.hero-foto {
-  position: relative;
-  width: 100%;
-  min-height: 175vh;
+.hero-foto{
+  position:relative;
+  width:100%;
+  min-height:175vh;
   background:
-    radial-gradient(circle at 50% 15%, #f4dbe4, transparent 55%),
+    radial-gradient(circle at 50% 15%,#f4dbe4,transparent 55%),
     #fffaf6;
 }
 
-.foto-fija {
-  position: sticky;
-  top: 0;
-  width: 100%;
-  height: 100vh;
-  height: 100svh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 35px 20px;
-  text-align: center;
-  overflow: hidden;
+.foto-fija{
+  position:sticky;
+  top:0;
+  width:100%;
+  height:100vh;
+  height:100svh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  padding:35px 20px;
+  text-align:center;
+  overflow:hidden;
 }
 
-.foto-contenido {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  max-width: 550px;
-  margin: auto;
-  will-change: opacity, transform;
+.foto-contenido{
+  position:relative;
+  z-index:2;
+  width:100%;
+  max-width:550px;
+  margin:auto;
+  will-change:opacity,transform;
 }
 
-.foto-marco {
-  width: min(390px, 78vw);
-  max-width: 100%;
-  margin: 25px auto;
-  padding: 12px 12px 38px;
-  background: white;
+.foto-marco{
+  width:min(390px,78vw);
+  max-width:100%;
+  margin:25px auto;
+  padding:12px 12px 38px;
+  background:white;
   box-shadow:
     0 15px 35px #86657635,
     0 3px 10px #86657620;
-  transform: rotate(-5deg);
-  border: 1px solid #f2e4e7;
+  transform:rotate(-5deg);
+  border:1px solid #f2e4e7;
 }
 
-.foto-marco img {
-  display: block;
-  width: 100%;
-  height: auto;
+.foto-marco img{
+  display:block;
+  width:100%;
+  height:auto;
 }
 
-.foto-marco .pie-foto {
-  margin: 15px 0 -20px;
-  font: 26px "Great Vibes", cursive;
-  color: var(--rosa);
+.foto-marco .pie-foto{
+  margin:15px 0 -20px;
+  font:26px "Great Vibes",cursive;
+  color:var(--rosa);
 }
 
-.foto-contenido h1 {
-  margin: 8px auto 0;
-  font-size: clamp(38px, 8vw, 60px);
-  color: var(--rosa);
+.foto-contenido h1{
+  margin:8px auto 0;
+  font-size:clamp(38px,8vw,60px);
+  color:var(--rosa);
 }
 
-.foto-contenido .fecha {
-  font: 23px "Cormorant Garamond", serif;
-  letter-spacing: 2px;
+.foto-contenido .fecha{
+  font:23px "Cormorant Garamond",serif;
+  letter-spacing:2px;
 }
 
-.desliza {
-  position: absolute;
-  bottom: 20px;
-  left: 0;
-  right: 0;
-  font-size: 10px;
-  letter-spacing: 2px;
-  color: var(--rosa);
+.desliza{
+  position:absolute;
+  bottom:20px;
+  left:0;
+  right:0;
+  font-size:10px;
+  letter-spacing:2px;
+  color:var(--rosa);
 }
 
 /* CUENTA REGRESIVA */
 
-.contador-seccion {
-  background: #aa7188;
-  color: white;
+.contador-seccion{
+  background:#aa7188;
+  color:white;
 }
 
-.contador-seccion .subtitulo {
-  color: #ffe8ef;
+.contador-seccion .subtitulo{
+  color:#ffe8ef;
 }
 
-.contador {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 8px;
-  max-width: 620px;
-  margin: 32px auto 0;
+.contador-seccion .conejo-lateral{
+  opacity:.22;
 }
 
-.contador > div {
-  min-width: 0;
+.contador{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:8px;
+  max-width:620px;
+  margin:32px auto 0;
 }
 
-.numero {
-  font: clamp(31px, 8vw, 62px) "Cormorant Garamond", serif;
+.contador>div{
+  min-width:0;
 }
 
-.etiqueta {
-  font-size: 9px;
-  letter-spacing: .5px;
-  text-transform: uppercase;
+.numero{
+  font:clamp(31px,8vw,62px) "Cormorant Garamond",serif;
 }
 
-/* FECHA Y UBICACIÓN */
-
-.fecha-grande {
-  margin: 10px auto;
-  color: var(--rosa);
-  font: clamp(65px, 13vw, 95px) "Cormorant Garamond", serif;
+.etiqueta{
+  font-size:9px;
+  letter-spacing:.5px;
+  text-transform:uppercase;
 }
 
-.tarjeta {
-  width: 100%;
-  max-width: 560px;
-  margin: 30px auto;
-  padding: 35px 22px;
-  background: #ffffffc7;
-  border-top: 3px solid var(--rosa);
-  box-shadow: 0 12px 35px #9e6b8015;
+/* FECHA */
+
+.fecha-grande{
+  margin:10px auto;
+  color:var(--rosa);
+  font:clamp(65px,13vw,95px) "Cormorant Garamond",serif;
 }
 
-.tarjeta h3 {
-  font-size: 34px;
-  margin: 10px;
+.tarjeta{
+  width:100%;
+  max-width:560px;
+  margin:30px auto;
+  padding:35px 22px;
+  background:#ffffffd9;
+  border-top:3px solid var(--rosa);
+  box-shadow:0 12px 35px #9e6b8015;
 }
 
-.tarjeta p {
-  font-size: 14px;
+.tarjeta h3{
+  font-size:34px;
+  margin:10px;
 }
 
-/* INVITACIÓN PERSONALIZADA */
-
-.nombre-invitado {
-  margin: 25px auto;
-  color: var(--rosa);
-  font: clamp(42px, 9vw, 65px)/1.3 "Great Vibes", cursive;
-  overflow-wrap: anywhere;
+.tarjeta p{
+  font-size:14px;
 }
 
-.cupos-texto {
-  font: 25px/1.5 "Cormorant Garamond", serif;
-  margin: 10px auto;
+/* INVITADO */
+
+.nombre-invitado{
+  margin:25px auto;
+  color:var(--rosa);
+  font:clamp(42px,9vw,65px)/1.3 "Great Vibes",cursive;
+  overflow-wrap:anywhere;
+}
+
+.cupos-texto{
+  font:25px/1.5 "Cormorant Garamond",serif;
+  margin:10px auto;
 }
 
 /* GALERÍA */
 
-.galeria {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
-  margin-top: 30px;
+.galeria{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:12px;
+  margin-top:30px;
 }
 
-.foto {
-  min-width: 0;
-  aspect-ratio: 3/4;
-  background: #f6e4e9;
-  display: grid;
-  place-items: center;
-  overflow: hidden;
-  cursor: pointer;
-  color: var(--rosa);
-  font: italic 22px "Cormorant Garamond", serif;
-  text-align: center;
+.foto{
+  min-width:0;
+  aspect-ratio:3/4;
+  background:#f6e4e9;
+  display:grid;
+  place-items:center;
+  overflow:hidden;
+  cursor:pointer;
+  color:var(--rosa);
+  font:italic 22px "Cormorant Garamond",serif;
+  text-align:center;
 }
 
-.foto img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.foto img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
 }
 
-.foto:last-child {
-  grid-column: 2;
+.foto:last-child{
+  grid-column:2;
 }
 
-.lightbox {
-  display: none;
-  position: fixed;
-  inset: 0;
-  z-index: 2000;
-  align-items: center;
-  justify-content: center;
-  padding: 30px;
-  background: #241820ed;
+.lightbox{
+  display:none;
+  position:fixed;
+  inset:0;
+  z-index:2000;
+  align-items:center;
+  justify-content:center;
+  padding:30px;
+  background:#241820ed;
 }
 
-.lightbox.activo {
-  display: flex;
+.lightbox.activo{
+  display:flex;
 }
 
-.lightbox img {
-  max-width: 100%;
-  max-height: 85vh;
-  object-fit: contain;
+.lightbox img{
+  max-width:100%;
+  max-height:85vh;
+  object-fit:contain;
 }
 
-.cerrar {
-  position: absolute;
-  right: 20px;
-  top: 10px;
-  color: white;
-  font-size: 38px;
-  cursor: pointer;
+.cerrar{
+  position:absolute;
+  right:20px;
+  top:10px;
+  color:white;
+  font-size:38px;
+  cursor:pointer;
+}
+
+/* MÚSICA */
+
+.musica-control{
+  position:fixed;
+  z-index:1100;
+  right:17px;
+  bottom:17px;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  width:56px;
+  height:56px;
+  border:1px solid #ffffffaa;
+  border-radius:50%;
+  background:#bd7e94;
+  color:white;
+  font-size:23px;
+  box-shadow:0 5px 20px #77596855;
+  cursor:pointer;
+}
+
+.musica-control.visible{
+  display:flex;
+}
+
+.musica-control:focus-visible{
+  outline:3px solid #fff;
+  outline-offset:3px;
+}
+
+.youtube-oculto{
+  position:fixed;
+  left:-9999px;
+  top:0;
+  width:200px;
+  height:120px;
+  opacity:0;
+  pointer-events:none;
 }
 
 /* DESPEDIDA */
 
-footer {
-  width: 100%;
-  padding: 75px 20px;
-  background: #a66e85;
-  color: white;
-  text-align: center;
-  overflow: hidden;
+footer{
+  position:relative;
+  width:100%;
+  padding:75px 20px;
+  background:#a66e85;
+  color:white;
+  text-align:center;
+  overflow:hidden;
 }
 
-footer .conejita {
-  width: min(220px, 65%);
+footer .conejita{
+  width:min(220px,65%);
 }
 
-footer .nombre-eva {
-  color: #fff1f5;
+footer .nombre-eva{
+  color:#fff1f5;
 }
 
-footer .frase {
-  margin-left: auto;
-  margin-right: auto;
+footer .frase{
+  margin-left:auto;
+  margin-right:auto;
 }
 
-/* DISEÑO PARA CELULARES */
+/* CELULARES */
 
-@media(max-width:600px) {
-  section {
-    padding: 65px 16px;
+@media(max-width:600px){
+
+  section{
+    padding:70px 18px;
   }
 
-  .intro-tarjeta {
-    padding: 25px 14px 30px;
+  .intro-tarjeta{
+    padding:25px 14px 30px;
   }
 
-  .intro-tarjeta .conejita {
-    width: min(185px, 62%);
-    max-height: 185px;
+  .intro-tarjeta .conejita{
+    width:min(185px,62%);
+    max-height:185px;
   }
 
-  .foto-fija {
-    padding: 20px 14px 35px;
+  .foto-fija{
+    padding:20px 14px 35px;
   }
 
-  .foto-marco {
-    width: min(340px, 76vw);
-    padding: 9px 9px 32px;
-    margin: 18px auto;
+  .foto-marco{
+    width:min(340px,76vw);
+    padding:9px 9px 32px;
+    margin:18px auto;
   }
 
-  .foto-contenido h1 {
-    font-size: clamp(35px, 9vw, 52px);
+  .foto-contenido h1{
+    font-size:clamp(35px,9vw,52px);
   }
 
-  .foto-contenido .fecha {
-    font-size: 20px;
+  .foto-contenido .fecha{
+    font-size:20px;
   }
 
-  .galeria {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 9px;
+  .galeria{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:9px;
   }
 
-  .foto:last-child {
-    grid-column: 1/3;
-    width: calc(50% - 5px);
-    justify-self: center;
+  .foto:last-child{
+    grid-column:1/3;
+    width:calc(50% - 5px);
+    justify-self:center;
   }
 
-  .contador {
-    gap: 4px;
+  .contador{
+    gap:4px;
   }
 
-  .etiqueta {
-    font-size: 8px;
+  .etiqueta{
+    font-size:8px;
   }
 
-  .tarjeta {
-    padding: 28px 16px;
+  .tarjeta{
+    padding:28px 16px;
+  }
+
+  .conejo-lateral{
+    width:115px;
+    opacity:.25;
+  }
+
+  .conejo-izquierda,
+  .conejo-abajo-izquierda{
+    left:-65px;
+  }
+
+  .conejo-derecha,
+  .conejo-arriba-derecha{
+    right:-65px;
+  }
+
+  .musica-control{
+    right:12px;
+    bottom:12px;
+    width:49px;
+    height:49px;
   }
 }
 
-@media(max-height:650px) {
-  .foto-marco {
-    width: min(260px, 65vw);
-    margin: 10px auto;
+@media(max-height:650px){
+  .foto-marco{
+    width:min(260px,65vw);
+    margin:10px auto;
   }
 
-  .foto-contenido h1 {
-    font-size: 35px;
+  .foto-contenido h1{
+    font-size:35px;
   }
 }
 
-@media(prefers-reduced-motion:reduce) {
-  .revelar {
-    opacity: 1;
-    transform: none;
+@media(prefers-reduced-motion:reduce){
+  .revelar{
+    opacity:1;
+    transform:none;
   }
 
-  * {
-    scroll-behavior: auto !important;
-    transition: none !important;
+  *{
+    scroll-behavior:auto!important;
+    transition:none!important;
   }
 }
 </style>
@@ -558,63 +668,68 @@ footer .frase {
 <!-- FLORES DECORATIVAS -->
 
 <svg xmlns="http://www.w3.org/2000/svg"
-     width="0"
-     height="0"
-     aria-hidden="true"
-     style="position:absolute;overflow:hidden">
-  <defs>
-    <symbol id="flores" viewBox="0 0 200 200">
-      <g fill="none" stroke="#a1b28e" stroke-width="3">
-        <path d="M100 190Q100 100 100 50
-                 M100 145Q55 120 35 95
-                 M100 125Q145 100 170 70"/>
-      </g>
+width="0" height="0"
+aria-hidden="true"
+style="position:absolute;overflow:hidden">
+<defs>
 
-      <g fill="#c9d4b7">
-        <ellipse cx="75" cy="140" rx="13" ry="25"
-                 transform="rotate(-45 75 140)"/>
-        <ellipse cx="125" cy="115" rx="13" ry="25"
-                 transform="rotate(45 125 115)"/>
-      </g>
+<symbol id="flores" viewBox="0 0 200 200">
+<g fill="none" stroke="#a1b28e" stroke-width="3">
+<path d="M100 190Q100 100 100 50
+M100 145Q55 120 35 95
+M100 125Q145 100 170 70"/>
+</g>
 
-      <g fill="#eab4c3">
-        <circle cx="100" cy="38" r="20"/>
-        <circle cx="80" cy="55" r="20"/>
-        <circle cx="120" cy="55" r="20"/>
-        <circle cx="88" cy="80" r="20"/>
-        <circle cx="112" cy="80" r="20"/>
-      </g>
+<g fill="#c9d4b7">
+<ellipse cx="75" cy="140" rx="13" ry="25"
+transform="rotate(-45 75 140)"/>
+<ellipse cx="125" cy="115" rx="13" ry="25"
+transform="rotate(45 125 115)"/>
+</g>
 
-      <circle cx="100" cy="60" r="13" fill="#e9d6aa"/>
+<g fill="#eab4c3">
+<circle cx="100" cy="38" r="20"/>
+<circle cx="80" cy="55" r="20"/>
+<circle cx="120" cy="55" r="20"/>
+<circle cx="88" cy="80" r="20"/>
+<circle cx="112" cy="80" r="20"/>
+</g>
 
-      <g fill="#f2cbd3">
-        <circle cx="35" cy="85" r="13"/>
-        <circle cx="23" cy="98" r="13"/>
-        <circle cx="47" cy="98" r="13"/>
-        <circle cx="170" cy="60" r="13"/>
-        <circle cx="158" cy="73" r="13"/>
-        <circle cx="182" cy="73" r="13"/>
-      </g>
-    </symbol>
-  </defs>
+<circle cx="100" cy="60" r="13" fill="#e9d6aa"/>
+
+<g fill="#f2cbd3">
+<circle cx="35" cy="85" r="13"/>
+<circle cx="23" cy="98" r="13"/>
+<circle cx="47" cy="98" r="13"/>
+<circle cx="170" cy="60" r="13"/>
+<circle cx="158" cy="73" r="13"/>
+<circle cx="182" cy="73" r="13"/>
+</g>
+</symbol>
+
+</defs>
 </svg>
 
-<!-- PANTALLA DE BIENVENIDA -->
+<!-- BIENVENIDA -->
 
 <div class="intro-pantalla" id="intro">
   <div class="intro-tarjeta">
 
-    <p class="subtitulo">Una bendición de amor</p>
+    <p class="subtitulo">
+      Una bendición de amor
+    </p>
 
     <img
       src="conejaeva.png"
       class="conejita"
-      alt="Conejita de Eva con lazo y tutú rosado"
+      alt="Conejita de Eva"
     >
 
     <h1>Baby Shower</h1>
 
-    <p class="subtitulo">De nuestra pequeña</p>
+    <p class="subtitulo">
+      De nuestra pequeña
+    </p>
 
     <div class="nombre-eva">Eva</div>
 
@@ -630,7 +745,7 @@ footer .frase {
   </div>
 </div>
 
-<!-- ECOGRAFÍA QUE SE DESVANECE -->
+<!-- ECOGRAFÍA -->
 
 <header class="hero-foto" id="heroFoto">
   <div class="foto-fija">
@@ -645,7 +760,9 @@ footer .frase {
 
     <div class="foto-contenido" id="fotoContenido">
 
-      <p class="subtitulo">Una dulce espera</p>
+      <p class="subtitulo">
+        Una dulce espera
+      </p>
 
       <h1>Un pequeño milagro</h1>
 
@@ -653,7 +770,7 @@ footer .frase {
 
         <img
           src="eva.jpeg"
-          alt="Ecografía de nuestra pequeña Eva"
+          alt="Ecografía de Eva"
         >
 
         <p class="pie-foto">
@@ -675,12 +792,29 @@ footer .frase {
   </div>
 </header>
 
-<!-- MENSAJE PRINCIPAL -->
+<!-- MENSAJE -->
 
 <section class="blanco">
+
+  <img
+    src="conejaeva.png"
+    class="conejo-lateral conejo-izquierda"
+    alt=""
+    aria-hidden="true"
+  >
+
+  <img
+    src="conejaeva.png"
+    class="conejo-lateral conejo-derecha"
+    alt=""
+    aria-hidden="true"
+  >
+
   <div class="contenedor revelar">
 
-    <p class="subtitulo">Con todo nuestro amor</p>
+    <p class="subtitulo">
+      Con todo nuestro amor
+    </p>
 
     <h2>Un amor que crece cada día</h2>
 
@@ -716,9 +850,19 @@ footer .frase {
 <!-- CUENTA REGRESIVA -->
 
 <section class="contador-seccion">
+
+  <img
+    src="conejaeva.png"
+    class="conejo-lateral conejo-abajo-izquierda"
+    alt=""
+    aria-hidden="true"
+  >
+
   <div class="contenedor revelar">
 
-    <p class="subtitulo">Falta muy poco</p>
+    <p class="subtitulo">
+      Falta muy poco
+    </p>
 
     <h2>Cuenta regresiva</h2>
 
@@ -752,13 +896,22 @@ footer .frase {
 
 <section class="papel">
 
+  <img
+    src="conejaeva.png"
+    class="conejo-lateral conejo-arriba-derecha"
+    alt=""
+    aria-hidden="true"
+  >
+
   <svg class="flor der" viewBox="0 0 200 200">
     <use href="#flores"/>
   </svg>
 
   <div class="contenedor revelar">
 
-    <p class="subtitulo">Un día lleno de ilusión</p>
+    <p class="subtitulo">
+      Un día lleno de ilusión
+    </p>
 
     <h2>Te esperamos para celebrar</h2>
 
@@ -793,12 +946,22 @@ footer .frase {
   </div>
 </section>
 
-<!-- INVITACIÓN PERSONALIZADA -->
+<!-- INVITADO PERSONALIZADO -->
 
 <section class="blanco">
+
+  <img
+    src="conejaeva.png"
+    class="conejo-lateral conejo-abajo-izquierda"
+    alt=""
+    aria-hidden="true"
+  >
+
   <div class="contenedor revelar">
 
-    <p class="subtitulo">Preparada con mucho cariño</p>
+    <p class="subtitulo">
+      Preparada con mucho cariño
+    </p>
 
     <h2>Un día especial para compartir</h2>
 
@@ -825,9 +988,19 @@ footer .frase {
 <!-- CONFIRMACIÓN -->
 
 <section class="rosa">
+
+  <img
+    src="conejaeva.png"
+    class="conejo-lateral conejo-derecha"
+    alt=""
+    aria-hidden="true"
+  >
+
   <div class="contenedor revelar">
 
-    <p class="subtitulo">Nos encantaría verte</p>
+    <p class="subtitulo">
+      Nos encantaría verte
+    </p>
 
     <h2>Confirma tu asistencia</h2>
 
@@ -852,9 +1025,19 @@ footer .frase {
 <!-- GALERÍA -->
 
 <section class="papel">
+
+  <img
+    src="conejaeva.png"
+    class="conejo-lateral conejo-arriba-derecha"
+    alt=""
+    aria-hidden="true"
+  >
+
   <div class="contenedor revelar">
 
-    <p class="subtitulo">Momentos para recordar</p>
+    <p class="subtitulo">
+      Momentos para recordar
+    </p>
 
     <h2>Pequeños recuerdos</h2>
 
@@ -868,7 +1051,7 @@ footer .frase {
   </div>
 </section>
 
-<!-- DESPEDIDA CON CONEJITA TRANSPARENTE -->
+<!-- DESPEDIDA -->
 
 <footer>
 
@@ -893,6 +1076,20 @@ footer .frase {
 
 </footer>
 
+<!-- CONTROL DE MÚSICA -->
+
+<button
+  id="botonMusica"
+  class="musica-control"
+  type="button"
+  aria-label="Activar música"
+  title="Activar o pausar música"
+>
+  ♪
+</button>
+
+<div id="reproductorYoutube" class="youtube-oculto"></div>
+
 <!-- VISOR DE FOTOGRAFÍAS -->
 
 <div class="lightbox" id="lightbox">
@@ -904,101 +1101,188 @@ footer .frase {
 
 /* CONFIGURACIÓN */
 
-const CONFIG = {
-  fecha: "2026-12-06T14:00:00-06:00",
-  whatsapp: "50662343967"
+const CONFIG={
+  fecha:"2026-12-06T14:00:00-06:00",
+  whatsapp:"50662343967",
+  videoYoutube:"WC6lEMYmxR8"
 };
 
-/* INVITACIÓN PERSONALIZADA */
+/* INVITADO Y CUPOS */
 
-const parametros = new URLSearchParams(location.search);
+const parametros=new URLSearchParams(location.search);
 
-const nombre = (
-  parametros.get("nombre") || "Invitado especial"
-).trim().slice(0, 120) || "Invitado especial";
+const nombre=(
+  parametros.get("nombre")||"Invitado especial"
+).trim().slice(0,120)||"Invitado especial";
 
-const cupos = Number(parametros.get("cupos"));
+const cupos=Number(parametros.get("cupos"));
 
-const cuposValidos =
+const cuposValidos=
   parametros.has("cupos") &&
   Number.isInteger(cupos) &&
-  cupos >= 1 &&
-  cupos <= 30;
+  cupos>=1 &&
+  cupos<=30;
 
-document.getElementById("nombreInvitado").textContent = nombre;
+document.getElementById("nombreInvitado").textContent=nombre;
 
-let texto = "";
+let texto="";
 
-if (cuposValidos) {
-  if (cupos === 1) {
-    texto = "1 espacio para usted";
-  } else if (cupos === 2) {
-    texto = "2 espacios para usted y su acompañante";
-  } else {
-    texto = cupos + " espacios para usted y sus acompañantes";
+if(cuposValidos){
+  if(cupos===1){
+    texto="1 espacio para usted";
+  }else if(cupos===2){
+    texto="2 espacios para usted y su acompañante";
+  }else{
+    texto=cupos+" espacios para usted y sus acompañantes";
   }
 }
 
-document.getElementById("textoCupos").textContent = texto;
+document.getElementById("textoCupos").textContent=texto;
 
-/* CONFIRMACIÓN POR WHATSAPP */
+/* WHATSAPP */
 
-const mensaje =
-  "Hola, deseo confirmar mi asistencia al Baby Shower de Eva.\n" +
-  "Nombre: " + nombre + "\n" +
-  (texto ? "Invitación: " + texto + "\n" : "") +
+const mensaje=
+  "Hola, deseo confirmar mi asistencia al Baby Shower de Eva.\n"+
+  "Nombre: "+nombre+"\n"+
+  (texto?"Invitación: "+texto+"\n":"")+
   "Cantidad de personas que asistirán: ";
 
-document.getElementById("confirmar").href =
-  "https://wa.me/" + CONFIG.whatsapp +
-  "?text=" + encodeURIComponent(mensaje);
+document.getElementById("confirmar").href=
+  "https://wa.me/"+CONFIG.whatsapp+
+  "?text="+encodeURIComponent(mensaje);
+
+/* MÚSICA DE YOUTUBE */
+
+let reproductor=null;
+let musicaSolicitada=false;
+let musicaActiva=false;
+
+const botonMusica=document.getElementById("botonMusica");
+
+function actualizarBotonMusica(){
+  botonMusica.textContent=musicaActiva?"Ⅱ":"♪";
+  botonMusica.setAttribute(
+    "aria-label",
+    musicaActiva?"Pausar música":"Reproducir música"
+  );
+  botonMusica.title=
+    musicaActiva?"Pausar música":"Reproducir música";
+}
+
+function iniciarMusica(){
+  musicaSolicitada=true;
+
+  if(reproductor && typeof reproductor.playVideo==="function"){
+    reproductor.playVideo();
+  }
+}
+
+function onYouTubeIframeAPIReady(){
+  reproductor=new YT.Player("reproductorYoutube",{
+    width:"200",
+    height:"120",
+    videoId:CONFIG.videoYoutube,
+    playerVars:{
+      autoplay:0,
+      controls:0,
+      playsinline:1,
+      rel:0,
+      loop:1,
+      playlist:CONFIG.videoYoutube
+    },
+    events:{
+      onReady:function(){
+        if(musicaSolicitada){
+          iniciarMusica();
+        }
+      },
+      onStateChange:function(evento){
+        musicaActiva=
+          evento.data===YT.PlayerState.PLAYING;
+        actualizarBotonMusica();
+      },
+      onError:function(){
+        musicaActiva=false;
+        actualizarBotonMusica();
+      }
+    }
+  });
+}
+
+const scriptYoutube=document.createElement("script");
+scriptYoutube.src="https://www.youtube.com/iframe_api";
+document.head.appendChild(scriptYoutube);
+
+botonMusica.addEventListener("click",function(){
+
+  if(!reproductor){
+    musicaSolicitada=true;
+    return;
+  }
+
+  if(musicaActiva){
+    reproductor.pauseVideo();
+  }else{
+    iniciarMusica();
+  }
+
+});
 
 /* ABRIR INVITACIÓN */
 
 document.getElementById("abrir").addEventListener(
   "click",
-  function () {
-    document.getElementById("intro").classList.add("oculto");
+  function(){
+
+    document.getElementById("intro")
+      .classList.add("oculto");
+
     document.body.classList.remove("bloqueado");
-    window.scrollTo(0, 0);
+
+    botonMusica.classList.add("visible");
+
+    window.scrollTo(0,0);
+
+    iniciarMusica();
   }
 );
 
-/* EFECTO DE ECOGRAFÍA */
+/* ECOGRAFÍA QUE SE DESVANECE */
 
-const heroFoto = document.getElementById("heroFoto");
-const fotoContenido = document.getElementById("fotoContenido");
+const heroFoto=document.getElementById("heroFoto");
+const fotoContenido=document.getElementById("fotoContenido");
 
-let desplazamientoPendiente = false;
+let desplazamientoPendiente=false;
 
-function actualizarFoto() {
-  const recorrido = Math.max(
+function actualizarFoto(){
+
+  const recorrido=Math.max(
     1,
-    heroFoto.offsetHeight - window.innerHeight
+    heroFoto.offsetHeight-window.innerHeight
   );
 
-  const avance = Math.min(
+  const avance=Math.min(
     1,
     Math.max(
       0,
-      -heroFoto.getBoundingClientRect().top / recorrido
+      -heroFoto.getBoundingClientRect().top/recorrido
     )
   );
 
-  const opacidad = 1 - Math.min(1, avance * 1.35);
+  const opacidad=1-Math.min(1,avance*1.35);
 
-  fotoContenido.style.opacity = opacidad;
+  fotoContenido.style.opacity=opacidad;
 
-  fotoContenido.style.transform =
-    "translateY(" + (-avance * 35) + "px) scale(" +
-    (1 - avance * .07) + ")";
+  fotoContenido.style.transform=
+    "translateY("+(-avance*35)+"px) scale("+
+    (1-avance*.07)+")";
 
-  desplazamientoPendiente = false;
+  desplazamientoPendiente=false;
 }
 
-function solicitarActualizacion() {
-  if (!desplazamientoPendiente) {
-    desplazamientoPendiente = true;
+function solicitarActualizacion(){
+  if(!desplazamientoPendiente){
+    desplazamientoPendiente=true;
     requestAnimationFrame(actualizarFoto);
   }
 }
@@ -1006,101 +1290,113 @@ function solicitarActualizacion() {
 window.addEventListener(
   "scroll",
   solicitarActualizacion,
-  { passive: true }
+  {passive:true}
 );
 
-window.addEventListener("resize", solicitarActualizacion);
+window.addEventListener("resize",solicitarActualizacion);
 
 actualizarFoto();
 
 /* CUENTA REGRESIVA */
 
-const fechaEvento = new Date(CONFIG.fecha).getTime();
+const fechaEvento=new Date(CONFIG.fecha).getTime();
 
-function actualizarContador() {
-  const diferencia = Math.max(
+function actualizarContador(){
+
+  const diferencia=Math.max(
     0,
-    fechaEvento - Date.now()
+    fechaEvento-Date.now()
   );
 
-  const valores = [
-    Math.floor(diferencia / 86400000),
-    Math.floor(diferencia / 3600000) % 24,
-    Math.floor(diferencia / 60000) % 60,
-    Math.floor(diferencia / 1000) % 60
+  const valores=[
+    Math.floor(diferencia/86400000),
+    Math.floor(diferencia/3600000)%24,
+    Math.floor(diferencia/60000)%60,
+    Math.floor(diferencia/1000)%60
   ];
 
-  ["dias", "horas", "minutos", "segundos"].forEach(
-    function (id, i) {
-      document.getElementById(id).textContent =
-        String(valores[i]).padStart(2, "0");
+  ["dias","horas","minutos","segundos"].forEach(
+    function(id,i){
+      document.getElementById(id).textContent=
+        String(valores[i]).padStart(2,"0");
     }
   );
 }
 
 actualizarContador();
-setInterval(actualizarContador, 1000);
+setInterval(actualizarContador,1000);
 
 /* ANIMACIONES */
 
-if ("IntersectionObserver" in window) {
-  const observador = new IntersectionObserver(
-    function (entradas) {
-      entradas.forEach(function (entrada) {
-        if (entrada.isIntersecting) {
+if("IntersectionObserver" in window){
+
+  const observador=new IntersectionObserver(
+    function(entradas){
+      entradas.forEach(function(entrada){
+        if(entrada.isIntersecting){
           entrada.target.classList.add("visible");
         }
       });
     },
-    { threshold: .08 }
+    {threshold:.08}
   );
 
   document.querySelectorAll(".revelar").forEach(
-    function (elemento) {
+    function(elemento){
       observador.observe(elemento);
     }
   );
-} else {
+
+}else{
+
   document.querySelectorAll(".revelar").forEach(
-    function (elemento) {
+    function(elemento){
       elemento.classList.add("visible");
     }
   );
+
 }
 
-/* GALERÍA DE FOTOGRAFÍAS */
+/* GALERÍA */
 
-const galeria = document.getElementById("galeria");
+const galeria=document.getElementById("galeria");
 
-for (let i = 1; i <= 7; i++) {
-  const cuadro = document.createElement("div");
-  cuadro.className = "foto";
-  cuadro.textContent = "Recuerdo " + i;
+for(let i=1;i<=7;i++){
 
-  const imagen = new Image();
-  imagen.src = "img/foto" + i + ".jpeg";
-  imagen.alt = "Recuerdo " + i;
-  imagen.loading = "lazy";
+  const cuadro=document.createElement("div");
+  cuadro.className="foto";
+  cuadro.textContent="Recuerdo "+i;
 
-  imagen.onload = function () {
-    cuadro.textContent = "";
+  const imagen=new Image();
+
+  imagen.src="img/foto"+i+".jpeg";
+  imagen.alt="Recuerdo "+i;
+  imagen.loading="lazy";
+
+  imagen.onload=function(){
+
+    cuadro.textContent="";
     cuadro.appendChild(imagen);
 
-    cuadro.onclick = function () {
-      document.getElementById("fotoGrande").src = imagen.src;
-      document.getElementById("lightbox").classList.add("activo");
+    cuadro.onclick=function(){
+
+      document.getElementById("fotoGrande").src=imagen.src;
+
+      document.getElementById("lightbox")
+        .classList.add("activo");
+
     };
   };
 
   galeria.appendChild(cuadro);
 }
 
-/* CERRAR FOTOGRAFÍA */
+/* CERRAR GALERÍA */
 
 document.getElementById("lightbox").addEventListener(
   "click",
-  function (e) {
-    if (e.target.id !== "fotoGrande") {
+  function(e){
+    if(e.target.id!=="fotoGrande"){
       this.classList.remove("activo");
     }
   }

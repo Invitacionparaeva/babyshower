@@ -5,6 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#fff8f8">
+
 <title>Baby Shower de Eva | Una dulce espera</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
@@ -149,7 +150,7 @@ section {
   transform: none;
 }
 
-/* NUEVA CONEJITA SIN FONDO */
+/* CONEJITA PNG TRANSPARENTE */
 
 .conejita {
   display: block;
@@ -157,6 +158,7 @@ section {
   height: auto;
   margin: 0 auto;
   object-fit: contain;
+  background: transparent;
   filter: drop-shadow(0 8px 14px #b8849825);
 }
 
@@ -227,7 +229,7 @@ section {
   margin: 5px auto 15px;
 }
 
-/* ECOGRAFÍA INCLINADA */
+/* ECOGRAFÍA */
 
 .hero-foto {
   position: relative;
@@ -605,7 +607,7 @@ footer .frase {
     <p class="subtitulo">Una bendición de amor</p>
 
     <img
-      src="conejaeva.jpeg"
+      src="conejaeva.png"
       class="conejita"
       alt="Conejita de Eva con lazo y tutú rosado"
     >
@@ -866,12 +868,12 @@ footer .frase {
   </div>
 </section>
 
-<!-- DESPEDIDA CON LA NUEVA CONEJITA -->
+<!-- DESPEDIDA CON CONEJITA TRANSPARENTE -->
 
 <footer>
 
   <img
-    src="conejaeva.jpeg"
+    src="conejaeva.png"
     class="conejita"
     alt="Conejita de Eva"
   >
@@ -900,7 +902,7 @@ footer .frase {
 
 <script>
 
-/* CONFIGURACIÓN DEL EVENTO */
+/* CONFIGURACIÓN */
 
 const CONFIG = {
   fecha: "2026-12-06T14:00:00-06:00",
@@ -962,7 +964,7 @@ document.getElementById("abrir").addEventListener(
   }
 );
 
-/* DESVANECIMIENTO DE ECOGRAFÍA */
+/* EFECTO DE ECOGRAFÍA */
 
 const heroFoto = document.getElementById("heroFoto");
 const fotoContenido = document.getElementById("fotoContenido");
@@ -1039,7 +1041,7 @@ function actualizarContador() {
 actualizarContador();
 setInterval(actualizarContador, 1000);
 
-/* ANIMACIONES DE LAS SECCIONES */
+/* ANIMACIONES */
 
 if ("IntersectionObserver" in window) {
   const observador = new IntersectionObserver(
@@ -1066,7 +1068,7 @@ if ("IntersectionObserver" in window) {
   );
 }
 
-/* GALERÍA DE SIETE FOTOGRAFÍAS */
+/* GALERÍA DE FOTOGRAFÍAS */
 
 const galeria = document.getElementById("galeria");
 

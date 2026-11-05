@@ -1,15 +1,20 @@
 
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#fff8f8">
+
 <title>Baby Shower de Eva | Una dulce espera</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
+
+/* COLORES */
+
 :root{
   --rosa:#bd7e94;
   --rosa-claro:#e8b7c6;
@@ -50,7 +55,6 @@ img,svg{
 h1,h2,h3{
   font-family:"Cormorant Garamond",serif;
   font-weight:500;
-  overflow-wrap:break-word;
 }
 
 h2{
@@ -136,15 +140,27 @@ section{
 
 .papel{
   background:
-    radial-gradient(ellipse at 12% 18%,#f9e2e8,transparent 45%),
-    radial-gradient(ellipse at 88% 80%,#f8e5eb,transparent 40%),
+    radial-gradient(
+      ellipse at 12% 18%,
+      #f9e2e8,
+      transparent 45%
+    ),
+    radial-gradient(
+      ellipse at 88% 80%,
+      #f8e5eb,
+      transparent 40%
+    ),
     var(--crema);
 }
+
+/* ANIMACIONES */
 
 .revelar{
   opacity:0;
   transform:translateY(25px);
-  transition:opacity .85s,transform .85s;
+  transition:
+    opacity .85s,
+    transform .85s;
 }
 
 .revelar.visible{
@@ -223,7 +239,7 @@ section{
   transform:rotate(160deg);
 }
 
-/* BIENVENIDA */
+/* PANTALLA DE BIENVENIDA */
 
 .intro-pantalla{
   position:fixed;
@@ -233,8 +249,14 @@ section{
   place-items:center;
   padding:15px;
   overflow-y:auto;
-  background:radial-gradient(circle,#fff9f7,#f5dce5);
-  transition:opacity .8s,visibility .8s;
+  background:radial-gradient(
+    circle,
+    #fff9f7,
+    #f5dce5
+  );
+  transition:
+    opacity .8s,
+    visibility .8s;
 }
 
 .intro-pantalla.oculto{
@@ -278,7 +300,11 @@ section{
   width:100%;
   min-height:175vh;
   background:
-    radial-gradient(circle at 50% 15%,#f4dbe4,transparent 55%),
+    radial-gradient(
+      circle at 50% 15%,
+      #f4dbe4,
+      transparent 55%
+    ),
     #fffaf6;
 }
 
@@ -517,11 +543,6 @@ section{
   display:flex;
 }
 
-.musica-control:focus-visible{
-  outline:3px solid #fff;
-  outline-offset:3px;
-}
-
 .youtube-oculto{
   position:fixed;
   left:-9999px;
@@ -532,13 +553,19 @@ section{
   pointer-events:none;
 }
 
-/* DESPEDIDA */
+/* CARTA FINAL PARA EVA */
 
 footer{
   position:relative;
   width:100%;
-  padding:75px 20px;
-  background:#a66e85;
+  padding:85px 20px;
+  background:
+    radial-gradient(
+      ellipse at 50% 0%,
+      #c993a8,
+      transparent 65%
+    ),
+    #a66e85;
   color:white;
   text-align:center;
   overflow:hidden;
@@ -555,6 +582,61 @@ footer .nombre-eva{
 footer .frase{
   margin-left:auto;
   margin-right:auto;
+}
+
+.carta-eva{
+  position:relative;
+  width:100%;
+  max-width:690px;
+  margin:38px auto 30px;
+  padding:45px 35px;
+  background:#fffaf6f0;
+  color:var(--oscuro);
+  border:1px solid #f4dbe4;
+  border-radius:6px;
+  box-shadow:0 15px 45px #6d41502e;
+}
+
+.carta-eva::before{
+  content:"♡";
+  display:block;
+  font-size:33px;
+  color:var(--rosa);
+  margin-bottom:14px;
+}
+
+.carta-titulo{
+  margin:0 0 30px;
+  color:var(--rosa);
+  font:clamp(36px,8vw,53px) "Great Vibes",cursive;
+}
+
+.carta-eva p{
+  max-width:580px;
+  margin:20px auto;
+  font:italic clamp(22px,4.5vw,29px)/1.55 "Cormorant Garamond",serif;
+}
+
+.carta-eva .carta-final{
+  margin-top:35px;
+  color:#a15f79;
+  font-weight:600;
+}
+
+.carta-firma{
+  margin-top:35px;
+  font:clamp(25px,5vw,34px) "Great Vibes",cursive;
+  color:var(--rosa);
+}
+
+footer .fecha-footer{
+  margin-top:30px;
+  font-size:12px;
+  letter-spacing:3px;
+}
+
+footer .despedida{
+  font:25px "Cormorant Garamond",serif;
 }
 
 /* CELULARES */
@@ -636,9 +718,24 @@ footer .frase{
     width:49px;
     height:49px;
   }
+
+  .carta-eva{
+    padding:35px 20px;
+    margin:30px auto;
+  }
+
+  .carta-eva p{
+    font-size:23px;
+    line-height:1.55;
+  }
+
+  .carta-titulo{
+    font-size:40px;
+  }
 }
 
 @media(max-height:650px){
+
   .foto-marco{
     width:min(260px,65vw);
     margin:10px auto;
@@ -650,6 +747,7 @@ footer .frase{
 }
 
 @media(prefers-reduced-motion:reduce){
+
   .revelar{
     opacity:1;
     transform:none;
@@ -660,6 +758,7 @@ footer .frase{
     transition:none!important;
   }
 }
+
 </style>
 </head>
 
@@ -671,48 +770,61 @@ footer .frase{
 width="0" height="0"
 aria-hidden="true"
 style="position:absolute;overflow:hidden">
+
 <defs>
 
 <symbol id="flores" viewBox="0 0 200 200">
+
 <g fill="none" stroke="#a1b28e" stroke-width="3">
+
 <path d="M100 190Q100 100 100 50
 M100 145Q55 120 35 95
 M100 125Q145 100 170 70"/>
+
 </g>
 
 <g fill="#c9d4b7">
+
 <ellipse cx="75" cy="140" rx="13" ry="25"
 transform="rotate(-45 75 140)"/>
+
 <ellipse cx="125" cy="115" rx="13" ry="25"
 transform="rotate(45 125 115)"/>
+
 </g>
 
 <g fill="#eab4c3">
+
 <circle cx="100" cy="38" r="20"/>
 <circle cx="80" cy="55" r="20"/>
 <circle cx="120" cy="55" r="20"/>
 <circle cx="88" cy="80" r="20"/>
 <circle cx="112" cy="80" r="20"/>
+
 </g>
 
 <circle cx="100" cy="60" r="13" fill="#e9d6aa"/>
 
 <g fill="#f2cbd3">
+
 <circle cx="35" cy="85" r="13"/>
 <circle cx="23" cy="98" r="13"/>
 <circle cx="47" cy="98" r="13"/>
 <circle cx="170" cy="60" r="13"/>
 <circle cx="158" cy="73" r="13"/>
 <circle cx="182" cy="73" r="13"/>
+
 </g>
+
 </symbol>
 
 </defs>
 </svg>
 
-<!-- BIENVENIDA -->
+<!-- PANTALLA DE BIENVENIDA -->
 
 <div class="intro-pantalla" id="intro">
+
   <div class="intro-tarjeta">
 
     <p class="subtitulo">
@@ -743,11 +855,13 @@ transform="rotate(45 125 115)"/>
     </button>
 
   </div>
+
 </div>
 
 <!-- ECOGRAFÍA -->
 
 <header class="hero-foto" id="heroFoto">
+
   <div class="foto-fija">
 
     <svg class="flor izq" viewBox="0 0 200 200">
@@ -790,6 +904,7 @@ transform="rotate(45 125 115)"/>
     </div>
 
   </div>
+
 </header>
 
 <!-- MENSAJE -->
@@ -845,6 +960,7 @@ transform="rotate(45 125 115)"/>
     </p>
 
   </div>
+
 </section>
 
 <!-- CUENTA REGRESIVA -->
@@ -889,7 +1005,9 @@ transform="rotate(45 125 115)"/>
       </div>
 
     </div>
+
   </div>
+
 </section>
 
 <!-- FECHA Y UBICACIÓN -->
@@ -921,7 +1039,9 @@ transform="rotate(45 125 115)"/>
 
     <div class="fecha-grande">06</div>
 
-    <p class="frase">2:00 de la tarde</p>
+    <p class="frase">
+      2:00 de la tarde
+    </p>
 
     <div class="tarjeta">
 
@@ -943,7 +1063,9 @@ transform="rotate(45 125 115)"/>
       </a>
 
     </div>
+
   </div>
+
 </section>
 
 <!-- INVITADO PERSONALIZADO -->
@@ -983,6 +1105,7 @@ transform="rotate(45 125 115)"/>
     </p>
 
   </div>
+
 </section>
 
 <!-- CONFIRMACIÓN -->
@@ -1020,6 +1143,7 @@ transform="rotate(45 125 115)"/>
     </a>
 
   </div>
+
 </section>
 
 <!-- GALERÍA -->
@@ -1049,9 +1173,10 @@ transform="rotate(45 125 115)"/>
     <div class="galeria" id="galeria"></div>
 
   </div>
+
 </section>
 
-<!-- DESPEDIDA -->
+<!-- CARTA FINAL PARA EVA -->
 
 <footer>
 
@@ -1061,22 +1186,78 @@ transform="rotate(45 125 115)"/>
     alt="Conejita de Eva"
   >
 
-  <p class="frase">
-    Eva, todavía no conocemos tu sonrisa,
-    pero ya eres motivo de tantas sonrisas.
-    Te esperamos con los brazos abiertos
-    y el corazón lleno de amor.
-  </p>
+  <div class="carta-eva revelar">
+
+    <h2 class="carta-titulo">
+      Para nuestra pequeña Eva
+    </h2>
+
+    <p>
+      Eva, mi pequeña princesa…
+    </p>
+
+    <p>
+      Todavía no conocemos tus ojitos,
+      no hemos escuchado tu risa
+      ni hemos sentido tus manitas
+      acariciar nuestro rostro.
+      Pero, sin siquiera haber llegado,
+      ya nos enseñaste lo que significa
+      amar con todo el corazón.
+    </p>
+
+    <p>
+      Te soñamos antes de conocerte,
+      te amamos antes de abrazarte
+      y te esperamos con una ilusión
+      que no cabe en palabras.
+    </p>
+
+    <p>
+      Algún día sabrás que,
+      mientras crecías en el vientre de mamá,
+      aquí afuera ya había corazones
+      que latían de felicidad por ti.
+    </p>
+
+    <p>
+      Y cuando finalmente llegues
+      a nuestros brazos,
+      entenderemos que todos nuestros sueños
+      tenían un mismo nombre: Eva.
+    </p>
+
+    <p>
+      Porque, aunque todavía no te hemos visto,
+      ya eres una de las partes más hermosas
+      de nuestra historia.
+    </p>
+
+    <p class="carta-final">
+      Te esperamos, mi niña bonita.
+      No sabes cuánto amor te espera en este mundo.
+    </p>
+
+    <div class="carta-firma">
+      ♡ Con todo el amor que existe,
+      para ti, Eva. ♡
+    </div>
+
+  </div>
 
   <div class="nombre-eva">Eva</div>
 
-  <p>06 · DICIEMBRE · 2026</p>
+  <p class="fecha-footer">
+    06 · DICIEMBRE · 2026
+  </p>
 
-  <p>Con todo nuestro cariño</p>
+  <p class="despedida">
+    Con todo nuestro cariño
+  </p>
 
 </footer>
 
-<!-- CONTROL DE MÚSICA -->
+<!-- BOTÓN DE MÚSICA -->
 
 <button
   id="botonMusica"
@@ -1088,13 +1269,22 @@ transform="rotate(45 125 115)"/>
   ♪
 </button>
 
-<div id="reproductorYoutube" class="youtube-oculto"></div>
+<div
+  id="reproductorYoutube"
+  class="youtube-oculto"
+></div>
 
 <!-- VISOR DE FOTOGRAFÍAS -->
 
 <div class="lightbox" id="lightbox">
+
   <span class="cerrar" id="cerrar">×</span>
-  <img id="fotoGrande" alt="Recuerdo ampliado">
+
+  <img
+    id="fotoGrande"
+    alt="Recuerdo ampliado"
+  >
+
 </div>
 
 <script>
@@ -1128,18 +1318,24 @@ document.getElementById("nombreInvitado").textContent=nombre;
 let texto="";
 
 if(cuposValidos){
+
   if(cupos===1){
     texto="1 espacio para usted";
-  }else if(cupos===2){
+  }
+
+  else if(cupos===2){
     texto="2 espacios para usted y su acompañante";
-  }else{
+  }
+
+  else{
     texto=cupos+" espacios para usted y sus acompañantes";
   }
+
 }
 
 document.getElementById("textoCupos").textContent=texto;
 
-/* WHATSAPP */
+/* CONFIRMACIÓN POR WHATSAPP */
 
 const mensaje=
   "Hola, deseo confirmar mi asistencia al Baby Shower de Eva.\n"+
@@ -1160,28 +1356,41 @@ let musicaActiva=false;
 const botonMusica=document.getElementById("botonMusica");
 
 function actualizarBotonMusica(){
+
   botonMusica.textContent=musicaActiva?"Ⅱ":"♪";
+
   botonMusica.setAttribute(
     "aria-label",
     musicaActiva?"Pausar música":"Reproducir música"
   );
+
   botonMusica.title=
     musicaActiva?"Pausar música":"Reproducir música";
+
 }
 
 function iniciarMusica(){
+
   musicaSolicitada=true;
 
-  if(reproductor && typeof reproductor.playVideo==="function"){
+  if(
+    reproductor &&
+    typeof reproductor.playVideo==="function"
+  ){
     reproductor.playVideo();
   }
+
 }
 
 function onYouTubeIframeAPIReady(){
+
   reproductor=new YT.Player("reproductorYoutube",{
+
     width:"200",
     height:"120",
+
     videoId:CONFIG.videoYoutube,
+
     playerVars:{
       autoplay:0,
       controls:0,
@@ -1190,27 +1399,44 @@ function onYouTubeIframeAPIReady(){
       loop:1,
       playlist:CONFIG.videoYoutube
     },
+
     events:{
+
       onReady:function(){
+
         if(musicaSolicitada){
           iniciarMusica();
         }
+
       },
+
       onStateChange:function(evento){
+
         musicaActiva=
           evento.data===YT.PlayerState.PLAYING;
+
         actualizarBotonMusica();
+
       },
+
       onError:function(){
+
         musicaActiva=false;
+
         actualizarBotonMusica();
+
       }
+
     }
+
   });
+
 }
 
 const scriptYoutube=document.createElement("script");
+
 scriptYoutube.src="https://www.youtube.com/iframe_api";
+
 document.head.appendChild(scriptYoutube);
 
 botonMusica.addEventListener("click",function(){
@@ -1222,7 +1448,9 @@ botonMusica.addEventListener("click",function(){
 
   if(musicaActiva){
     reproductor.pauseVideo();
-  }else{
+  }
+
+  else{
     iniciarMusica();
   }
 
@@ -1244,12 +1472,14 @@ document.getElementById("abrir").addEventListener(
     window.scrollTo(0,0);
 
     iniciarMusica();
+
   }
 );
 
 /* ECOGRAFÍA QUE SE DESVANECE */
 
 const heroFoto=document.getElementById("heroFoto");
+
 const fotoContenido=document.getElementById("fotoContenido");
 
 let desplazamientoPendiente=false;
@@ -1278,13 +1508,19 @@ function actualizarFoto(){
     (1-avance*.07)+")";
 
   desplazamientoPendiente=false;
+
 }
 
 function solicitarActualizacion(){
+
   if(!desplazamientoPendiente){
+
     desplazamientoPendiente=true;
+
     requestAnimationFrame(actualizarFoto);
+
   }
+
 }
 
 window.addEventListener(
@@ -1293,7 +1529,10 @@ window.addEventListener(
   {passive:true}
 );
 
-window.addEventListener("resize",solicitarActualizacion);
+window.addEventListener(
+  "resize",
+  solicitarActualizacion
+);
 
 actualizarFoto();
 
@@ -1315,67 +1554,94 @@ function actualizarContador(){
     Math.floor(diferencia/1000)%60
   ];
 
-  ["dias","horas","minutos","segundos"].forEach(
-    function(id,i){
-      document.getElementById(id).textContent=
-        String(valores[i]).padStart(2,"0");
-    }
-  );
+  [
+    "dias",
+    "horas",
+    "minutos",
+    "segundos"
+  ].forEach(function(id,i){
+
+    document.getElementById(id).textContent=
+      String(valores[i]).padStart(2,"0");
+
+  });
+
 }
 
 actualizarContador();
+
 setInterval(actualizarContador,1000);
 
-/* ANIMACIONES */
+/* ANIMACIONES AL DESLIZAR */
 
 if("IntersectionObserver" in window){
 
   const observador=new IntersectionObserver(
+
     function(entradas){
+
       entradas.forEach(function(entrada){
+
         if(entrada.isIntersecting){
+
           entrada.target.classList.add("visible");
+
         }
+
       });
+
     },
+
     {threshold:.08}
+
   );
 
   document.querySelectorAll(".revelar").forEach(
     function(elemento){
+
       observador.observe(elemento);
-    }
-  );
 
-}else{
-
-  document.querySelectorAll(".revelar").forEach(
-    function(elemento){
-      elemento.classList.add("visible");
     }
   );
 
 }
 
-/* GALERÍA */
+else{
+
+  document.querySelectorAll(".revelar").forEach(
+    function(elemento){
+
+      elemento.classList.add("visible");
+
+    }
+  );
+
+}
+
+/* GALERÍA DE SIETE FOTOGRAFÍAS */
 
 const galeria=document.getElementById("galeria");
 
 for(let i=1;i<=7;i++){
 
   const cuadro=document.createElement("div");
+
   cuadro.className="foto";
+
   cuadro.textContent="Recuerdo "+i;
 
   const imagen=new Image();
 
   imagen.src="img/foto"+i+".jpeg";
+
   imagen.alt="Recuerdo "+i;
+
   imagen.loading="lazy";
 
   imagen.onload=function(){
 
     cuadro.textContent="";
+
     cuadro.appendChild(imagen);
 
     cuadro.onclick=function(){
@@ -1386,9 +1652,11 @@ for(let i=1;i<=7;i++){
         .classList.add("activo");
 
     };
+
   };
 
   galeria.appendChild(cuadro);
+
 }
 
 /* CERRAR GALERÍA */
@@ -1396,12 +1664,17 @@ for(let i=1;i<=7;i++){
 document.getElementById("lightbox").addEventListener(
   "click",
   function(e){
+
     if(e.target.id!=="fotoGrande"){
+
       this.classList.remove("activo");
+
     }
+
   }
 );
 
 </script>
+
 </body>
 </html>

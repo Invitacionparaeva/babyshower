@@ -10,682 +10,743 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
-:root{
-  --rosa:#bd7e94;
-  --rosa-claro:#e8b7c6;
-  --crema:#fffaf6;
-  --oscuro:#775968;
-  --oro:#b69a73;
+:root {
+  --rosa: #bd7e94;
+  --rosa-claro: #e8b7c6;
+  --crema: #fffaf6;
+  --oscuro: #775968;
+  --oro: #b69a73;
 }
 
 *,
 *::before,
-*::after{
-  box-sizing:border-box;
+*::after {
+  box-sizing: border-box;
 }
 
-html{
-  width:100%;
-  overflow-x:hidden;
-  scroll-behavior:smooth;
+html {
+  width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
-body{
-  margin:0;
-  width:100%;
-  overflow-x:hidden;
-  background:var(--crema);
-  color:var(--oscuro);
-  font-family:Montserrat,sans-serif;
+body {
+  margin: 0;
+  width: 100%;
+  overflow-x: hidden;
+  background: var(--crema);
+  color: var(--oscuro);
+  font-family: Montserrat, sans-serif;
 }
 
-body.bloqueado{
-  overflow:hidden;
+body.bloqueado {
+  overflow: hidden;
 }
 
-img,svg{
-  max-width:100%;
+img, svg {
+  max-width: 100%;
 }
 
-h1,h2,h3{
-  font-family:"Cormorant Garamond",serif;
-  font-weight:500;
+h1, h2, h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
 }
 
-h2{
-  font-size:clamp(37px,8vw,65px);
-  line-height:1.12;
-  margin:10px 0 24px;
+h2 {
+  font-size: clamp(37px, 8vw, 65px);
+  line-height: 1.12;
+  margin: 10px 0 24px;
 }
 
-p{
-  line-height:1.85;
+p {
+  line-height: 1.85;
 }
 
-section{
-  position:relative;
-  width:100%;
-  padding:90px 20px;
-  overflow:hidden;
-  isolation:isolate;
+section {
+  position: relative;
+  width: 100%;
+  padding: 90px 20px;
+  overflow: hidden;
+  isolation: isolate;
 }
 
-.contenedor{
-  position:relative;
-  z-index:2;
-  width:100%;
-  max-width:850px;
-  margin:auto;
-  text-align:center;
+.contenedor {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 850px;
+  margin: auto;
+  text-align: center;
 }
 
-.subtitulo{
-  color:var(--rosa);
-  font-size:11px;
-  letter-spacing:2.5px;
-  text-transform:uppercase;
+.subtitulo {
+  color: var(--rosa);
+  font-size: 11px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
 }
 
-.texto{
-  max-width:630px;
-  margin:18px auto;
-  font-size:14px;
+.texto {
+  max-width: 630px;
+  margin: 18px auto;
+  font-size: 14px;
 }
 
-.frase{
-  max-width:640px;
-  margin:22px auto;
-  font:italic clamp(24px,5vw,33px)/1.5 "Cormorant Garamond",serif;
+.frase {
+  max-width: 640px;
+  margin: 22px auto;
+  font: italic clamp(24px, 5vw, 33px)/1.5
+    "Cormorant Garamond", serif;
 }
 
-.ornamento{
-  color:var(--oro);
-  font-size:28px;
-  margin:25px auto;
+.ornamento {
+  color: var(--oro);
+  font-size: 28px;
+  margin: 25px auto;
 }
 
-.boton{
-  display:inline-block;
-  max-width:100%;
-  padding:16px 25px;
-  margin-top:20px;
-  border:1px solid var(--rosa);
-  background:var(--rosa);
-  color:white;
-  font:600 11px/1.5 Montserrat,sans-serif;
-  letter-spacing:1px;
-  text-align:center;
-  text-decoration:none;
-  text-transform:uppercase;
-  cursor:pointer;
-  transition:background .25s;
+.boton {
+  display: inline-block;
+  max-width: 100%;
+  padding: 16px 25px;
+  margin-top: 20px;
+  border: 1px solid var(--rosa);
+  background: var(--rosa);
+  color: white;
+  font: 600 11px/1.5 Montserrat, sans-serif;
+  letter-spacing: 1px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background .25s;
 }
 
-.boton:hover{
-  background:#9e6379;
+.boton:hover {
+  background: #9e6379;
 }
 
-.blanco{background:white}
-.rosa{background:#f8e8ed}
+.blanco {
+  background: white;
+}
 
-.papel{
+.rosa {
+  background: #f8e8ed;
+}
+
+.papel {
   background:
-    radial-gradient(ellipse at 12% 18%,#f9e2e8,transparent 45%),
-    radial-gradient(ellipse at 88% 80%,#f8e5eb,transparent 40%),
+    radial-gradient(
+      ellipse at 12% 18%,
+      #f9e2e8,
+      transparent 45%
+    ),
+    radial-gradient(
+      ellipse at 88% 80%,
+      #f8e5eb,
+      transparent 40%
+    ),
     var(--crema);
 }
 
-.revelar{
-  opacity:0;
-  transform:translateY(25px);
-  transition:opacity .85s,transform .85s;
+.revelar {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity .85s, transform .85s;
 }
 
-.revelar.visible{
-  opacity:1;
-  transform:none;
+.revelar.visible {
+  opacity: 1;
+  transform: none;
 }
 
-/* CONEJITA */
+/* CONEJITAS */
 
-.conejita{
-  display:block;
-  width:min(245px,78%);
-  height:auto;
-  margin:0 auto;
-  object-fit:contain;
-  background:transparent;
-  filter:drop-shadow(0 8px 14px #b8849825);
+.conejita {
+  display: block;
+  width: min(245px, 78%);
+  height: auto;
+  margin: 0 auto;
+  object-fit: contain;
+  background: transparent;
+  filter: drop-shadow(0 8px 14px #b8849825);
 }
 
-.conejo-lateral{
-  position:absolute;
-  z-index:1;
-  width:clamp(100px,17vw,210px);
-  height:auto;
-  opacity:.52;
-  pointer-events:none;
-  user-select:none;
-  filter:drop-shadow(0 8px 15px #a97b8a18);
+.conejo-lateral {
+  position: absolute;
+  z-index: 1;
+  width: clamp(100px, 17vw, 210px);
+  height: auto;
+  opacity: .52;
+  pointer-events: none;
+  user-select: none;
+  filter: drop-shadow(0 8px 15px #a97b8a18);
 }
 
-.conejo-izquierda{
-  left:-50px;
-  top:16%;
-  transform:rotate(-12deg);
+.conejo-izquierda {
+  left: -50px;
+  top: 16%;
+  transform: rotate(-12deg);
 }
 
-.conejo-derecha{
-  right:-55px;
-  bottom:9%;
-  transform:rotate(12deg);
+.conejo-derecha {
+  right: -55px;
+  bottom: 9%;
+  transform: rotate(12deg);
 }
 
-.conejo-arriba-derecha{
-  right:-55px;
-  top:8%;
-  transform:rotate(15deg);
+.conejo-arriba-derecha {
+  right: -55px;
+  top: 8%;
+  transform: rotate(15deg);
 }
 
-.conejo-abajo-izquierda{
-  left:-50px;
-  bottom:5%;
-  transform:rotate(-13deg);
+.conejo-abajo-izquierda {
+  left: -50px;
+  bottom: 5%;
+  transform: rotate(-13deg);
 }
 
-.flor{
-  position:absolute;
-  z-index:0;
-  width:145px;
-  height:145px;
-  opacity:.45;
-  pointer-events:none;
+.flor {
+  position: absolute;
+  z-index: 0;
+  width: 145px;
+  height: 145px;
+  opacity: .45;
+  pointer-events: none;
 }
 
-.flor.izq{
-  left:-55px;
-  top:-35px;
+.flor.izq {
+  left: -55px;
+  top: -35px;
 }
 
-.flor.der{
-  right:-55px;
-  bottom:-35px;
-  transform:rotate(160deg);
+.flor.der {
+  right: -55px;
+  bottom: -35px;
+  transform: rotate(160deg);
 }
 
-/* BIENVENIDA */
+/* PANTALLA DE BIENVENIDA */
 
-.intro-pantalla{
-  position:fixed;
-  inset:0;
-  z-index:1000;
-  display:grid;
-  place-items:center;
-  padding:15px;
-  overflow-y:auto;
-  background:radial-gradient(circle,#fff9f7,#f5dce5);
-  transition:opacity .8s,visibility .8s;
+.intro-pantalla {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: 15px;
+  overflow-y: auto;
+  background: radial-gradient(
+    circle,
+    #fff9f7,
+    #f5dce5
+  );
+  transition: opacity .8s, visibility .8s;
 }
 
-.intro-pantalla.oculto{
-  opacity:0;
-  visibility:hidden;
-  pointer-events:none;
+.intro-pantalla.oculto {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
-.intro-tarjeta{
-  width:100%;
-  max-width:500px;
-  padding:30px 18px 38px;
-  margin:auto;
-  text-align:center;
-  background:#ffffffc4;
-  border:1px solid #dfb8c5;
-  border-radius:170px 170px 18px 18px;
-  box-shadow:0 20px 60px #a46b8320;
+.intro-tarjeta {
+  width: 100%;
+  max-width: 500px;
+  padding: 30px 18px 38px;
+  margin: auto;
+  text-align: center;
+  background: #ffffffc4;
+  border: 1px solid #dfb8c5;
+  border-radius: 170px 170px 18px 18px;
+  box-shadow: 0 20px 60px #a46b8320;
 }
 
-.intro-tarjeta h1{
-  font-size:clamp(40px,10vw,65px);
-  margin:5px;
+.intro-tarjeta h1 {
+  font-size: clamp(40px, 10vw, 65px);
+  margin: 5px;
 }
 
-.intro-tarjeta .conejita{
-  width:min(245px,70%);
-  max-height:245px;
+.intro-tarjeta .conejita {
+  width: min(245px, 70%);
+  max-height: 245px;
 }
 
-.nombre-eva{
-  font:clamp(80px,20vw,135px)/1.2 "Great Vibes",cursive;
-  color:var(--rosa);
-  margin:5px auto 15px;
+.nombre-eva {
+  font: clamp(80px, 20vw, 135px)/1.2
+    "Great Vibes", cursive;
+  color: var(--rosa);
+  margin: 5px auto 15px;
 }
 
 /* ECOGRAFÍA */
 
-.hero-foto{
-  position:relative;
-  width:100%;
-  min-height:175vh;
+.hero-foto {
+  position: relative;
+  width: 100%;
+  min-height: 175vh;
   background:
-    radial-gradient(circle at 50% 15%,#f4dbe4,transparent 55%),
+    radial-gradient(
+      circle at 50% 15%,
+      #f4dbe4,
+      transparent 55%
+    ),
     #fffaf6;
 }
 
-.foto-fija{
-  position:sticky;
-  top:0;
-  width:100%;
-  height:100vh;
-  height:100svh;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  padding:35px 20px;
-  text-align:center;
-  overflow:hidden;
+.foto-fija {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 35px 20px;
+  text-align: center;
+  overflow: hidden;
 }
 
-.foto-contenido{
-  position:relative;
-  z-index:2;
-  width:100%;
-  max-width:550px;
-  margin:auto;
-  will-change:opacity,transform;
+.foto-contenido {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 550px;
+  margin: auto;
+  will-change: opacity, transform;
 }
 
-.foto-marco{
-  width:min(390px,78vw);
-  max-width:100%;
-  margin:25px auto;
-  padding:12px 12px 38px;
-  background:white;
+.foto-marco {
+  width: min(390px, 78vw);
+  max-width: 100%;
+  margin: 25px auto;
+  padding: 12px 12px 38px;
+  background: white;
   box-shadow:
     0 15px 35px #86657635,
     0 3px 10px #86657620;
-  transform:rotate(-5deg);
-  border:1px solid #f2e4e7;
+  transform: rotate(-5deg);
+  border: 1px solid #f2e4e7;
 }
 
-.foto-marco img{
-  display:block;
-  width:100%;
-  height:auto;
+.foto-marco img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
-.foto-marco .pie-foto{
-  margin:15px 0 -20px;
-  font:26px "Great Vibes",cursive;
-  color:var(--rosa);
+.foto-marco .pie-foto {
+  margin: 15px 0 -20px;
+  font: 26px "Great Vibes", cursive;
+  color: var(--rosa);
 }
 
-.foto-contenido h1{
-  margin:8px auto 0;
-  font-size:clamp(38px,8vw,60px);
-  color:var(--rosa);
+.foto-contenido h1 {
+  margin: 8px auto 0;
+  font-size: clamp(38px, 8vw, 60px);
+  color: var(--rosa);
 }
 
-.foto-contenido .fecha{
-  font:23px "Cormorant Garamond",serif;
-  letter-spacing:2px;
+.foto-contenido .fecha {
+  font: 23px "Cormorant Garamond", serif;
+  letter-spacing: 2px;
 }
 
-.desliza{
-  position:absolute;
-  bottom:20px;
-  left:0;
-  right:0;
-  font-size:10px;
-  letter-spacing:2px;
-  color:var(--rosa);
+.desliza {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--rosa);
 }
 
-/* CONTADOR */
+/* CUENTA REGRESIVA */
 
-.contador-seccion{
-  background:#aa7188;
-  color:white;
+.contador-seccion {
+  background: #aa7188;
+  color: white;
 }
 
-.contador-seccion .subtitulo{
-  color:#ffe8ef;
+.contador-seccion .subtitulo {
+  color: #ffe8ef;
 }
 
-.contador-seccion .conejo-lateral{
-  opacity:.22;
+.contador-seccion .conejo-lateral {
+  opacity: .22;
 }
 
-.contador{
-  display:grid;
-  grid-template-columns:repeat(4,minmax(0,1fr));
-  gap:8px;
-  max-width:620px;
-  margin:32px auto 0;
+.contador {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  max-width: 620px;
+  margin: 32px auto 0;
 }
 
-.contador>div{min-width:0}
-
-.numero{
-  font:clamp(31px,8vw,62px) "Cormorant Garamond",serif;
+.contador > div {
+  min-width: 0;
 }
 
-.etiqueta{
-  font-size:9px;
-  letter-spacing:.5px;
-  text-transform:uppercase;
+.numero {
+  font: clamp(31px, 8vw, 62px)
+    "Cormorant Garamond", serif;
+}
+
+.etiqueta {
+  font-size: 9px;
+  letter-spacing: .5px;
+  text-transform: uppercase;
 }
 
 /* FECHA */
 
-.fecha-grande{
-  margin:10px auto;
-  color:var(--rosa);
-  font:clamp(65px,13vw,95px) "Cormorant Garamond",serif;
+.fecha-grande {
+  margin: 10px auto;
+  color: var(--rosa);
+  font: clamp(65px, 13vw, 95px)
+    "Cormorant Garamond", serif;
 }
 
-.tarjeta{
-  width:100%;
-  max-width:560px;
-  margin:30px auto;
-  padding:35px 22px;
-  background:#ffffffd9;
-  border-top:3px solid var(--rosa);
-  box-shadow:0 12px 35px #9e6b8015;
+.tarjeta {
+  width: 100%;
+  max-width: 560px;
+  margin: 30px auto;
+  padding: 35px 22px;
+  background: #ffffffd9;
+  border-top: 3px solid var(--rosa);
+  box-shadow: 0 12px 35px #9e6b8015;
 }
 
-.tarjeta h3{
-  font-size:34px;
-  margin:10px;
+.tarjeta h3 {
+  font-size: 34px;
+  margin: 10px;
 }
 
-.tarjeta p{font-size:14px}
+.tarjeta p {
+  font-size: 14px;
+}
 
 /* INVITADO */
 
-.nombre-invitado{
-  margin:25px auto;
-  color:var(--rosa);
-  font:clamp(42px,9vw,65px)/1.3 "Great Vibes",cursive;
-  overflow-wrap:anywhere;
+.nombre-invitado {
+  margin: 25px auto;
+  color: var(--rosa);
+  font: clamp(42px, 9vw, 65px)/1.3
+    "Great Vibes", cursive;
+  overflow-wrap: anywhere;
 }
 
-.cupos-texto{
-  font:25px/1.5 "Cormorant Garamond",serif;
-  margin:10px auto;
+.cupos-texto {
+  font: 25px/1.5
+    "Cormorant Garamond", serif;
+  margin: 10px auto;
 }
 
-/* GALERÍA */
+/* GALERÍA DE FOTOGRAFÍAS */
 
-.galeria{
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:12px;
-  margin-top:30px;
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 30px;
 }
 
-.foto{
-  min-width:0;
-  aspect-ratio:3/4;
-  background:#f6e4e9;
-  display:grid;
-  place-items:center;
-  overflow:hidden;
-  cursor:pointer;
-  color:var(--rosa);
-  font:italic 22px "Cormorant Garamond",serif;
-  text-align:center;
+.foto {
+  min-width: 0;
+  aspect-ratio: 3/4;
+  background: #f6e4e9;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  cursor: pointer;
+  color: var(--rosa);
+  font: italic 22px
+    "Cormorant Garamond", serif;
+  text-align: center;
 }
 
-.foto img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
+.foto img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .4s;
 }
 
-.foto:last-child{grid-column:2}
-
-.lightbox{
-  display:none;
-  position:fixed;
-  inset:0;
-  z-index:2000;
-  align-items:center;
-  justify-content:center;
-  padding:30px;
-  background:#241820ed;
+.foto:hover img {
+  transform: scale(1.05);
 }
 
-.lightbox.activo{display:flex}
-
-.lightbox img{
-  max-width:100%;
-  max-height:85vh;
-  object-fit:contain;
+.foto:last-child {
+  grid-column: 2;
 }
 
-.cerrar{
-  position:absolute;
-  right:20px;
-  top:10px;
-  color:white;
-  font-size:38px;
-  cursor:pointer;
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  background: #241820ed;
+}
+
+.lightbox.activo {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 100%;
+  max-height: 85vh;
+  object-fit: contain;
+}
+
+.cerrar {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  color: white;
+  font-size: 38px;
+  cursor: pointer;
 }
 
 /* MÚSICA */
 
-.musica-control{
-  position:fixed;
-  z-index:1100;
-  right:17px;
-  bottom:17px;
-  display:none;
-  align-items:center;
-  justify-content:center;
-  width:56px;
-  height:56px;
-  border:1px solid #ffffffaa;
-  border-radius:50%;
-  background:#bd7e94;
-  color:white;
-  font-size:23px;
-  box-shadow:0 5px 20px #77596855;
-  cursor:pointer;
+.musica-control {
+  position: fixed;
+  z-index: 1100;
+  right: 17px;
+  bottom: 17px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border: 1px solid #ffffffaa;
+  border-radius: 50%;
+  background: #bd7e94;
+  color: white;
+  font-size: 23px;
+  box-shadow: 0 5px 20px #77596855;
+  cursor: pointer;
 }
 
-.musica-control.visible{display:flex}
-
-.youtube-oculto{
-  position:fixed;
-  left:-9999px;
-  top:0;
-  width:200px;
-  height:120px;
-  opacity:0;
-  pointer-events:none;
+.musica-control.visible {
+  display: flex;
 }
 
-/* CARTA FINAL */
+.youtube-oculto {
+  position: fixed;
+  left: -9999px;
+  top: 0;
+  width: 200px;
+  height: 120px;
+  opacity: 0;
+  pointer-events: none;
+}
 
-footer{
-  position:relative;
-  width:100%;
-  padding:85px 20px;
+/* CARTA FINAL PARA EVA */
+
+footer {
+  position: relative;
+  width: 100%;
+  padding: 85px 20px;
   background:
-    radial-gradient(ellipse at 50% 0%,#c993a8,transparent 65%),
+    radial-gradient(
+      ellipse at 50% 0%,
+      #c993a8,
+      transparent 65%
+    ),
     #a66e85;
-  color:white;
-  text-align:center;
-  overflow:hidden;
+  color: white;
+  text-align: center;
+  overflow: hidden;
 }
 
-footer .conejita{
-  width:min(220px,65%);
+footer .conejita {
+  width: min(220px, 65%);
 }
 
-footer .nombre-eva{
-  color:#fff1f5;
+footer .nombre-eva {
+  color: #fff1f5;
 }
 
-.carta-eva{
-  position:relative;
-  width:100%;
-  max-width:690px;
-  margin:38px auto 30px;
-  padding:45px 35px;
-  background:#fffaf6f0;
-  color:var(--oscuro);
-  border:1px solid #f4dbe4;
-  border-radius:6px;
-  box-shadow:0 15px 45px #6d41502e;
+.carta-eva {
+  position: relative;
+  width: 100%;
+  max-width: 690px;
+  margin: 38px auto 30px;
+  padding: 45px 35px;
+  background: #fffaf6f0;
+  color: var(--oscuro);
+  border: 1px solid #f4dbe4;
+  border-radius: 6px;
+  box-shadow: 0 15px 45px #6d41502e;
 }
 
-.carta-eva::before{
-  content:"♡";
-  display:block;
-  font-size:33px;
-  color:var(--rosa);
-  margin-bottom:14px;
+.carta-eva::before {
+  content: "♡";
+  display: block;
+  font-size: 33px;
+  color: var(--rosa);
+  margin-bottom: 14px;
 }
 
-.carta-titulo{
-  margin:0 0 30px;
-  color:var(--rosa);
-  font:clamp(36px,8vw,53px) "Great Vibes",cursive;
+.carta-titulo {
+  margin: 0 0 30px;
+  color: var(--rosa);
+  font: clamp(36px, 8vw, 53px)
+    "Great Vibes", cursive;
 }
 
-.carta-eva p{
-  max-width:580px;
-  margin:20px auto;
-  font:italic clamp(22px,4.5vw,29px)/1.55 "Cormorant Garamond",serif;
+.carta-eva p {
+  max-width: 580px;
+  margin: 20px auto;
+  font: italic clamp(22px, 4.5vw, 29px)/1.55
+    "Cormorant Garamond", serif;
 }
 
-.carta-eva .carta-final{
-  margin-top:35px;
-  color:#a15f79;
-  font-weight:600;
+.carta-eva .carta-final {
+  margin-top: 35px;
+  color: #a15f79;
+  font-weight: 600;
 }
 
-.carta-firma{
-  margin-top:35px;
-  font:clamp(25px,5vw,34px) "Great Vibes",cursive;
-  color:var(--rosa);
+.carta-firma {
+  margin-top: 35px;
+  font: clamp(25px, 5vw, 34px)
+    "Great Vibes", cursive;
+  color: var(--rosa);
 }
 
-.fecha-footer{
-  margin-top:30px;
-  font-size:12px;
-  letter-spacing:3px;
+.fecha-footer {
+  margin-top: 30px;
+  font-size: 12px;
+  letter-spacing: 3px;
 }
 
-.despedida{
-  font:25px "Cormorant Garamond",serif;
+.despedida {
+  font: 25px
+    "Cormorant Garamond", serif;
 }
 
 /* CELULARES */
 
-@media(max-width:600px){
-  section{padding:70px 18px}
+@media (max-width: 600px) {
 
-  .intro-tarjeta{
-    padding:25px 14px 30px;
+  section {
+    padding: 70px 18px;
   }
 
-  .intro-tarjeta .conejita{
-    width:min(185px,62%);
-    max-height:185px;
+  .intro-tarjeta {
+    padding: 25px 14px 30px;
   }
 
-  .foto-fija{
-    padding:20px 14px 35px;
+  .intro-tarjeta .conejita {
+    width: min(185px, 62%);
+    max-height: 185px;
   }
 
-  .foto-marco{
-    width:min(340px,76vw);
-    padding:9px 9px 32px;
-    margin:18px auto;
+  .foto-fija {
+    padding: 20px 14px 35px;
   }
 
-  .foto-contenido h1{
-    font-size:clamp(35px,9vw,52px);
+  .foto-marco {
+    width: min(340px, 76vw);
+    padding: 9px 9px 32px;
+    margin: 18px auto;
   }
 
-  .foto-contenido .fecha{
-    font-size:20px;
+  .foto-contenido h1 {
+    font-size: clamp(35px, 9vw, 52px);
   }
 
-  .galeria{
-    grid-template-columns:repeat(2,minmax(0,1fr));
-    gap:9px;
+  .foto-contenido .fecha {
+    font-size: 20px;
   }
 
-  .foto:last-child{
-    grid-column:1/3;
-    width:calc(50% - 5px);
-    justify-self:center;
+  .galeria {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+    gap: 9px;
   }
 
-  .contador{gap:4px}
-  .etiqueta{font-size:8px}
-
-  .tarjeta{
-    padding:28px 16px;
+  .foto:last-child {
+    grid-column: 1/3;
+    width: calc(50% - 5px);
+    justify-self: center;
   }
 
-  .conejo-lateral{
-    width:115px;
-    opacity:.25;
+  .contador {
+    gap: 4px;
+  }
+
+  .etiqueta {
+    font-size: 8px;
+  }
+
+  .tarjeta {
+    padding: 28px 16px;
+  }
+
+  .conejo-lateral {
+    width: 115px;
+    opacity: .25;
   }
 
   .conejo-izquierda,
-  .conejo-abajo-izquierda{
-    left:-65px;
+  .conejo-abajo-izquierda {
+    left: -65px;
   }
 
   .conejo-derecha,
-  .conejo-arriba-derecha{
-    right:-65px;
+  .conejo-arriba-derecha {
+    right: -65px;
   }
 
-  .musica-control{
-    right:12px;
-    bottom:12px;
-    width:49px;
-    height:49px;
+  .musica-control {
+    right: 12px;
+    bottom: 12px;
+    width: 49px;
+    height: 49px;
   }
 
-  .carta-eva{
-    padding:35px 20px;
-    margin:30px auto;
+  .carta-eva {
+    padding: 35px 20px;
+    margin: 30px auto;
   }
 
-  .carta-eva p{
-    font-size:23px;
+  .carta-eva p {
+    font-size: 23px;
   }
 
-  .carta-titulo{
-    font-size:40px;
-  }
-}
-
-@media(max-height:650px){
-  .foto-marco{
-    width:min(260px,65vw);
-    margin:10px auto;
+  .carta-titulo {
+    font-size: 40px;
   }
 }
 
-@media(prefers-reduced-motion:reduce){
-  .revelar{
-    opacity:1;
-    transform:none;
+@media (max-height: 650px) {
+  .foto-marco {
+    width: min(260px, 65vw);
+    margin: 10px auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .revelar {
+    opacity: 1;
+    transform: none;
   }
 
-  *{
-    scroll-behavior:auto!important;
-    transition:none!important;
+  * {
+    scroll-behavior: auto !important;
+    transition: none !important;
   }
 }
 </style>
@@ -696,21 +757,27 @@ footer .nombre-eva{
 <!-- FLORES DECORATIVAS -->
 
 <svg xmlns="http://www.w3.org/2000/svg"
-width="0" height="0" aria-hidden="true"
+width="0" height="0"
+aria-hidden="true"
 style="position:absolute;overflow:hidden">
+
 <defs>
 <symbol id="flores" viewBox="0 0 200 200">
 
-<g fill="none" stroke="#a1b28e" stroke-width="3">
+<g fill="none"
+stroke="#a1b28e"
+stroke-width="3">
 <path d="M100 190Q100 100 100 50
 M100 145Q55 120 35 95
 M100 125Q145 100 170 70"/>
 </g>
 
 <g fill="#c9d4b7">
-<ellipse cx="75" cy="140" rx="13" ry="25"
+<ellipse cx="75" cy="140"
+rx="13" ry="25"
 transform="rotate(-45 75 140)"/>
-<ellipse cx="125" cy="115" rx="13" ry="25"
+<ellipse cx="125" cy="115"
+rx="13" ry="25"
 transform="rotate(45 125 115)"/>
 </g>
 
@@ -722,7 +789,8 @@ transform="rotate(45 125 115)"/>
 <circle cx="112" cy="80" r="20"/>
 </g>
 
-<circle cx="100" cy="60" r="13" fill="#e9d6aa"/>
+<circle cx="100" cy="60"
+r="13" fill="#e9d6aa"/>
 
 <g fill="#f2cbd3">
 <circle cx="35" cy="85" r="13"/>
@@ -742,15 +810,21 @@ transform="rotate(45 125 115)"/>
 <div class="intro-pantalla" id="intro">
   <div class="intro-tarjeta">
 
-    <p class="subtitulo">Una bendición de amor</p>
+    <p class="subtitulo">
+      Una bendición de amor
+    </p>
 
-    <img src="conejaeva.png"
-         class="conejita"
-         alt="Conejita de Eva">
+    <img
+      src="conejaeva.png"
+      class="conejita"
+      alt="Conejita de Eva"
+    >
 
     <h1>Baby Shower</h1>
 
-    <p class="subtitulo">De nuestra pequeña</p>
+    <p class="subtitulo">
+      De nuestra pequeña
+    </p>
 
     <div class="nombre-eva">Eva</div>
 
@@ -769,6 +843,7 @@ transform="rotate(45 125 115)"/>
 <!-- ECOGRAFÍA -->
 
 <header class="hero-foto" id="heroFoto">
+
   <div class="foto-fija">
 
     <svg class="flor izq" viewBox="0 0 200 200">
@@ -781,17 +856,30 @@ transform="rotate(45 125 115)"/>
 
     <div class="foto-contenido" id="fotoContenido">
 
-      <p class="subtitulo">Una dulce espera</p>
+      <p class="subtitulo">
+        Una dulce espera
+      </p>
 
       <h1>Un pequeño milagro</h1>
 
       <div class="foto-marco">
-        <img src="eva.jpeg" alt="Ecografía de Eva">
-        <p class="pie-foto">Nuestro pequeño amor</p>
+
+        <img
+          src="eva.jpeg"
+          alt="Ecografía de Eva"
+        >
+
+        <p class="pie-foto">
+          Nuestro pequeño amor
+        </p>
+
       </div>
 
       <div class="nombre-eva">Eva</div>
-      <p class="fecha">06 · 12 · 2026</p>
+
+      <p class="fecha">
+        06 · 12 · 2026
+      </p>
 
     </div>
 
@@ -806,21 +894,31 @@ transform="rotate(45 125 115)"/>
 
 <section class="blanco">
 
-  <img src="conejaeva.png"
-       class="conejo-lateral conejo-izquierda"
-       alt="" aria-hidden="true">
+  <img
+    src="conejaeva.png"
+    class="conejo-lateral conejo-izquierda"
+    alt=""
+    aria-hidden="true"
+  >
 
-  <img src="conejaeva.png"
-       class="conejo-lateral conejo-derecha"
-       alt="" aria-hidden="true">
+  <img
+    src="conejaeva.png"
+    class="conejo-lateral conejo-derecha"
+    alt=""
+    aria-hidden="true"
+  >
 
   <div class="contenedor revelar">
 
-    <p class="subtitulo">Con todo nuestro amor</p>
+    <p class="subtitulo">
+      Con todo nuestro amor
+    </p>
 
     <h2>Un amor que crece cada día</h2>
 
-    <div class="ornamento">❀ ✦ ❀</div>
+    <div class="ornamento">
+      ❀ ✦ ❀
+    </div>
 
     <p class="frase">
       “Hay amores que llegan a nuestra vida
@@ -831,14 +929,16 @@ transform="rotate(45 125 115)"/>
     <p class="texto">
       La espera de Eva nos llena de ilusión,
       ternura y felicidad.
-      Cada día estamos más cerca de conocer su carita,
-      escuchar su risa y tenerla entre nuestros brazos.
+      Cada día estamos más cerca de conocer
+      su carita, escuchar su risa
+      y tenerla entre nuestros brazos.
     </p>
 
     <p class="texto">
       Queremos compartir esta alegría
       con las personas que tanto queremos,
-      rodeados de sonrisas, abrazos y mucho cariño.
+      rodeados de sonrisas,
+      abrazos y mucho cariño.
     </p>
 
     <p class="frase">
@@ -853,13 +953,19 @@ transform="rotate(45 125 115)"/>
 
 <section class="contador-seccion">
 
-  <img src="conejaeva.png"
-       class="conejo-lateral conejo-abajo-izquierda"
-       alt="" aria-hidden="true">
+  <img
+    src="conejaeva.png"
+    class="conejo-lateral conejo-abajo-izquierda"
+    alt=""
+    aria-hidden="true"
+  >
 
   <div class="contenedor revelar">
 
-    <p class="subtitulo">Falta muy poco</p>
+    <p class="subtitulo">
+      Falta muy poco
+    </p>
+
     <h2>Cuenta regresiva</h2>
 
     <div class="contador">
@@ -892,13 +998,18 @@ transform="rotate(45 125 115)"/>
 
 <section class="papel">
 
-  <img src="conejaeva.png"
-       class="conejo-lateral conejo-arriba-derecha"
-       alt="" aria-hidden="true">
+  <img
+    src="conejaeva.png"
+    class="conejo-lateral conejo-arriba-derecha"
+    alt=""
+    aria-hidden="true"
+  >
 
   <div class="contenedor revelar">
 
-    <p class="subtitulo">Un día lleno de ilusión</p>
+    <p class="subtitulo">
+      Un día lleno de ilusión
+    </p>
 
     <h2>Te esperamos para celebrar</h2>
 
@@ -908,7 +1019,9 @@ transform="rotate(45 125 115)"/>
 
     <div class="fecha-grande">06</div>
 
-    <p class="frase">2:00 de la tarde</p>
+    <p class="frase">
+      2:00 de la tarde
+    </p>
 
     <div class="tarjeta">
 
@@ -917,13 +1030,16 @@ transform="rotate(45 125 115)"/>
       <p>
         Entre flores, sonrisas y mucho cariño,
         nos reuniremos para celebrar
-        la próxima llegada de nuestra pequeña Eva.
+        la próxima llegada
+        de nuestra pequeña Eva.
       </p>
 
-      <a class="boton"
-         href="https://maps.app.goo.gl/pATyiWgRNzmx7Gxr8"
-         target="_blank"
-         rel="noopener noreferrer">
+      <a
+        class="boton"
+        href="https://maps.app.goo.gl/pATyiWgRNzmx7Gxr8"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         Ver ubicación
       </a>
 
@@ -935,13 +1051,18 @@ transform="rotate(45 125 115)"/>
 
 <section class="blanco">
 
-  <img src="conejaeva.png"
-       class="conejo-lateral conejo-abajo-izquierda"
-       alt="" aria-hidden="true">
+  <img
+    src="conejaeva.png"
+    class="conejo-lateral conejo-abajo-izquierda"
+    alt=""
+    aria-hidden="true"
+  >
 
   <div class="contenedor revelar">
 
-    <p class="subtitulo">Preparada con mucho cariño</p>
+    <p class="subtitulo">
+      Preparada con mucho cariño
+    </p>
 
     <h2>Un día especial para compartir</h2>
 
@@ -949,17 +1070,26 @@ transform="rotate(45 125 115)"/>
       Esta invitación es especialmente para:
     </p>
 
-    <div class="nombre-invitado" id="nombreInvitado">
+    <div
+      class="nombre-invitado"
+      id="nombreInvitado"
+    >
       Invitado especial
     </div>
 
-    <p class="cupos-texto" id="textoCupos"></p>
+    <p
+      class="cupos-texto"
+      id="textoCupos"
+    ></p>
 
-    <div class="ornamento">❀ ✦ ❀</div>
+    <div class="ornamento">
+      ❀ ✦ ❀
+    </div>
 
     <p class="frase">
-      Nos hará muy felices contar con su presencia
-      y compartir juntos la alegría de esperar a Eva.
+      Nos hará muy felices contar
+      con su presencia y compartir juntos
+      la alegría de esperar a Eva.
     </p>
 
   </div>
@@ -969,43 +1099,56 @@ transform="rotate(45 125 115)"/>
 
 <section class="rosa">
 
-  <img src="conejaeva.png"
-       class="conejo-lateral conejo-derecha"
-       alt="" aria-hidden="true">
+  <img
+    src="conejaeva.png"
+    class="conejo-lateral conejo-derecha"
+    alt=""
+    aria-hidden="true"
+  >
 
   <div class="contenedor revelar">
 
-    <p class="subtitulo">Nos encantaría verte</p>
+    <p class="subtitulo">
+      Nos encantaría verte
+    </p>
 
     <h2>Confirma tu asistencia</h2>
 
     <p class="texto">
-      Queremos compartir contigo este día tan especial.
+      Queremos compartir contigo
+      este día tan especial.
       Confírmanos si podrás acompañarnos
       en la celebración de Eva.
     </p>
 
-    <a class="boton"
-       id="confirmar"
-       target="_blank"
-       rel="noopener noreferrer">
+    <a
+      class="boton"
+      id="confirmar"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       Confirmar por WhatsApp
     </a>
 
   </div>
 </section>
 
-<!-- GALERÍA -->
+<!-- GALERÍA DE 7 FOTOGRAFÍAS -->
 
 <section class="papel">
 
-  <img src="conejaeva.png"
-       class="conejo-lateral conejo-arriba-derecha"
-       alt="" aria-hidden="true">
+  <img
+    src="conejaeva.png"
+    class="conejo-lateral conejo-arriba-derecha"
+    alt=""
+    aria-hidden="true"
+  >
 
   <div class="contenedor revelar">
 
-    <p class="subtitulo">Momentos para recordar</p>
+    <p class="subtitulo">
+      Momentos para recordar
+    </p>
 
     <h2>Pequeños recuerdos</h2>
 
@@ -1014,7 +1157,10 @@ transform="rotate(45 125 115)"/>
       merece guardarse para siempre.
     </p>
 
-    <div class="galeria" id="galeria"></div>
+    <div
+      class="galeria"
+      id="galeria"
+    ></div>
 
   </div>
 </section>
@@ -1023,9 +1169,11 @@ transform="rotate(45 125 115)"/>
 
 <footer>
 
-  <img src="conejaeva.png"
-       class="conejita"
-       alt="Conejita de Eva">
+  <img
+    src="conejaeva.png"
+    class="conejita"
+    alt="Conejita de Eva"
+  >
 
   <div class="carta-eva revelar">
 
@@ -1076,7 +1224,8 @@ transform="rotate(45 125 115)"/>
 
     <p class="carta-final">
       Te esperamos, mi niña bonita.
-      No sabes cuánto amor te espera en este mundo.
+      No sabes cuánto amor
+      te espera en este mundo.
     </p>
 
     <div class="carta-firma">
@@ -1098,230 +1247,313 @@ transform="rotate(45 125 115)"/>
 
 </footer>
 
-<!-- MÚSICA -->
+<!-- BOTÓN DE MÚSICA -->
 
-<button id="botonMusica"
-        class="musica-control"
-        type="button"
-        aria-label="Activar música">
+<button
+  id="botonMusica"
+  class="musica-control"
+  type="button"
+  aria-label="Activar música"
+>
   ♪
 </button>
 
-<div id="reproductorYoutube"
-     class="youtube-oculto"></div>
+<div
+  id="reproductorYoutube"
+  class="youtube-oculto"
+></div>
 
-<!-- VISOR DE FOTOS -->
+<!-- VISOR DE FOTOGRAFÍAS -->
 
 <div class="lightbox" id="lightbox">
-  <span class="cerrar" id="cerrar">×</span>
-  <img id="fotoGrande" alt="Recuerdo ampliado">
+
+  <span class="cerrar" id="cerrar">
+    ×
+  </span>
+
+  <img
+    id="fotoGrande"
+    alt="Recuerdo ampliado"
+  >
+
 </div>
 
 <script>
 
 /* CONFIGURACIÓN */
 
-const CONFIG={
-  fecha:"2026-12-06T14:00:00-06:00",
-  whatsapp:"50662343967",
-  videoYoutube:"WC6lEMYmxR8"
+const CONFIG = {
+  fecha: "2026-12-06T14:00:00-06:00",
+  whatsapp: "50662343967",
+  videoYoutube: "WC6lEMYmxR8"
 };
 
-/* PERSONALIZACIÓN */
+/* PERSONALIZACIÓN DE INVITADOS */
 
-const parametros=new URLSearchParams(location.search);
+const parametros = new URLSearchParams(
+  window.location.search
+);
 
-const nombre=(
-  parametros.get("nombre")||"Invitado especial"
-).trim().slice(0,120)||"Invitado especial";
+const nombre = (
+  parametros.get("nombre") ||
+  "Invitado especial"
+).trim().slice(0, 120) || "Invitado especial";
 
-const cupos=Number(parametros.get("cupos"));
+const cupos = Number(
+  parametros.get("cupos")
+);
 
-const cuposValidos=
+const cuposValidos =
   parametros.has("cupos") &&
   Number.isInteger(cupos) &&
-  cupos>=1 &&
-  cupos<=30;
+  cupos >= 1 &&
+  cupos <= 30;
 
-document.getElementById("nombreInvitado").textContent=nombre;
+document.getElementById(
+  "nombreInvitado"
+).textContent = nombre;
 
-let texto="";
+let texto = "";
 
-if(cuposValidos){
+if (cuposValidos) {
 
-  if(cupos===1){
-    texto="1 espacio para usted";
-  }else if(cupos===2){
-    texto="2 espacios para usted y su acompañante";
-  }else{
-    texto=cupos+" espacios para usted y sus acompañantes";
+  if (cupos === 1) {
+
+    texto = "1 espacio para usted";
+
+  } else if (cupos === 2) {
+
+    texto =
+      "2 espacios para usted y su acompañante";
+
+  } else {
+
+    texto =
+      cupos +
+      " espacios para usted y sus acompañantes";
+
   }
 
 }
 
-document.getElementById("textoCupos").textContent=texto;
+document.getElementById(
+  "textoCupos"
+).textContent = texto;
 
-/* WHATSAPP */
+/* CONFIRMACIÓN POR WHATSAPP */
 
-const mensaje=
-  "Hola, deseo confirmar mi asistencia al Baby Shower de Eva.\n"+
-  "Nombre: "+nombre+"\n"+
-  (texto?"Invitación: "+texto+"\n":"")+
+const mensaje =
+  "Hola, deseo confirmar mi asistencia " +
+  "al Baby Shower de Eva.\n" +
+  "Nombre: " + nombre + "\n" +
+  (
+    texto
+      ? "Invitación: " + texto + "\n"
+      : ""
+  ) +
   "Cantidad de personas que asistirán: ";
 
-document.getElementById("confirmar").href=
-  "https://wa.me/"+CONFIG.whatsapp+
-  "?text="+encodeURIComponent(mensaje);
+document.getElementById(
+  "confirmar"
+).href =
+  "https://wa.me/" +
+  CONFIG.whatsapp +
+  "?text=" +
+  encodeURIComponent(mensaje);
 
-/* YOUTUBE */
+/* MÚSICA DE YOUTUBE */
 
-let reproductor=null;
-let musicaSolicitada=false;
-let musicaActiva=false;
+let reproductor = null;
+let musicaSolicitada = false;
+let musicaActiva = false;
 
-const botonMusica=document.getElementById("botonMusica");
+const botonMusica =
+  document.getElementById("botonMusica");
 
-function actualizarBotonMusica(){
+function actualizarBotonMusica() {
 
-  botonMusica.textContent=musicaActiva?"Ⅱ":"♪";
+  botonMusica.textContent =
+    musicaActiva ? "Ⅱ" : "♪";
 
   botonMusica.setAttribute(
     "aria-label",
-    musicaActiva?"Pausar música":"Reproducir música"
+    musicaActiva
+      ? "Pausar música"
+      : "Reproducir música"
   );
 
 }
 
-function iniciarMusica(){
+function iniciarMusica() {
 
-  musicaSolicitada=true;
+  musicaSolicitada = true;
 
-  if(reproductor &&
-     typeof reproductor.playVideo==="function"){
+  if (
+    reproductor &&
+    typeof reproductor.playVideo === "function"
+  ) {
     reproductor.playVideo();
   }
 
 }
 
-function onYouTubeIframeAPIReady(){
+function onYouTubeIframeAPIReady() {
 
-  reproductor=new YT.Player("reproductorYoutube",{
+  reproductor = new YT.Player(
+    "reproductorYoutube",
+    {
 
-    width:"200",
-    height:"120",
-    videoId:CONFIG.videoYoutube,
+      width: "200",
+      height: "120",
+      videoId: CONFIG.videoYoutube,
 
-    playerVars:{
-      autoplay:0,
-      controls:0,
-      playsinline:1,
-      rel:0,
-      loop:1,
-      playlist:CONFIG.videoYoutube
-    },
+      playerVars: {
+        autoplay: 0,
+        controls: 0,
+        playsinline: 1,
+        rel: 0,
+        loop: 1,
+        playlist: CONFIG.videoYoutube
+      },
 
-    events:{
+      events: {
 
-      onReady:function(){
-        if(musicaSolicitada){
-          iniciarMusica();
+        onReady: function() {
+
+          if (musicaSolicitada) {
+            iniciarMusica();
+          }
+
+        },
+
+        onStateChange: function(evento) {
+
+          musicaActiva =
+            evento.data ===
+            YT.PlayerState.PLAYING;
+
+          actualizarBotonMusica();
+
+        },
+
+        onError: function() {
+
+          musicaActiva = false;
+          actualizarBotonMusica();
+
         }
-      },
 
-      onStateChange:function(evento){
-        musicaActiva=
-          evento.data===YT.PlayerState.PLAYING;
-        actualizarBotonMusica();
-      },
-
-      onError:function(){
-        musicaActiva=false;
-        actualizarBotonMusica();
       }
 
     }
-
-  });
+  );
 
 }
 
-const scriptYoutube=document.createElement("script");
-scriptYoutube.src="https://www.youtube.com/iframe_api";
+const scriptYoutube =
+  document.createElement("script");
+
+scriptYoutube.src =
+  "https://www.youtube.com/iframe_api";
+
 document.head.appendChild(scriptYoutube);
 
-botonMusica.addEventListener("click",function(){
+botonMusica.addEventListener(
+  "click",
+  function() {
 
-  if(!reproductor){
-    musicaSolicitada=true;
-    return;
+    if (!reproductor) {
+      musicaSolicitada = true;
+      return;
+    }
+
+    if (musicaActiva) {
+      reproductor.pauseVideo();
+    } else {
+      iniciarMusica();
+    }
+
   }
-
-  if(musicaActiva){
-    reproductor.pauseVideo();
-  }else{
-    iniciarMusica();
-  }
-
-});
+);
 
 /* ABRIR INVITACIÓN */
 
-document.getElementById("abrir").addEventListener(
+document.getElementById(
+  "abrir"
+).addEventListener(
   "click",
-  function(){
+  function() {
 
-    document.getElementById("intro")
-      .classList.add("oculto");
+    document.getElementById(
+      "intro"
+    ).classList.add("oculto");
 
-    document.body.classList.remove("bloqueado");
+    document.body.classList.remove(
+      "bloqueado"
+    );
 
-    botonMusica.classList.add("visible");
+    botonMusica.classList.add(
+      "visible"
+    );
 
-    window.scrollTo(0,0);
+    window.scrollTo(0, 0);
 
     iniciarMusica();
 
   }
 );
 
-/* ECOGRAFÍA */
+/* EFECTO DE ECOGRAFÍA */
 
-const heroFoto=document.getElementById("heroFoto");
-const fotoContenido=document.getElementById("fotoContenido");
+const heroFoto =
+  document.getElementById("heroFoto");
 
-let desplazamientoPendiente=false;
+const fotoContenido =
+  document.getElementById("fotoContenido");
 
-function actualizarFoto(){
+let desplazamientoPendiente = false;
 
-  const recorrido=Math.max(
+function actualizarFoto() {
+
+  const recorrido = Math.max(
     1,
-    heroFoto.offsetHeight-window.innerHeight
+    heroFoto.offsetHeight -
+    window.innerHeight
   );
 
-  const avance=Math.min(
+  const avance = Math.min(
     1,
     Math.max(
       0,
-      -heroFoto.getBoundingClientRect().top/recorrido
+      -heroFoto.getBoundingClientRect().top /
+      recorrido
     )
   );
 
-  fotoContenido.style.opacity=
-    1-Math.min(1,avance*1.35);
+  fotoContenido.style.opacity =
+    1 - Math.min(1, avance * 1.35);
 
-  fotoContenido.style.transform=
-    "translateY("+(-avance*35)+"px) scale("+
-    (1-avance*.07)+")";
+  fotoContenido.style.transform =
+    "translateY(" +
+    (-avance * 35) +
+    "px) scale(" +
+    (1 - avance * .07) +
+    ")";
 
-  desplazamientoPendiente=false;
+  desplazamientoPendiente = false;
 
 }
 
-function solicitarActualizacion(){
+function solicitarActualizacion() {
 
-  if(!desplazamientoPendiente){
-    desplazamientoPendiente=true;
-    requestAnimationFrame(actualizarFoto);
+  if (!desplazamientoPendiente) {
+
+    desplazamientoPendiente = true;
+
+    requestAnimationFrame(
+      actualizarFoto
+    );
+
   }
 
 }
@@ -1329,120 +1561,208 @@ function solicitarActualizacion(){
 window.addEventListener(
   "scroll",
   solicitarActualizacion,
-  {passive:true}
+  { passive: true }
 );
 
-window.addEventListener("resize",solicitarActualizacion);
+window.addEventListener(
+  "resize",
+  solicitarActualizacion
+);
 
 actualizarFoto();
 
-/* CONTADOR */
+/* CUENTA REGRESIVA */
 
-const fechaEvento=new Date(CONFIG.fecha).getTime();
+const fechaEvento =
+  new Date(CONFIG.fecha).getTime();
 
-function actualizarContador(){
+function actualizarContador() {
 
-  const diferencia=Math.max(
+  const diferencia = Math.max(
     0,
-    fechaEvento-Date.now()
+    fechaEvento - Date.now()
   );
 
-  const valores=[
-    Math.floor(diferencia/86400000),
-    Math.floor(diferencia/3600000)%24,
-    Math.floor(diferencia/60000)%60,
-    Math.floor(diferencia/1000)%60
+  const valores = [
+
+    Math.floor(
+      diferencia / 86400000
+    ),
+
+    Math.floor(
+      diferencia / 3600000
+    ) % 24,
+
+    Math.floor(
+      diferencia / 60000
+    ) % 60,
+
+    Math.floor(
+      diferencia / 1000
+    ) % 60
+
   ];
 
-  ["dias","horas","minutos","segundos"].forEach(
-    function(id,i){
-      document.getElementById(id).textContent=
-        String(valores[i]).padStart(2,"0");
-    }
-  );
+  [
+    "dias",
+    "horas",
+    "minutos",
+    "segundos"
+  ].forEach(function(id, i) {
+
+    document.getElementById(
+      id
+    ).textContent =
+      String(valores[i]).padStart(2, "0");
+
+  });
 
 }
 
 actualizarContador();
-setInterval(actualizarContador,1000);
 
-/* ANIMACIONES */
+setInterval(
+  actualizarContador,
+  1000
+);
 
-if("IntersectionObserver" in window){
+/* ANIMACIONES AL DESLIZAR */
 
-  const observador=new IntersectionObserver(
-    function(entradas){
+if ("IntersectionObserver" in window) {
 
-      entradas.forEach(function(entrada){
-        if(entrada.isIntersecting){
-          entrada.target.classList.add("visible");
-        }
-      });
+  const observador =
+    new IntersectionObserver(
+      function(entradas) {
 
-    },
-    {threshold:.08}
-  );
+        entradas.forEach(
+          function(entrada) {
 
-  document.querySelectorAll(".revelar").forEach(
-    function(elemento){
-      observador.observe(elemento);
-    }
-  );
+            if (entrada.isIntersecting) {
 
-}else{
+              entrada.target.classList.add(
+                "visible"
+              );
 
-  document.querySelectorAll(".revelar").forEach(
-    function(elemento){
-      elemento.classList.add("visible");
-    }
-  );
+            }
+
+          }
+        );
+
+      },
+      { threshold: .08 }
+    );
+
+  document.querySelectorAll(
+    ".revelar"
+  ).forEach(function(elemento) {
+
+    observador.observe(elemento);
+
+  });
+
+} else {
+
+  document.querySelectorAll(
+    ".revelar"
+  ).forEach(function(elemento) {
+
+    elemento.classList.add(
+      "visible"
+    );
+
+  });
 
 }
 
-/* GALERÍA */
+/* GALERÍA CORREGIDA */
 
-const galeria=document.getElementById("galeria");
+const galeria =
+  document.getElementById("galeria");
 
-for(let i=1;i<=7;i++){
+for (let i = 1; i <= 7; i++) {
 
-  const cuadro=document.createElement("div");
-  cuadro.className="foto";
-  cuadro.textContent="Recuerdo "+i;
+  const cuadro =
+    document.createElement("div");
 
-  const imagen=new Image();
+  cuadro.className = "foto";
 
-  imagen.src="img/foto"+i+".jpeg";
-  imagen.alt="Recuerdo "+i;
-  imagen.loading="lazy";
+  const imagen =
+    document.createElement("img");
 
-  imagen.onload=function(){
+  imagen.src =
+    "./img/foto" + i + ".jpeg";
 
-    cuadro.textContent="";
-    cuadro.appendChild(imagen);
+  imagen.alt =
+    "Recuerdo " + i;
 
-    cuadro.onclick=function(){
+  imagen.loading = "lazy";
 
-      document.getElementById("fotoGrande").src=imagen.src;
+  imagen.onerror = function() {
 
-      document.getElementById("lightbox")
-        .classList.add("activo");
-
-    };
+    cuadro.textContent =
+      "Recuerdo " + i;
 
   };
+
+  cuadro.appendChild(imagen);
+
+  cuadro.addEventListener(
+    "click",
+    function() {
+
+      if (
+        !imagen.complete ||
+        imagen.naturalWidth === 0
+      ) {
+        return;
+      }
+
+      document.getElementById(
+        "fotoGrande"
+      ).src = imagen.src;
+
+      document.getElementById(
+        "lightbox"
+      ).classList.add("activo");
+
+    }
+  );
 
   galeria.appendChild(cuadro);
 
 }
 
-/* CERRAR GALERÍA */
+/* CERRAR FOTOGRAFÍA AMPLIADA */
 
-document.getElementById("lightbox").addEventListener(
+document.getElementById(
+  "lightbox"
+).addEventListener(
   "click",
-  function(e){
+  function(evento) {
 
-    if(e.target.id!=="fotoGrande"){
-      this.classList.remove("activo");
+    if (
+      evento.target.id !== "fotoGrande"
+    ) {
+
+      this.classList.remove(
+        "activo"
+      );
+
+    }
+
+  }
+);
+
+document.addEventListener(
+  "keydown",
+  function(evento) {
+
+    if (evento.key === "Escape") {
+
+      document.getElementById(
+        "lightbox"
+      ).classList.remove("activo");
+
     }
 
   }
